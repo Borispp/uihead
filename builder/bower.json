@@ -1,0 +1,21 @@
+{
+  "name": "uihead",
+  "version": "0.0.1",
+  "description": "uihead bower",
+  "main": "gulpfile.js",
+  "keywords": [
+    "frontend",
+    "uihead"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "jquery": "~2.2.4",
+    "select2": "select2/select2#~4.0.0",
+    "bxslider-4": "stevenwanderski/bxslider-4#~4.2.5"
+  }
+}
