@@ -242,6 +242,10 @@ h6.headline {
   font-style: italic;
   text-decoration: none;
   border-bottom: 1px solid #000;
+  -webkit-transition: color 0.15s;
+  -moz-transition: color 0.15s;
+  -ms-transition: color 0.15s;
+  -o-transition: color 0.15s;
   transition: color 0.15s;
 }
 .headline-author a:hover {
@@ -303,6 +307,10 @@ h6.headline {
 .icon {
   font-family: 'iconfont';
   font-size: 20px;
+  -webkit-transition: color 0.15s;
+  -moz-transition: color 0.15s;
+  -ms-transition: color 0.15s;
+  -o-transition: color 0.15s;
   transition: color 0.15s;
 }
 .icon.-shadow {
@@ -314,6 +322,10 @@ h6.headline {
   height: 38px;
   border-radius: 50%;
   position: relative;
+  -webkit-transition: color 0.15s linear, background 0.15s linear;
+  -moz-transition: color 0.15s linear, background 0.15s linear;
+  -ms-transition: color 0.15s linear, background 0.15s linear;
+  -o-transition: color 0.15s linear, background 0.15s linear;
   transition: color 0.15s linear, background 0.15s linear;
 }
 .icon.-rounded.-large {
@@ -325,8 +337,7 @@ h6.headline {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 .icon.-rounded.-notification:after {
   content: "";
@@ -439,6 +450,10 @@ h6.headline {
   text-decoration: none;
   background: none;
   border: none;
+  -webkit-transition: background 0.15s linear, color 0.15s linear, border-color 0.15s linear;
+  -moz-transition: background 0.15s linear, color 0.15s linear, border-color 0.15s linear;
+  -ms-transition: background 0.15s linear, color 0.15s linear, border-color 0.15s linear;
+  -o-transition: background 0.15s linear, color 0.15s linear, border-color 0.15s linear;
   transition: background 0.15s linear, color 0.15s linear, border-color 0.15s linear;
 }
 .btn:active {
@@ -458,6 +473,10 @@ h6.headline {
   background: #fff;
   border: 1px solid #dfdfdf;
   color: #9b9b9b;
+  -webkit-transition: background 0.1s linear, color 0.1s linear, border-color 0.1s linear;
+  -moz-transition: background 0.1s linear, color 0.1s linear, border-color 0.1s linear;
+  -ms-transition: background 0.1s linear, color 0.1s linear, border-color 0.1s linear;
+  -o-transition: background 0.1s linear, color 0.1s linear, border-color 0.1s linear;
   transition: background 0.1s linear, color 0.1s linear, border-color 0.1s linear;
 }
 .btn.-default:hover {
@@ -526,6 +545,10 @@ h6.headline {
   padding: 9px 19px;
   color: #000;
   box-shadow: 0 3px 3px rgba(0,0,0,0.1);
+  -webkit-transition: color 0.15s linear, box-shadow 0.15s linear;
+  -moz-transition: color 0.15s linear, box-shadow 0.15s linear;
+  -ms-transition: color 0.15s linear, box-shadow 0.15s linear;
+  -o-transition: color 0.15s linear, box-shadow 0.15s linear;
   transition: color 0.15s linear, box-shadow 0.15s linear;
 }
 .btn.-white-shadow:hover {
@@ -574,14 +597,15 @@ h6.headline {
   display: block;
   margin: 15px auto 6px;
   font-size: 20px;
-  -webkit-transform: translate(0, 0);
-          transform: translate(0, 0);
-  transition: -webkit-transform 0.2s;
+  transform: translate(0, 0);
+  -webkit-transition: transform 0.2s;
+  -moz-transition: transform 0.2s;
+  -ms-transition: transform 0.2s;
+  -o-transition: transform 0.2s;
   transition: transform 0.2s;
 }
 .btn.-arrow:hover:before {
-  -webkit-transform: translate(0, -3px);
-          transform: translate(0, -3px);
+  transform: translate(0, -3px);
 }
 .btn.-uppercase {
   text-transform: uppercase;
@@ -594,6 +618,10 @@ h6.headline {
   overflow: hidden;
   text-decoration: none;
   color: #40be65;
+  -webkit-transition: color 0.15s;
+  -moz-transition: color 0.15s;
+  -ms-transition: color 0.15s;
+  -o-transition: color 0.15s;
   transition: color 0.15s;
 }
 .link-underline:after {
@@ -604,17 +632,18 @@ h6.headline {
   width: 100%;
   height: 5px;
   background: #39ab5b;
-  -webkit-transform: translate(-101%, 0);
-          transform: translate(-101%, 0);
-  transition: -webkit-transform 0.25s;
+  transform: translate(-101%, 0);
+  -webkit-transition: transform 0.25s;
+  -moz-transition: transform 0.25s;
+  -ms-transition: transform 0.25s;
+  -o-transition: transform 0.25s;
   transition: transform 0.25s;
 }
 .link-underline:hover {
   color: #39ab5b;
 }
 .link-underline:hover:after {
-  -webkit-transform: translate(0, 0);
-          transform: translate(0, 0);
+  transform: translate(0, 0);
 }
 .link {
   display: inline-block;
@@ -622,6 +651,10 @@ h6.headline {
   font-size: 16px;
   font-weight: 500;
   text-decoration: none;
+  -webkit-transition: color 0.15s;
+  -moz-transition: color 0.15s;
+  -ms-transition: color 0.15s;
+  -o-transition: color 0.15s;
   transition: color 0.15s;
 }
 .link.-blue {
@@ -643,12 +676,10 @@ h6.headline {
   display: inline-block;
   padding-left: 12px;
   padding-right: 2px;
-  -webkit-transform: translate(0, 0);
-          transform: translate(0, 0);
+  transform: translate(0, 0);
 }
 .link.link-arrow:hover:after {
-  -webkit-animation: link-arrow-animation linear 0.4s 2;
-          animation: link-arrow-animation linear 0.4s 2;
+  animation: link-arrow-animation linear 0.4s 2;
 }
 .checkbox input {
   display: none;
@@ -685,6 +716,10 @@ h6.headline {
   width: 14px;
   height: 14px;
   border-radius: 2px;
+  -webkit-transition: border-color 0.1s linear, background 0.1s linear, color 0.1s linear;
+  -moz-transition: border-color 0.1s linear, background 0.1s linear, color 0.1s linear;
+  -ms-transition: border-color 0.1s linear, background 0.1s linear, color 0.1s linear;
+  -o-transition: border-color 0.1s linear, background 0.1s linear, color 0.1s linear;
   transition: border-color 0.1s linear, background 0.1s linear, color 0.1s linear;
 }
 .checkbox label:hover:before {
@@ -699,32 +734,48 @@ h6.headline {
   top: -2px;
   padding-left: 6px;
 }
-@-webkit-keyframes link-arrow-animation {
+@-moz-keyframes link-arrow-animation {
   0% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
+    transform: translate(0, 0);
   }
   50% {
-    -webkit-transform: translate(3px, 0);
-            transform: translate(3px, 0);
+    transform: translate(3px, 0);
   }
   100% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+@-webkit-keyframes link-arrow-animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(3px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@-o-keyframes link-arrow-animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(3px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
   }
 }
 @keyframes link-arrow-animation {
   0% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
+    transform: translate(0, 0);
   }
   50% {
-    -webkit-transform: translate(3px, 0);
-            transform: translate(3px, 0);
+    transform: translate(3px, 0);
   }
   100% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
+    transform: translate(0, 0);
   }
 }
 .header-main {
@@ -752,8 +803,7 @@ h6.headline {
   position: relative;
   top: -3px;
   margin-right: 8px;
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
+  transform: scale(0.9);
 }
 .site-logo .logo-img,
 .site-logo .emoji {
@@ -762,8 +812,7 @@ h6.headline {
 .header-main-menu {
   position: absolute;
   left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
 }
 .header-main-menu li {
   display: inline-block;
@@ -773,6 +822,10 @@ h6.headline {
   color: #fff;
   font-size: 18px;
   text-decoration: none;
+  -webkit-transition: color 0.15s;
+  -moz-transition: color 0.15s;
+  -ms-transition: color 0.15s;
+  -o-transition: color 0.15s;
   transition: color 0.15s;
 }
 .header-main-menu a:hover {
@@ -796,6 +849,10 @@ h6.headline {
   margin-top: -5px;
   font-size: 22px;
   color: #9b9b9b;
+  -webkit-transition: color 0.15s;
+  -moz-transition: color 0.15s;
+  -ms-transition: color 0.15s;
+  -o-transition: color 0.15s;
   transition: color 0.15s;
 }
 .header-main-menu .catalog a:before {
@@ -839,30 +896,29 @@ h6.headline {
 }
 .composition img {
   position: absolute;
-  transition: -webkit-transform 0.3s;
+  -webkit-transition: transform 0.3s;
+  -moz-transition: transform 0.3s;
+  -ms-transition: transform 0.3s;
+  -o-transition: transform 0.3s;
   transition: transform 0.3s;
 }
 .composition .composition-1 {
   top: 0;
   left: 30px;
-  -webkit-transform: translate(0, -50px);
-          transform: translate(0, -50px);
+  transform: translate(0, -50px);
 }
 .composition .composition-2 {
   top: 137px;
   left: 92px;
-  -webkit-transform: translate(50px, 50px);
-          transform: translate(50px, 50px);
+  transform: translate(50px, 50px);
 }
 .composition .composition-3 {
   top: 182px;
   left: 0;
-  -webkit-transform: translate(-50px, 50px);
-          transform: translate(-50px, 50px);
+  transform: translate(-50px, 50px);
 }
 .composition.-active img {
-  -webkit-transform: translate(0, 0);
-          transform: translate(0, 0);
+  transform: translate(0, 0);
 }
 .content.-right {
   float: right;
@@ -963,8 +1019,7 @@ h6.headline {
   background: #777;
   left: 50%;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   width: 100%;
   height: calc(100% + 20px);
   margin: -5px 0;
@@ -1123,6 +1178,9 @@ h6.headline {
   width: 100%;
   height: 100%;
   -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
   transform: translateX(100%);
   background-position: center center;
   background-size: cover;
@@ -1131,10 +1189,16 @@ h6.headline {
 .cd-hero-slider li.selected {
   position: relative;
   -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
   transform: translateX(0);
 }
 .cd-hero-slider li.move-left {
   -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
   transform: translateX(-100%);
 }
 .cd-hero-slider .cd-img-container {
@@ -1147,6 +1211,9 @@ h6.headline {
   bottom: auto;
   right: auto;
   -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
 }
 .cd-hero-slider .cd-bg-video-wrapper {
@@ -1171,11 +1238,19 @@ h6.headline {
   bottom: auto;
   right: auto;
   -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
 }
 .cd-hero-slider li.is-moving,
 .cd-hero-slider li.selected {
-  transition: -webkit-transform 0.5s;
+  -webkit-transition: -webkit-transform 0.5s;
+  -moz-transition: -moz-transform 0.5s;
+  -webkit-transition: transform 0.5s;
+  -moz-transition: transform 0.5s;
+  -ms-transition: transform 0.5s;
+  -o-transition: transform 0.5s;
   transition: transform 0.5s;
 }
 .cd-hero-slider .cd-full-width,
@@ -1190,6 +1265,9 @@ h6.headline {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
   transform: translateZ(0);
 }
 @media only screen and (min-width: 768px) {
@@ -1223,53 +1301,102 @@ h6.headline {
   .cd-hero-slider .cd-half-width {
     opacity: 0;
     -webkit-transform: translateX(40px);
+    -moz-transform: translateX(40px);
+    -ms-transform: translateX(40px);
+    -o-transform: translateX(40px);
     transform: translateX(40px);
   }
   .cd-hero-slider .move-left .cd-half-width {
     -webkit-transform: translateX(-40px);
+    -moz-transform: translateX(-40px);
+    -ms-transform: translateX(-40px);
+    -o-transform: translateX(-40px);
     transform: translateX(-40px);
   }
   .cd-hero-slider .selected .cd-half-width {
     opacity: 1;
     -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
     transform: translateX(0);
   }
   .cd-hero-slider .is-moving .cd-half-width {
-    transition: opacity 0s 0.5s, -webkit-transform 0s 0.5s;
+    -webkit-transition: opacity 0s 0.5s, -webkit-transform 0s 0.5s;
+    -moz-transition: opacity 0s 0.5s, -moz-transform 0s 0.5s;
+    -webkit-transition: opacity 0s 0.5s, transform 0s 0.5s;
+    -moz-transition: opacity 0s 0.5s, transform 0s 0.5s;
+    -ms-transition: opacity 0s 0.5s, transform 0s 0.5s;
+    -o-transition: opacity 0s 0.5s, transform 0s 0.5s;
     transition: opacity 0s 0.5s, transform 0s 0.5s;
   }
   .cd-hero-slider li.selected h2 {
-    transition: opacity 0.4s 0.2s, -webkit-transform 0.5s 0.2s;
+    -webkit-transition: opacity 0.4s 0.2s, -webkit-transform 0.5s 0.2s;
+    -moz-transition: opacity 0.4s 0.2s, -moz-transform 0.5s 0.2s;
+    -webkit-transition: opacity 0.4s 0.2s, transform 0.5s 0.2s;
+    -moz-transition: opacity 0.4s 0.2s, transform 0.5s 0.2s;
+    -ms-transition: opacity 0.4s 0.2s, transform 0.5s 0.2s;
+    -o-transition: opacity 0.4s 0.2s, transform 0.5s 0.2s;
     transition: opacity 0.4s 0.2s, transform 0.5s 0.2s;
   }
   .cd-hero-slider li.selected p {
-    transition: opacity 0.4s 0.3s, -webkit-transform 0.5s 0.3s;
+    -webkit-transition: opacity 0.4s 0.3s, -webkit-transform 0.5s 0.3s;
+    -moz-transition: opacity 0.4s 0.3s, -moz-transform 0.5s 0.3s;
+    -webkit-transition: opacity 0.4s 0.3s, transform 0.5s 0.3s;
+    -moz-transition: opacity 0.4s 0.3s, transform 0.5s 0.3s;
+    -ms-transition: opacity 0.4s 0.3s, transform 0.5s 0.3s;
+    -o-transition: opacity 0.4s 0.3s, transform 0.5s 0.3s;
     transition: opacity 0.4s 0.3s, transform 0.5s 0.3s;
   }
   .cd-hero-slider li.selected .cd-btn {
-    transition: opacity 0.4s 0.4s, -webkit-transform 0.5s 0.4s, background-color 0.2s 0s;
+    -webkit-transition: opacity 0.4s 0.4s, -webkit-transform 0.5s 0.4s, background-color 0.2s 0s;
+    -moz-transition: opacity 0.4s 0.4s, -moz-transform 0.5s 0.4s, background-color 0.2s 0s;
+    -webkit-transition: opacity 0.4s 0.4s, transform 0.5s 0.4s, background-color 0.2s 0s;
+    -moz-transition: opacity 0.4s 0.4s, transform 0.5s 0.4s, background-color 0.2s 0s;
+    -ms-transition: opacity 0.4s 0.4s, transform 0.5s 0.4s, background-color 0.2s 0s;
+    -o-transition: opacity 0.4s 0.4s, transform 0.5s 0.4s, background-color 0.2s 0s;
     transition: opacity 0.4s 0.4s, transform 0.5s 0.4s, background-color 0.2s 0s;
   }
 }
 .cd-hero-slider li.selected.from-left .cd-half-width:nth-of-type(2),
 .cd-hero-slider li.selected.from-right .cd-half-width:first-of-type {
-  transition: opacity 0.4s 0.2s, -webkit-transform 0.5s 0.2s;
+  -webkit-transition: opacity 0.4s 0.2s, -webkit-transform 0.5s 0.2s;
+  -moz-transition: opacity 0.4s 0.2s, -moz-transform 0.5s 0.2s;
+  -webkit-transition: opacity 0.4s 0.2s, transform 0.5s 0.2s;
+  -moz-transition: opacity 0.4s 0.2s, transform 0.5s 0.2s;
+  -ms-transition: opacity 0.4s 0.2s, transform 0.5s 0.2s;
+  -o-transition: opacity 0.4s 0.2s, transform 0.5s 0.2s;
   transition: opacity 0.4s 0.2s, transform 0.5s 0.2s;
 }
 @media only screen and (min-width: 768px) {
   .cd-hero-slider li.selected.from-right .cd-half-width:first-of-type {
-    transition: opacity 0.4s 0.2s, -webkit-transform 0.5s 0.2s;
+    -webkit-transition: opacity 0.4s 0.2s, -webkit-transform 0.5s 0.2s;
+    -moz-transition: opacity 0.4s 0.2s, -moz-transform 0.5s 0.2s;
+    -webkit-transition: opacity 0.4s 0.2s, transform 0.5s 0.2s;
+    -moz-transition: opacity 0.4s 0.2s, transform 0.5s 0.2s;
+    -ms-transition: opacity 0.4s 0.2s, transform 0.5s 0.2s;
+    -o-transition: opacity 0.4s 0.2s, transform 0.5s 0.2s;
     transition: opacity 0.4s 0.2s, transform 0.5s 0.2s;
   }
 }
 .cd-hero-slider li.selected.from-left .cd-half-width:first-of-type,
 .cd-hero-slider li.selected.from-right .cd-half-width:nth-of-type(2) {
-  transition: opacity 0.4s 0.4s, -webkit-transform 0.5s 0.4s;
+  -webkit-transition: opacity 0.4s 0.4s, -webkit-transform 0.5s 0.4s;
+  -moz-transition: opacity 0.4s 0.4s, -moz-transform 0.5s 0.4s;
+  -webkit-transition: opacity 0.4s 0.4s, transform 0.5s 0.4s;
+  -moz-transition: opacity 0.4s 0.4s, transform 0.5s 0.4s;
+  -ms-transition: opacity 0.4s 0.4s, transform 0.5s 0.4s;
+  -o-transition: opacity 0.4s 0.4s, transform 0.5s 0.4s;
   transition: opacity 0.4s 0.4s, transform 0.5s 0.4s;
 }
 @media only screen and (min-width: 768px) {
   .cd-hero-slider li.selected.from-right .cd-half-width:nth-of-type(2) {
-    transition: opacity 0.4s 0.4s, -webkit-transform 0.5s 0.4s;
+    -webkit-transition: opacity 0.4s 0.4s, -webkit-transform 0.5s 0.4s;
+    -moz-transition: opacity 0.4s 0.4s, -moz-transform 0.5s 0.4s;
+    -webkit-transition: opacity 0.4s 0.4s, transform 0.5s 0.4s;
+    -moz-transition: opacity 0.4s 0.4s, transform 0.5s 0.4s;
+    -ms-transition: opacity 0.4s 0.4s, transform 0.5s 0.4s;
+    -o-transition: opacity 0.4s 0.4s, transform 0.5s 0.4s;
     transition: opacity 0.4s 0.4s, transform 0.5s 0.4s;
   }
 }
@@ -1277,12 +1404,18 @@ h6.headline {
 .cd-hero-slider .cd-full-width p .cd-hero-slider .cd-full-width .cd-btn {
   opacity: 0;
   -webkit-transform: translateX(100px);
+  -moz-transform: translateX(100px);
+  -ms-transform: translateX(100px);
+  -o-transform: translateX(100px);
   transform: translateX(100px);
 }
 @media only screen and (min-width: 768px) {
   .cd-hero-slider .cd-full-width .cd-btn {
     opacity: 0;
     -webkit-transform: translateX(100px);
+    -moz-transform: translateX(100px);
+    -ms-transform: translateX(100px);
+    -o-transform: translateX(100px);
     transform: translateX(100px);
   }
 }
@@ -1290,12 +1423,18 @@ h6.headline {
 .cd-hero-slider .move-left .cd-full-width p .cd-hero-slider .move-left .cd-full-width .cd-btn {
   opacity: 0;
   -webkit-transform: translateX(-100px);
+  -moz-transform: translateX(-100px);
+  -ms-transform: translateX(-100px);
+  -o-transform: translateX(-100px);
   transform: translateX(-100px);
 }
 @media only screen and (min-width: 768px) {
   .cd-hero-slider .move-left .cd-full-width .cd-btn {
     opacity: 0;
     -webkit-transform: translateX(-100px);
+    -moz-transform: translateX(-100px);
+    -ms-transform: translateX(-100px);
+    -o-transform: translateX(-100px);
     transform: translateX(-100px);
   }
 }
@@ -1303,23 +1442,39 @@ h6.headline {
 .cd-hero-slider .selected .cd-full-width p .cd-hero-slider .selected .cd-full-width .cd-btn {
   opacity: 1;
   -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
   transform: translateX(0);
 }
 @media only screen and (min-width: 768px) {
   .cd-hero-slider .selected .cd-full-width .cd-btn {
     opacity: 1;
     -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
     transform: translateX(0);
   }
 }
 .cd-hero-slider li.is-moving .cd-full-width h2 .cd-hero-slider li.is-moving .cd-full-width .cd-btn,
 .cd-hero-slider li.is-moving .cd-full-width p .cd-hero-slider li.is-moving .cd-full-width .cd-btn {
-  transition: opacity 0s 0.5s, -webkit-transform 0s 0.5s;
+  -webkit-transition: opacity 0s 0.5s, -webkit-transform 0s 0.5s;
+  -moz-transition: opacity 0s 0.5s, -moz-transform 0s 0.5s;
+  -webkit-transition: opacity 0s 0.5s, transform 0s 0.5s;
+  -moz-transition: opacity 0s 0.5s, transform 0s 0.5s;
+  -ms-transition: opacity 0s 0.5s, transform 0s 0.5s;
+  -o-transition: opacity 0s 0.5s, transform 0s 0.5s;
   transition: opacity 0s 0.5s, transform 0s 0.5s;
 }
 @media only screen and (min-width: 768px) {
   .cd-hero-slider li.is-moving .cd-full-width .cd-btn {
-    transition: opacity 0s 0.5s, -webkit-transform 0s 0.5s;
+    -webkit-transition: opacity 0s 0.5s, -webkit-transform 0s 0.5s;
+    -moz-transition: opacity 0s 0.5s, -moz-transform 0s 0.5s;
+    -webkit-transition: opacity 0s 0.5s, transform 0s 0.5s;
+    -moz-transition: opacity 0s 0.5s, transform 0s 0.5s;
+    -ms-transition: opacity 0s 0.5s, transform 0s 0.5s;
+    -o-transition: opacity 0s 0.5s, transform 0s 0.5s;
     transition: opacity 0s 0.5s, transform 0s 0.5s;
   }
 }
@@ -1378,6 +1533,10 @@ h6.headline {
 .cd-slider-nav li {
   display: inline-block;
   opacity: 0.5;
+  -webkit-transition: opacity 0.15s;
+  -moz-transition: opacity 0.15s;
+  -ms-transition: opacity 0.15s;
+  -o-transition: opacity 0.15s;
   transition: opacity 0.15s;
   margin: 0 10px;
 }
@@ -1418,8 +1577,7 @@ h6.headline {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 .hero-slider-content .slider-top-description {
   color: #fff;

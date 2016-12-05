@@ -8,8 +8,7 @@ var imagesLength = images.length
 var substrateLiLength = $substrateImages.find('li').length
 
 $substrateImages.find('li').each(function (i, el) {
-	var randomNumber = Math.floor(Math.random() * imagesLength)
-	console.log(randomNumber);
+	var randomNumber = Math.floor(Math.random() * imagesLength);
 
 	$(el).css({
 		'background-image': 'url(' + images[randomNumber] + ')'
@@ -24,7 +23,10 @@ setInterval(function () {
 		'background-image': 'url(' + images[randomNumber] + ')'
 	})
 
-}, 2000)
+}, 2000);
+
+var emoji = ['emoji-kiss', 'emoji-laugh', 'emoji-wink', 'emoji-kiss2', 'emoji-laugh2', 'emoji-laugh3']
+$('.site-logo .emoji').addClass(emoji[Math.floor(Math.random() * 6)])
 
 
 
