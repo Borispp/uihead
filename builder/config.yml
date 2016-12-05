@@ -7,6 +7,8 @@ paths:
       main: "../src/assets/styles/main.styl"
       path: "../src/assets/styles"
 
+    iconfont: "../src/assets/iconfont/*.svg"
+
     sprites:
       images:
         all: "../src/assets/images/design/sprite/*"
@@ -47,6 +49,9 @@ paths:
       path: "../built/assets/styles"
       svg:
         path: "../../styles/svg.css"
+
+    iconfont:
+      font: "../built/assets/fonts/iconfont/"
 
     scripts:
       all: "../built/assets/scripts/**/*.js"

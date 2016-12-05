@@ -16,6 +16,7 @@
   "dependencies": {
     "jquery": "~2.2.4",
     "select2": "select2/select2#~4.0.0",
-    "bxslider-4": "stevenwanderski/bxslider-4#~4.2.5"
+    "bxslider-4": "stevenwanderski/bxslider-4#~4.2.5",
+    "hero-slider": "CodyHouse/hero-slider"
   }
 }
