@@ -3,6 +3,9 @@
   font-size 20px
   transition color 0.15s
 
+  &.-shadow
+    box-shadow 2px 2px 9px rgba(0,0,0,.15)
+
   &.-rounded
     display inline-block
     width 38px
@@ -11,7 +14,12 @@
     position relative
     transition color 0.15s linear, background 0.15s linear
 
+    &.-large
+      width 46px
+      height 46px
+
     &:before
+      content ''
       position absolute
       top 50%
       left 50%
@@ -61,3 +69,6 @@
 
 .icon-bag:before
   content "\EA09"
+
+.icon-hot:before
+  sprite($s-hot)

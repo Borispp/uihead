@@ -15,21 +15,66 @@
 h1, h2, h3, h4, h5, h6
   font-family Poppins
   font-weight 600
+  letter-spacing -2px
 
 h1.headline
   font-size 48px
+  line-height 60px
 
 h2.headline
   font-size 36px
+  line-height 48px
+  padding-bottom 16px
 
 h3.headline
   font-size 24px
+  line-height 30px
 
 h4.headline
   font-size 18px
+  line-height 24px
 
 h5.headline
   font-size 16px
+  line-height 18px
 
 h6.headline
   font-size 14px
+  line-height 16px
+
+.headline
+  .icon
+    margin-left 10px
+    position relative
+    top 10px
+
+.headline-big
+  font-family 'Poppins'
+  font-size 72px
+  font-weight 600
+  letter-spacing -4px
+
+.headline-description
+  color $gray-text
+  font-size 20px
+  font-weight 300 // In mockup 400. ?
+  line-height 30px
+  padding-bottom 14px
+
+  &.-small
+    font-size 16px
+    line-height 24px
+    letter-spacing 0
+
+.headline-author
+  font-size 16px
+
+  a
+    font-family 'Playfair Display'
+    font-style italic
+    text-decoration none
+    border-bottom 1px solid $black
+    transition color .15s
+
+    &:hover
+      border-bottom none

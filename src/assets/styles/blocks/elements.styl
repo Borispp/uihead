@@ -48,7 +48,12 @@
 
   &.-large
     font-size 18px
-    padding 21px 30px
+    padding 21px 32px
+    border-radius 36px
+
+  &.-big
+    font-size 18px
+    padding 21px 43px
     border-radius 36px
 
 
@@ -70,16 +75,23 @@
 
   &.-green
     background $green
-    border 1px solid $green
+    border 1px solid transparent
     color $white
 
     &:hover
       background $green-darker
-      border-color $green-darker
 
     &:active
       background $green-dark
-      border-color $green-dark
+
+  &.-blue
+    background $blue
+    border 1px solid transparent
+    color $white
+
+    &:hover
+      background $blue-darker
+
 
   &.-black
     background $black
@@ -108,6 +120,9 @@
 
     &:hover
       background $white-opacity
+
+  &.-text-blue
+    color $blue
 
   &.-white-shadow
     background $white
@@ -177,24 +192,29 @@
 .link-underline
   position relative
   display inline-block
+  padding-right 2px
   vertical-align middle
   overflow hidden
   text-decoration none
   color $green
+  transition color .15s
 
   &:after
     content ""
     position absolute
-    bottom 6px
+    bottom 2px
     left 0
     width 100%
     height 5px
-    background $green
+    background $green-darker
     transform translate(-101%, 0)
     transition transform 0.25s
 
-  &:hover:after
-    transform translate(0, 0)
+  &:hover
+    color $green-darker
+    &:after
+      transform translate(0, 0)
+
 
 .link
   display inline-block
