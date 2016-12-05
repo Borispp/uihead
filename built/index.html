@@ -2,13 +2,10 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <meta charset="UTF-8">
-  <title>UI Head</title>
+  <title>UI Head: Index</title>
   <link href="assets/libs/select2/dist/css/select2.min.css" rel="stylesheet" />
   <link type="text/css" rel="stylesheet" href="assets/libs/bxslider-4/dist/jquery.bxslider.min.css"/>
   <link href="assets/styles/main.css" rel="stylesheet" type="text/css">
-
-  <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700|Open+Sans:300,400,400i,600,700&amp;subset=cyrillic" rel="stylesheet">
-
 
   <link rel="icon" href="assets/images/content/favicon.png" type="image/x-icon" />
 
@@ -16,7 +13,71 @@
 <body>
 
   <div class="wrapper">
+    <header class="cd-header header-main">
+      <a href="#" class="site-logo">
+        <span class="emoji emoji-kiss2"></span>
+        <span class="logo-img"></span>
+      </a>
 
+      <ul class="header-main-menu">
+        <li class="catalog"><a href="#">Catalog</a></li>
+        <li class="subscription"><a href="#">Subscription</a></li>
+        <li class="deal"><a href="#">Deal</a></li>
+        <li class="blog"><a href="#">Blog</a></li>
+      </ul>
+
+      <div class="header-main-controls">
+        <a href="#" class="icon icon-bag -rounded -white-opacity"></a>
+        <a href="#" class="btn -default -white-opacity -uppercase">Login</a>
+      </div>
+  	</header>
+
+  	<section class="cd-hero">
+  		<ul class="cd-hero-slider autoplay">
+  			<li class="selected" style="background-image: url('./assets/images/content/header-1.jpg')">
+  				<div class="cd-full-width">
+  					<h2>Hero slider</h2>
+  					<p>A simple, responsive slideshow in CSS &amp; jQuery.</p>
+  					<a href="http://codyhouse.co/?p=675" class="cd-btn btn -green -large">Article &amp; Download</a>
+  				</div> <!-- .cd-full-width -->
+  			</li>
+
+  			<li>
+  				<div class="cd-half-width">
+  					<h2>Slide title here</h2>
+  					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In consequatur cumque natus!</p>
+  					<a href="#0" class="cd-btn">Start</a>
+  					<a href="#0" class="cd-btn secondary">Learn More</a>
+  				</div> <!-- .cd-half-width -->
+
+  				<div class="cd-half-width cd-img-container">
+  					<img src="assets/images/content/logo.png" alt="tech 1">
+  				</div> <!-- .cd-half-width.cd-img-container -->
+  			</li>
+
+  			<li class="cd-bg-video">
+  				<div class="cd-full-width">
+  					<h2>Slide title here</h2>
+  					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, explicabo.</p>
+  					<a href="#0" class="cd-btn btn -green -large">Learn more</a>
+  				</div> <!-- .cd-full-width -->
+
+  				<div class="cd-bg-video-wrapper" data-video="https://0.s3.envato.com/h264-video-previews/5aa5b210-6c16-488c-8e84-a9d5b477ae63/18910273">
+  					<!-- video element will be loaded using jQuery -->
+  				</div> <!-- .cd-bg-video-wrapper -->
+  			</li>
+  		</ul> <!-- .cd-hero-slider -->
+
+  		<div class="cd-slider-nav">
+  			<nav>
+  				<ul>
+  					<li class="selected"><a href="#0"></a></li>
+  					<li><a href="#0"></a></li>
+  					<li><a href="#0"></a></li>
+  				</ul>
+  			</nav>
+  		</div> <!-- .cd-slider-nav -->
+  	</section> <!-- .cd-hero -->
   </div>
 
   <div id="overlay" class="-hide"></div>
@@ -24,6 +85,7 @@
   <script src="assets/libs/jquery/dist/jquery.min.js"></script>
 	<script src="assets/libs/select2/dist/js/select2.min.js"></script>
 	<script src="assets/libs/bxslider-4/dist/jquery.bxslider.min.js"></script>
+	<script src="assets/libs/hero-slider/js/main.js"></script>
   <script src="assets/scripts/main.js"></script>
 </body>
 </html>

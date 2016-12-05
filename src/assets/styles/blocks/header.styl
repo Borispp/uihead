@@ -1,0 +1,98 @@
+.header-main
+  padding 30px
+  box-sizing border-box
+  clearfix()
+
+.site-logo
+  float left
+  text-decoration none
+
+  .logo-img
+    display inline-block
+    sprite($s-logo)
+
+  .emoji
+    position relative
+    top -3px
+    margin-right 8px
+    transform scale(.9)
+
+  .logo-img,
+  .emoji
+    vertical-align top
+
+.header-main-menu
+  position absolute
+  left 50%
+  transform translate(-50%, 0)
+
+  li
+    display inline-block
+    margin 0 9px
+
+  a
+    color $white
+    font-size 18px
+    text-decoration none
+    transition color .15s
+
+    &:hover
+      color $green-darker
+
+      &:before
+        color $green-darker
+
+    &:active
+      color $green-dark
+
+      &:before
+        color $green-dark
+
+
+    &:before
+      font-family 'iconfont'
+      position relative
+      display inline-block
+      vertical-align top
+      margin-right 8px
+      margin-top -5px
+      font-size 22px
+      color $gray-text
+      transition color .15s
+
+  .catalog a:before
+    content "\EA01"
+
+  .subscription a:before
+    content "\EA02"
+    margin-top -6px
+
+  .deal a:before
+    content "\EA07"
+    margin-top -3px
+
+  .blog a:before
+    content "\EA08"
+
+.header-main-controls
+  float right
+  margin-top -2px
+
+  a
+    vertical-align top
+
+  .icon-bag,
+  .btn
+    margin-left 6px
+
+  // HACK
+  .icon-bag
+
+    &:before
+      content ""
+      position absolute
+      margin-top -1px
+      display block
+      background url('../images/content/bag.png')
+      width 18px
+      height 21px

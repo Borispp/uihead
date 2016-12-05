@@ -1,0 +1,359 @@
+.cd-hero
+  position relative
+  -webkit-font-smoothing antialiased
+  -moz-osx-font-smoothing grayscale
+
+.cd-hero-slider
+  position relative
+  overflow hidden
+
+  li
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+    -webkit-transform translateX(100%)
+    -moz-transform translateX(100%)
+    -ms-transform translateX(100%)
+    -o-transform translateX(100%)
+    transform translateX(100%)
+    background-position center center
+    background-size cover
+    background-repeat no-repeat
+
+    &.selected
+      position relative
+      -webkit-transform translateX(0)
+      -moz-transform translateX(0)
+      -ms-transform translateX(0)
+      -o-transform translateX(0)
+      transform translateX(0)
+
+    &.move-left
+      -webkit-transform translateX(-100%)
+      -moz-transform translateX(-100%)
+      -ms-transform translateX(-100%)
+      -o-transform translateX(-100%)
+      transform translateX(-100%)
+
+  .cd-img-container
+      display none
+      img
+          position absolute
+          left 50%
+          top 50%
+          bottom auto
+          right auto
+          -webkit-transform translateX(-50%) translateY(-50%)
+          -moz-transform translateX(-50%) translateY(-50%)
+          -ms-transform translateX(-50%) translateY(-50%)
+          -o-transform translateX(-50%) translateY(-50%)
+          transform translateX(-50%) translateY(-50%)
+  .cd-bg-video-wrapper
+      display none
+      position absolute
+      top 0
+      left 0
+      width 100%
+      height 100%
+      overflow hidden
+      video
+          display block
+          min-height 100%
+          min-width 100%
+          max-width none
+          height auto
+          width auto
+          position absolute
+          left 50%
+          top 50%
+          bottom auto
+          right auto
+          -webkit-transform translateX(-50%) translateY(-50%)
+          -moz-transform translateX(-50%) translateY(-50%)
+          -ms-transform translateX(-50%) translateY(-50%)
+          -o-transform translateX(-50%) translateY(-50%)
+          transform translateX(-50%) translateY(-50%)
+
+.cd-hero-slider li.is-moving, .cd-hero-slider li.selected
+    -webkit-transition -webkit-transform 0.5s
+    -moz-transition -moz-transform 0.5s
+    transition transform 0.5s
+
+.cd-hero-slider .cd-full-width,
+.cd-hero-slider .cd-half-width
+    position absolute
+    width 100%
+    height 100%
+    z-index 1
+    left 0
+    top 0
+    padding-top 100px
+    text-align center
+    -webkit-backface-visibility hidden
+    backface-visibility hidden
+    -webkit-transform translateZ(0)
+    -moz-transform translateZ(0)
+    -ms-transform translateZ(0)
+    -o-transform translateZ(0)
+    transform translateZ(0)
+
+
+@media only screen and (min-width: 768px)
+    .cd-hero-slider
+        li
+            &:nth-of-type(2)
+                background-image none
+            &:nth-of-type(3)
+                background-image none
+            &:nth-of-type(4)
+                background-image none
+        .cd-bg-video-wrapper
+            display block
+        .cd-half-width
+            width 45%
+            &:first-of-type
+                left 5%
+            &:nth-of-type(2)
+                right 5%
+                left auto
+        .cd-img-container
+            display block
+
+.cd-hero-slider .cd-full-width
+  padding-top 150px
+
+@media only screen and (min-width: 768px)
+  .cd-hero-slider .cd-half-width
+    padding-top 150px
+
+
+.cd-hero-slider .cd-full-width
+  padding-top 220px
+
+@media only screen and (min-width: 1170px)
+  .cd-hero-slider .cd-half-width
+    padding-top 220px
+
+@media only screen and (min-width: 768px)
+    .cd-hero-slider
+        .cd-half-width
+            opacity 0
+            -webkit-transform translateX(40px)
+            -moz-transform translateX(40px)
+            -ms-transform translateX(40px)
+            -o-transform translateX(40px)
+            transform translateX(40px)
+        .move-left
+            .cd-half-width
+                -webkit-transform translateX(-40px)
+                -moz-transform translateX(-40px)
+                -ms-transform translateX(-40px)
+                -o-transform translateX(-40px)
+                transform translateX(-40px)
+        .selected
+            .cd-half-width
+                opacity 1
+                -webkit-transform translateX(0)
+                -moz-transform translateX(0)
+                -ms-transform translateX(0)
+                -o-transform translateX(0)
+                transform translateX(0)
+        .is-moving
+            .cd-half-width
+                -webkit-transition opacity 0s 0.5s, -webkit-transform 0s 0.5s
+                -moz-transition opacity 0s 0.5s, -moz-transform 0s 0.5s
+                transition opacity 0s 0.5s, transform 0s 0.5s
+        li
+            &.selected
+                h2
+                    -webkit-transition opacity 0.4s 0.2s, -webkit-transform 0.5s 0.2s
+                    -moz-transition opacity 0.4s 0.2s, -moz-transform 0.5s 0.2s
+                    transition opacity 0.4s 0.2s, transform 0.5s 0.2s
+                p
+                    -webkit-transition opacity 0.4s 0.3s, -webkit-transform 0.5s 0.3s
+                    -moz-transition opacity 0.4s 0.3s, -moz-transform 0.5s 0.3s
+                    transition opacity 0.4s 0.3s, transform 0.5s 0.3s
+                .cd-btn
+                    -webkit-transition opacity 0.4s 0.4s, -webkit-transform 0.5s 0.4s, background-color 0.2s 0s
+                    -moz-transition opacity 0.4s 0.4s, -moz-transform 0.5s 0.4s, background-color 0.2s 0s
+                    transition opacity 0.4s 0.4s, transform 0.5s 0.4s, background-color 0.2s 0s
+
+.cd-hero-slider li.selected.from-left .cd-half-width:nth-of-type(2),
+  .cd-hero-slider li.selected.from-right .cd-half-width:first-of-type
+    -webkit-transition opacity 0.4s 0.2s, -webkit-transform 0.5s 0.2s
+    -moz-transition opacity 0.4s 0.2s, -moz-transform 0.5s 0.2s
+    transition opacity 0.4s 0.2s, transform 0.5s 0.2s
+
+@media only screen and (min-width: 768px)
+  .cd-hero-slider li.selected.from-right .cd-half-width:first-of-type
+    -webkit-transition opacity 0.4s 0.2s, -webkit-transform 0.5s 0.2s
+    -moz-transition opacity 0.4s 0.2s, -moz-transform 0.5s 0.2s
+    transition opacity 0.4s 0.2s, transform 0.5s 0.2s
+
+.cd-hero-slider li.selected.from-left .cd-half-width:first-of-type,
+  .cd-hero-slider li.selected.from-right .cd-half-width:nth-of-type(2)
+    -webkit-transition opacity 0.4s 0.4s, -webkit-transform 0.5s 0.4s
+    -moz-transition opacity 0.4s 0.4s, -moz-transform 0.5s 0.4s
+    transition opacity 0.4s 0.4s, transform 0.5s 0.4s
+
+@media only screen and (min-width: 768px)
+  .cd-hero-slider li.selected.from-right .cd-half-width:nth-of-type(2)
+    -webkit-transition opacity 0.4s 0.4s, -webkit-transform 0.5s 0.4s
+    -moz-transition opacity 0.4s 0.4s, -moz-transform 0.5s 0.4s
+    transition opacity 0.4s 0.4s, transform 0.5s 0.4s
+
+.cd-hero-slider .cd-full-width h2,
+.cd-hero-slider .cd-full-width p
+  .cd-hero-slider .cd-full-width .cd-btn
+    opacity 0
+    -webkit-transform translateX(100px)
+    -moz-transform translateX(100px)
+    -ms-transform translateX(100px)
+    -o-transform translateX(100px)
+    transform translateX(100px)
+
+@media only screen and (min-width: 768px)
+  .cd-hero-slider .cd-full-width .cd-btn
+    opacity 0
+    -webkit-transform translateX(100px)
+    -moz-transform translateX(100px)
+    -ms-transform translateX(100px)
+    -o-transform translateX(100px)
+    transform translateX(100px)
+
+.cd-hero-slider .move-left .cd-full-width h2,
+.cd-hero-slider .move-left .cd-full-width p
+  .cd-hero-slider .move-left .cd-full-width .cd-btn
+    opacity 0
+    -webkit-transform translateX(-100px)
+    -moz-transform translateX(-100px)
+    -ms-transform translateX(-100px)
+    -o-transform translateX(-100px)
+    transform translateX(-100px)
+
+@media only screen and (min-width: 768px)
+  .cd-hero-slider .move-left .cd-full-width .cd-btn
+    opacity 0
+    -webkit-transform translateX(-100px)
+    -moz-transform translateX(-100px)
+    -ms-transform translateX(-100px)
+    -o-transform translateX(-100px)
+    transform translateX(-100px)
+
+.cd-hero-slider .selected .cd-full-width h2,
+.cd-hero-slider .selected .cd-full-width p
+  .cd-hero-slider .selected .cd-full-width .cd-btn
+    opacity 1
+    -webkit-transform translateX(0)
+    -moz-transform translateX(0)
+    -ms-transform translateX(0)
+    -o-transform translateX(0)
+    transform translateX(0)
+
+@media only screen and (min-width: 768px)
+  .cd-hero-slider .selected .cd-full-width .cd-btn
+    opacity 1
+    -webkit-transform translateX(0)
+    -moz-transform translateX(0)
+    -ms-transform translateX(0)
+    -o-transform translateX(0)
+    transform translateX(0)
+
+.cd-hero-slider li.is-moving .cd-full-width h2,
+.cd-hero-slider li.is-moving .cd-full-width p
+  .cd-hero-slider li.is-moving .cd-full-width .cd-btn
+    -webkit-transition opacity 0s 0.5s, -webkit-transform 0s 0.5s
+    -moz-transition opacity 0s 0.5s, -moz-transform 0s 0.5s
+    transition opacity 0s 0.5s, transform 0s 0.5s
+
+@media only screen and (min-width: 768px)
+  .cd-hero-slider li.is-moving .cd-full-width .cd-btn
+    -webkit-transition opacity 0s 0.5s, -webkit-transform 0s 0.5s
+    -moz-transition opacity 0s 0.5s, -moz-transform 0s 0.5s
+    transition opacity 0s 0.5s, transform 0s 0.5s
+
+.cd-main-content
+    width 90%
+    max-width 768px
+    margin 0 auto
+    padding 2em 0
+    p
+        font-size 1.4rem
+        line-height 1.8
+        color #999999
+        margin 2em 0
+
+@media only screen and (min-width: 1170px)
+    .cd-main-content
+        padding 3em 0
+        p
+            font-size 1.6rem
+
+.no-js
+    .cd-hero-slider
+        li
+            display none
+            &.selected
+                display block
+    .cd-slider-nav
+        display none
+
+
+// ==============================================
+// Slider overwrite
+// ==============================================
+.cd-hero-slider
+  height 100vh
+  max-height 800px
+
+.cd-hero
+  position relative
+
+.cd-header
+  position absolute
+  z-index 2
+  top 0
+  left 0
+  width 100%
+
+.cd-slider-nav
+  position absolute
+  width 100%
+  bottom 0
+  z-index 2
+  text-align center
+
+  li
+    display inline-block
+    opacity 0.5
+    transition opacity .15s
+
+    &:hover
+      opacity 0.7
+
+    &.selected
+      opacity 1
+
+  a
+    display inline-block
+    border-radius 50%
+    width 10px
+    height 10px
+    background $white
+
+.cd-hero-slider
+  li
+    background-color #666
+    background-size cover
+
+    &:before
+      content ''
+      display block
+      position absolute
+      top 0
+      left 0
+      width 100%
+      height 100%
+      background rgba(0,0,0,.75)

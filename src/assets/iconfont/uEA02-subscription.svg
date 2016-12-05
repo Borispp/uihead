@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="16" viewBox="0 0 24 16">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #2a2a2a;
+        fill-rule: evenodd;
+        filter: url(#filter);
+      }
+    </style>
+    <filter id="filter" x="1288" y="260" width="24" height="16" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#9b9b9b"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path id="icon" class="cls-1" d="M1296,272.645a3.519,3.519,0,0,1,1.88,1.36c0.36,0,12.12,0,12.12,0V262s-11.73,0-12.12-.006a3.524,3.524,0,0,1-1.88,1.36V263.5a1,1,0,0,1-2,0v-0.146a3.505,3.505,0,0,1-1.87-1.354H1290v12s1.73,0,2.13,0a3.5,3.5,0,0,1,1.87-1.354V272.5a1,1,0,0,1,2,0v0.146ZM1289,276a1,1,0,0,1-1-1V261a1,1,0,0,1,1-1h4a0.782,0.782,0,0,1,.67.475,1.374,1.374,0,0,0,2.66-.009A0.778,0.778,0,0,1,1297,260h14a1,1,0,0,1,1,1v14a1,1,0,0,1-1,1h-14a0.791,0.791,0,0,1-.68-0.466,1.36,1.36,0,0,0-2.64,0,0.781,0.781,0,0,1-.68.466h-4Zm5-9.5a1,1,0,1,1,1,1A1,1,0,0,1,1294,266.5Zm0,3a1,1,0,1,1,1,1A1,1,0,0,1,1294,269.5Zm5-4.5a1,1,0,0,1,1-1h7a1,1,0,0,1,0,2h-7A1,1,0,0,1,1299,265Zm0,3a1,1,0,0,1,1-1h5a1,1,0,0,1,0,2h-5A1,1,0,0,1,1299,268Zm0,3a1,1,0,0,1,1-1h5a1,1,0,0,1,0,2h-5A1,1,0,0,1,1299,271Z" transform="translate(-1288 -260)"/>
+</svg>

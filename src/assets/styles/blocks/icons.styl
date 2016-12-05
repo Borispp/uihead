@@ -1,0 +1,63 @@
+.icon
+  font-family 'iconfont'
+  font-size 20px
+  transition color 0.15s
+
+  &.-rounded
+    display inline-block
+    width 38px
+    height 38px
+    border-radius 50%
+    position relative
+    transition color 0.15s linear, background 0.15s linear
+
+    &:before
+      position absolute
+      top 50%
+      left 50%
+      transform translate(-50%, -50%)
+
+    &.-notification:after
+      content ""
+      position absolute
+      right 0
+      top 0
+      width 6px
+      height 6px
+      background $blue
+      border 3px solid $white
+      border-radius 50%
+
+    &.-green
+      background $green
+      color $white
+
+      &:hover
+        background $green-darker
+
+      &:active
+        background $green-dark
+
+    &.-gray
+      background $gray
+      color $gray-text
+
+    &.-white
+      background $white
+      color $green
+
+    &.-white-opacity
+      background rgba(255,255,255,.2)
+      color $white
+
+      &:hover
+        background $green-darker
+
+      &:active
+        background $green-dark
+
+.icon-menu:before
+  content "\EA03"
+
+.icon-bag:before
+  content "\EA09"
