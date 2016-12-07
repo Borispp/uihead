@@ -3,7 +3,9 @@
 // ==============================================
 
 .composition
-  width 500px
+  width 45%
+  max-width 500px
+  height 420px
   float left
   position relative
 
@@ -38,11 +40,21 @@
 
   &.-right
     float right
-    width 540px
+    width 49%
+    max-width 540px
+
+  &.-right-middle
+    float right
+    width 45%
+    max-width 500px
 
   &.-right-small
     float right
-    width 444px
+    width 41%
+    max-width 444px
+
+  &.-centered
+    text-align center
 
   &.-light
     .headline,
@@ -75,6 +87,23 @@
         color $white
         border-color $white
 
+.sub-headline
+  margin-bottom 16px
+
+  &.-top
+    margin -40px 0 46px
+
+.content-image
+  float left
+  width 47%
+  max-width 540px
+
+  img
+    width 100%
+    border 2px solid $white
+    border-radius 5px
+    box-shadow 3px 3px 8px rgba(0,0,0,.15)
+
 // ==============================================
 // Features
 // ==============================================
@@ -83,7 +112,7 @@
   color #fff
 
   .content
-    padding-top 33px
+    padding 33px 0
 
     .btn
       color inherit
@@ -118,10 +147,13 @@
   .headline-description
     margin-bottom 12px
 
-
-
 .features-image
   float left
+  width 55%
+  max-width 610px
+
+  img
+    width 100%
 
 
 // ==============================================
@@ -250,7 +282,6 @@
 // ==============================================
 
 .about-list
-  margin 108px 0
   font-size 0
 
   li
@@ -285,3 +316,60 @@
     sprite($s-mark)
   .diamond .pic:before
     sprite($s-diamond)
+
+// ==============================================
+// Purchase
+// ==============================================
+
+.purchase
+  padding-top 12px
+
+  .purchase-currency,
+  .purchase-price,
+  .purchase-old-price
+    display inline-block
+    vertical-align middle
+
+  .purchase-currency
+    font-size 15px
+    font-weight 600
+    margin-top -26px
+
+  .purchase-price
+    font 600 50px 'Poppins'
+    margin 0 8px 0 6px
+
+  .purchase-old-price
+    font 600 27px 'Poppins'
+    margin -18px 30px 0 0
+    letter-spacing -2px
+    position relative
+
+    &:before
+      content ''
+      width calc(100% + 4px)
+      height 3px
+      position absolute
+      left -2px
+      top calc(50% - 3px)
+      background $white
+
+@media (max-width 1160px)
+  .content-image
+    width 45%
+    padding-left 16px
+
+  .content.-right-middle
+    padding-right 16px
+
+@media (max-width 1100px)
+  .features
+    .content
+      padding 10px 0 30px
+
+    .headline-description
+      margin -8px 0 8px
+
+@media (max-width 920px)
+  .section.-default .content-image + .content
+    padding-top 20px

@@ -1,0 +1,124 @@
+.subscription-signup
+  position relative
+  background-image url('../images/content/hands.jpg')
+  background-size cover
+  color $white
+  text-align center
+
+  &:before
+    content ''
+    display block
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+    background rgba(0,0,0,.25)
+
+  .base-col
+    position relative
+    z-index 1
+
+
+  .headline
+    margin-bottom 30px
+
+  .subscription-input
+    width 100%
+    max-width 460px
+    padding 14px 0
+    box-sizing border-box
+    text-align center
+    font-size 18px
+    color rgba(255,255,255,.9)
+    border 2px solid rgba(255,255,255,.3)
+    border-radius 4px
+    background rgba(255,255,255,.05)
+    transition border-color 0.2s linear, background 0.2s linear
+
+    +placeholder()
+      color rgba(255,255,255,.5)
+
+    &:focus
+      border-color rgba(255,255,255,.7)
+      background rgba(255,255,255,.1)
+
+      +placeholder()
+        text-indent -800px
+
+  .subscription-submit
+    width 100%
+    max-width 460px
+    font-size 18px
+    font-weight 500
+    padding 21px 0
+    margin-top -4px
+    border-radius 0
+    border-bottom-left-radius 4px
+    border-bottom-right-radius 4px
+
+.footer-info
+  background $black
+  padding 71px 0
+
+  .site-logo
+    display inline-block
+    float none
+    margin 3px 24px 0 0
+
+  .site-logo,
+  .icon-sprite
+    display inline-block
+    vertical-align middle
+
+  .icon-sprite
+    margin 0 3px
+
+.site-social
+  text-align center
+
+.footer-menu
+  text-align center
+  padding 42px 0 36px
+
+  .footer-menu-item
+    display inline-block
+    padding 0 12px
+
+  a
+    color $white
+    font 500 16px 'Poppins'
+    text-decoration none
+    text-transform uppercase
+
+    &:after
+      height 1px
+
+    &:hover
+      color $green-darker
+
+    &:active
+      color $green-dark
+
+.footer-copyright
+  font-size 15px
+  color rgba(255,255,255,0.5)
+  line-height 28px
+  text-align center
+
+  a
+    color rgba(255,255,255,0.5)
+
+    &:hover
+      color $green-darker
+
+    &:active
+      color $green-dark
+
+@media (max-width 920px)
+  .footer-menu
+    a
+      font-size 14px
+
+    .footer-menu-item
+      padding 0 8px

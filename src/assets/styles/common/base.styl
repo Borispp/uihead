@@ -32,3 +32,34 @@ body, input, textarea
 
 input[type="search"]
   -webkit-appearance textfield
+
+.-res-min-full,
+.-res-min-920,
+.-res-min-820
+  display block !important
+
+.-res-max-1100,
+.-res-max-920,
+.-res-max-820
+  display none !important
+
+@media(max-width 1100px)
+  .-res-min-full
+    display none !important
+
+  .-res-max-1100
+    display block !important
+
+@media(max-width 920px)
+  .-res-min-920
+    display none !important
+
+  .-res-max-920
+    display block !important
+
+@media(max-width 820px)
+  .-res-min-820
+    display none !important
+
+  .-res-max-820
+    display block !important

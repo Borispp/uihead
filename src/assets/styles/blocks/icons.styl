@@ -19,7 +19,6 @@
       height 46px
 
     &:before
-      content ''
       position absolute
       top 50%
       left 50%
@@ -54,6 +53,11 @@
       background $white
       color $green
 
+      &:hover,
+      &:active
+        background $green-darker
+        color $white
+
     &.-white-opacity
       background rgba(255,255,255,.2)
       color $white
@@ -64,11 +68,45 @@
       &:active
         background $green-dark
 
-.icon-menu:before
-  content "\EA03"
+  &.icon-menu:before
+    content "\EA0B"
+    font-size 11px
 
-.icon-bag:before
-  content "\EA09"
+  &.icon-bag:before
+    content "\EA0A"
 
-.icon-hot:before
-  sprite($s-hot)
+  &.icon-login:before
+    content "\EA0C"
+
+  &.icon-hot:before
+    content ''
+    sprite($s-hot)
+
+  &.icon-close
+    transform rotate(0)
+    transition transform 0.2s
+
+    &:before
+      font-size 11px
+      color #000
+      content "\EA0D"
+
+    &:hover
+      transform rotate(90deg)
+      background rgba(255,255,255,.8) !important
+
+// ==============================================
+// Icons from sprite
+// ==============================================
+
+.icon-sprite
+  display inline-block
+
+  &.facebook
+    sprite($s-fb)
+
+  &.twitter
+    sprite($s-twitter)
+
+  &.google-plus
+    sprite($s-google)

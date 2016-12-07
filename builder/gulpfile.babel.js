@@ -30,8 +30,9 @@ gulp.task('iconfont', function(){
     .pipe(iconfont({
       fontName: 'iconfont', // required
       prependUnicode: true, // recommended option
-      formats: ['ttf', 'eot', 'woff', 'woff2'], // default, 'woff2' and 'svg' are available
-      timestamp: runTimestamp, // recommended to get consistent builds when watching files
+      formats: ['ttf', 'eot', 'woff', 'woff2', 'svg'],
+      normalize: true,
+      timestamp: runTimestamp // recommended to get consistent builds when watching files
     }))
       .on('glyphs', function(glyphs, options) {
         // CSS templating, e.g.

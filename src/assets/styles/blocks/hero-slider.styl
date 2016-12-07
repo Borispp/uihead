@@ -352,10 +352,12 @@
 .hero-slider-content
   width 100%
   max-width 900px
+  padding 0 30px
   position absolute
   top 50%
   left 50%
   transform translate(-50%, -50%)
+  box-sizing border-box
 
   .slider-top-description
     color $white
@@ -389,3 +391,36 @@
     font-weight 500
     color $white
     opacity 0.5
+
+@media (max-width 1160px)
+  .cd-half-width .hero-slider-content
+    .slider-headline
+      font-size 42px
+      line-height 54px
+      margin 20px 0
+
+    .slider-description
+      font-size 18px
+      line-height 24px
+
+@media (max-width 1000px)
+  .hero-slider-content
+    .slider-headline
+      font-size 50px
+      line-height 60px
+      margin 20px 0
+
+    .slider-description
+      font-size 20px
+
+      br
+        display inline-block
+
+  .cd-half-width
+    .hero-slider-content
+      .slider-headline
+        font-size 36px
+        line-height 48px
+
+    &.cd-img-container
+      right -3% !important

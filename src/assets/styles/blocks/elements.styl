@@ -108,7 +108,7 @@
     color $white
 
     &:hover
-      background rgba(0,0,0,.81)
+      background rgba(0,0,0,.75)
 
     &:active
       background rgba(0,0,0,.91)
@@ -188,6 +188,8 @@
 // ==============================================
 // Links style
 // ==============================================
+a
+  transition color .15s linear
 
 .link-underline
   position relative
@@ -215,6 +217,11 @@
     &:after
       transform translate(0, 0)
 
+  &:active
+    color $green-dark
+    &:after
+      background $green-dark
+      transform translate(0, 0)
 
 .link
   display inline-block
@@ -239,8 +246,8 @@
   &.link-arrow
     &:after
       font-family 'iconfont'
-      content "\EA04"
-      font-size 20px
+      content "\EA02"
+      font-size 9px
       display inline-block
       padding-left 12px
       padding-right 2px
@@ -303,6 +310,17 @@
       top -2px
       padding-left 6px
 
+// ==============================================
+// Inputs
+// ==============================================
+input[type="text"]
+  +placeholder()
+    text-indent 0
+    transition text-indent 0.3s linear
+
+  &:focus
+    +placeholder()
+      text-indent -400px
 
 // ==============================================
 // Keyframes

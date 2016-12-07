@@ -3,8 +3,10 @@
 
 .base-col
   width 100%
-  max-width 1100px
+  max-width 1160px
+  padding 0 30px
   margin 0 auto
+  box-sizing border-box
 
 // ==============================================
 // Common wrapper (dev styles)
@@ -19,6 +21,16 @@
   &.-with-composition
     .content
       margin-top 94px
+
+  &.-default
+    padding 100px 0
+
+    .content-image + .content
+      padding-top 40px
+
+  &.-green
+    background $green
+    color $white
 
 // ==============================================
 // Common wrapper (dev styles)
@@ -55,3 +67,65 @@
     background $gray
     margin 20px -20px 20px
     padding 1px 20px 20px
+
+
+@media (max-width 1160px)
+  .section.-with-composition
+    padding 70px 0 90px
+
+    .base-col
+      width 1130px
+      float right
+
+    .content.-right
+      width 45%
+      padding-right 36px
+
+    .composition
+      transform scale(0.95)
+
+  .section.-default
+    padding 90px 0
+
+@media (max-width 1000px)
+  .section.-with-composition
+    padding 45px 0 65px
+
+    .base-col
+      width 1050px
+      float right
+
+    .content.-right
+      width 40%
+
+    .composition
+      transform scale(0.83)
+
+@media (max-width 920px)
+  .section.-with-composition
+    padding 40px 0 60px
+
+    .base-col
+      width 950px
+      float right
+
+    .content.-right
+      width 38%
+
+    .composition
+      transform scale(0.8)
+
+@media (max-width 850px)
+  .section.-with-composition
+    padding 30px 0 50px
+
+    .base-col
+      width 880px
+      float right
+
+    .content.-right
+      width 37%
+      padding-right 24px
+
+    .composition
+      transform scale(0.75)
