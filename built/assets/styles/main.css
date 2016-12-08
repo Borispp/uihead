@@ -154,6 +154,10 @@ textarea {
   width: 100vw;
   height: 100vh;
 }
+.-popup-active .wrapper {
+  overflow: hidden;
+  height: 100vh;
+}
 #overlay {
   background: rgba(0,0,0,0.7);
   position: fixed;
