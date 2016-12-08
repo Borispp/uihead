@@ -172,6 +172,8 @@ input[type="search"] {
   -webkit-appearance: textfield;
 }
 input[type='submit'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
 }
 .-res-min-full,
@@ -2084,7 +2086,7 @@ input[type="text"]:focus:-ms-input-placeholder {
   display: none;
 }
 .cd-hero-slider {
-  height: 100vh;
+  height: 100%;
   min-height: 700px;
   max-height: 900px;
 }
