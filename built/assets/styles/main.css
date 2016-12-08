@@ -171,6 +171,9 @@ textarea {
 input[type="search"] {
   -webkit-appearance: textfield;
 }
+input[type='submit'] {
+  appearance: none;
+}
 .-res-min-full,
 .-res-min-1000,
 .-res-min-920,
