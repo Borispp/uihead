@@ -149,6 +149,7 @@ textarea {
   outline: none;
 }
 .-popup-active {
+  position: relative;
   overflow: hidden;
   width: 100vw;
   height: 100vh;
