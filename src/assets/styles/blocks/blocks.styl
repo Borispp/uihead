@@ -121,6 +121,8 @@
     margin -24px 0 20px
 
   .price
+    position relative
+    z-index 2
     font-size 20px
     font-weight 600
     margin-bottom -2px
@@ -143,6 +145,17 @@
         position absolute
         top calc(50% - 2px)
         left -2px
+
+    &.btn.-rounded
+      cursor default
+      color $black
+      font-size 22px
+      font-weight 500
+
+      &:hover
+        background $white
+      &:active
+        top 0
 
   .headline-description
     margin-bottom 12px
@@ -226,9 +239,10 @@
   .subscription-buyer
     width 174px
     text-align left
+    p
 
   .subscription-price
-    margin 0 26px
+    margin 5px 26px 4px
     font-weight 600
     position relative
     top 2px
@@ -370,6 +384,205 @@
     .headline-description
       margin -8px 0 8px
 
+@media (max-width 1000px)
+  .features
+    text-align center
+    position relative
+
+    &:before
+      content ''
+      position absolute
+      left 0
+      top 0
+      width 100%
+      height 100%
+      background rgba(0,0,0,.8)
+      opacity 0
+      transition opacity 0.2s
+
+    .features-image
+      float none
+      margin 0 auto !important
+      width 100%
+
+    .price.btn.-rounded
+      position absolute
+      right 30px
+      top 30px
+
+    .headline-description
+      display none
+
+    h2.headline
+      font-size 36px
+      padding-bottom 20px
+
+      .icon
+        display none
+
+    .content
+      position absolute
+      top 50%
+      left 50%
+      padding 0
+      transform translate(-50%, -50%)
+      box-sizing border-box
+      opacity 0
+      transition opacity 0.2s
+
+      .headline-author
+        margin-bottom 32px
+
+      &.-light
+        .headline,
+        .headline-author,
+        .headline-description,
+        a
+          color $white
+
+        .headline-author a
+          border-bottom-color $white
+
+      .btn
+        background $white
+        color $black !important
+        border-color $white
+
+        &:hover
+          background rgba(255,255,255,.9)
+
+        &:active
+          background rgba(255,255,255,.8)
+
+    &:hover
+      &:before
+        opacity 1
+
+      .content
+        opacity 1
+
+  .section-subscription
+    padding 40px 0 80px
+
+    .subscription-name
+      margin-bottom 56px
+
+    h2.headline
+      font-size 36px
+      line-height 48px
+      letter-spacing -2px
+      padding-bottom 8px
+
+  .about-list
+    .pic
+      height 70px
+
+    h2
+      font-size 20px
+      line-height 30px
+
+    p
+      font-size 14px
+      line-height 22px
+
 @media (max-width 920px)
   .section.-default .content-image + .content
     padding-top 20px
+
+@media (max-width 700px)
+  .base-col
+    width 100%
+    padding 0 16px
+
+  .section
+    &.-with-composition
+
+      .base-col
+        width 100%
+
+      .composition
+        transform scale(.62)
+        margin -62px auto -18px
+        position relative
+        left -72px
+        float none
+        width 295px
+
+      h2.headline
+        font-size 22px
+        line-height 30px
+
+    .content
+      float none !important
+      width 100% !important
+      margin-top 0 !important
+
+      &.-mobile-centered
+        text-align center
+
+    &.-default
+      padding 60px 0
+
+  .features
+    .content
+      opacity 0 !important
+
+    .price.btn.-rounded
+      display none !important
+
+  .section-subscription
+
+    .subscription-name
+      font-size 16px
+      line-height 24px
+      letter-spacing 5px
+      margin 8px 0 36px
+
+    h2.headline
+      font-size 30px
+      line-height 38px
+      letter-spacing -1px
+      padding-bottom 2px
+
+  .about-list
+    li
+      width 100%
+      box-sizing border-box
+      margin 0 0 36px
+
+      &:last-child
+        margin-bottom 0
+
+    .pic
+      height 80px
+
+    h2
+      font-size 24px
+
+    p
+      font-size 16px
+      line-height 26px
+
+  .sub-headline.-top
+    font-size 14px
+    margin -20px 0 32px
+
+  .content-image
+    float none
+    width calc(100% - 4px)
+    max-width 100%
+    padding-left 0
+    margin 0 6px 15px 0
+
+  .purchase
+    padding-top 0
+
+    .purchase-currency
+      margin-left 30px
+
+  .subscription-signup
+    padding 46px 0 58px !important
+
+    h2.headline
+      padding-bottom 0
+      margin-bottom 28px

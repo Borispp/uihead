@@ -1,6 +1,54 @@
+// ==============================================
+// Init common plugins
+// ==============================================
+
 $('.select2').select2({
 	minimumResultsForSearch: -1
 });
+
+// ==============================================
+// Elements
+// ==============================================
+var $elements = {
+	body: $('body'),
+	show: $('[data-show]'),
+	close: $('[data-close]')
+}
+
+// ==============================================
+// Open popups or menu
+// ==============================================
+
+var showElement = {
+
+	bindUIActions: function () {
+		var _this = this;
+		$elements.show.on('click', function (e) {
+			_this.show.call(this, e)
+		});
+		$elements.close.on('click', function (e) {
+			_this.hide.call(this, e)
+		})
+	},
+
+	show: function(e) {
+		e.preventDefault()
+		$($(this).data('show')).removeClass('-hide')
+		$elements.body.addClass('-popup-active')
+	},
+
+	hide: function (e) {
+		e.preventDefault()
+		$($(this).data('close')).addClass('-hide')
+		$elements.body.removeClass('-popup-active')
+	}
+};
+
+showElement.bindUIActions()
+
+// ==============================================
+// Subscription images
+// ==============================================
 
 var $substrateImages = $('.substrate-images');
 var images = $substrateImages.data('images').split(',')
@@ -27,44 +75,3 @@ setInterval(function () {
 
 var emoji = ['emoji-kiss', 'emoji-laugh', 'emoji-wink', 'emoji-kiss2', 'emoji-laugh2', 'emoji-laugh3']
 $('.site-logo .emoji').addClass(emoji[Math.floor(Math.random() * 6)])
-
-
-
-var utils = (function ($) {
-	"use strict";
-
-	// var $elements = {
-	// 	body: $('body'),
-	// 	close: $('#overlay, .close')
-	// }
-	//
-	// var scrollToHeadline = function (target) {
-	// 	var y = 0;
-	//
-	// 	if(target && $(target).length) {
-	// 		y = $(target).offset().top;
-	// 		$('body').animate({ scrollTop: y }, 500, 'swing')
-	// 	}
-	// }
-	//
-	// return {
-	// 	$elements: $elements,
-	// 	scrollToHeadline: scrollToHeadline
-	// }
-
-})(jQuery);
-
-(function ($, utils) {
-	"use strict";
-
-	// utils.$elements.close.on('click', function () {
-	// 	utils.imagePopup.close()
-	// });
-
-	// Scroll in menu
-	// utils.$elements.summaryList.find('a').on('click', function (e) {
-	// 	e.preventDefault();
-	// 	utils.scrollToHeadline($(this).attr('href'));
-	// });
-
-})(jQuery, utils);

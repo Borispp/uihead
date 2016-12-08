@@ -405,13 +405,18 @@
 
 @media (max-width 1000px)
   .hero-slider-content
+    .br
+      display none
+
     .slider-headline
       font-size 50px
-      line-height 60px
-      margin 20px 0
+      letter-spacing -3px
+      line-height 54px
+      margin 30px 0 20px
 
     .slider-description
       font-size 20px
+      margin-bottom 40px
 
       br
         display inline-block
@@ -424,3 +429,28 @@
 
     &.cd-img-container
       right -3% !important
+
+@media(max-width 700px)
+
+  .cd-hero-slider
+    min-height 570px
+
+  .hero-slider-content
+    padding 0 16px
+
+    .slider-top-description
+      font-size 16px
+
+    .slider-headline
+      font-size 28px !important
+      line-height 38px !important
+      letter-spacing -1px !important
+      margin 12px 0 16px !important
+
+    .slider-description
+      font-size 16px
+      line-height 26px
+      letter-spacing -1px
+      padding 0 18px
+      margin-bottom 28px
+      box-sizing border-box

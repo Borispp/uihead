@@ -30,13 +30,19 @@
         <a href="#" class="icon icon-bag -rounded -white-opacity"></a>
         <a href="#" class="icon icon-login -rounded -white-opacity -res-max-920"></a>
         <a href="#" class="btn -default -white-opacity -uppercase -res-min-920">Login</a>
-        <a href="#" class="icon icon-menu -rounded -white -res-max-820"></a>
+        <a href="#" data-show=".mobile-menu" class="icon icon-menu -rounded -white -res-max-820"></a>
       </div>
   	</header>
 
-    <!-- <div class="mobile-menu">
-      <a href="#" class="icon icon-close -rounded -white"></a>
-    </div> -->
+    <div class="mobile-menu -hide">
+      <a href="#" data-close=".mobile-menu" class="icon icon-close -rounded -white"></a>
+      <ul class="mobile-menu-links">
+        <li><a href="#">Catalog</a></li>
+        <li><a href="#">Subsciption</a></li>
+        <li><a href="#">Deal</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </div>
 
   	<section class="cd-hero">
   		<ul class="cd-hero-slider ">
@@ -45,7 +51,7 @@
             <div class="hero-slider-content">
               <span class="slider-top-description">meet <b>uihead</b></span>
     					<h2 class="slider-headline">Most selective <b>market</b> of digital products for web creators</h2>
-    					<p class="slider-description">The work of a team should always embrace a great player <br>but the great player must always work. </p>
+    					<p class="slider-description">The work of a team should always embrace a great player <span class="br"></span> but the great player must always work. </p>
     					<a href="#" class="cd-btn btn -green -large">Discover All Items</a>
             </div>
   				</div> <!-- .cd-full-width -->
@@ -101,7 +107,7 @@
           <img src="./assets/images/content/composition3.png" alt="" class="composition-3" />
         </div>
 
-        <div class="content -right">
+        <div class="content -right -mobile-centered">
           <h2 class="headline">All products what you really need in one place with <a href="#" class="link-underline">UIHead</a></h2>
           <p class="headline-description">Readymag gives you freedom over your creative process: you don’t have to think about any technical aspects. There are no limits and absolutely no coding, just creative process.</p>
           <p>
@@ -117,8 +123,10 @@
           <img src="./assets/images/content/img.png" alt="" />
         </div>
 
+        <p class="price btn -rounded -white -res-max-1000"><i class="centered">$28</i></p>
+
         <div class="content -right-small -light">
-          <p class="price">$28 <s>$50</s></p>
+          <p class="price -res-min-1000">$28 <s>$50</s></p>
           <h2 class="headline">Glue UI Kit <span class="icon icon-hot -rounded -white -shadow -large"></span></h2>
           <p class="headline-author">by <a href="#">Beans UI Goods</a></p>
           <p class="headline-description -small">Glue is a big mobile UI Kit, full of crazy UI elements, organized into 100+ qualitative screens for Sketch and Photoshop.</p>
@@ -135,8 +143,10 @@
           <img src="./assets/images/content/img2.png" alt="" />
         </div>
 
+        <p class="price btn -rounded -white -res-max-1000"><i class="centered">$48</i></p>
+
         <div class="content -right-small -dark">
-          <p class="price">$48</p>
+          <p class="price -res-min-1000">$48</p>
           <h2 class="headline">Awair Mobile Kit <span class="icon icon-hot -rounded -white -shadow -large"></span></h2>
           <p class="headline-author">by <a href="#">Beans UI Goods</a></p>
           <p class="headline-description -small">Glue is a big mobile UI Kit, full of crazy UI elements, organized into 100+ qualitative screens for Sketch and Photoshop.</p>
@@ -153,8 +163,10 @@
           <img src="./assets/images/content/img3.png" alt="" />
         </div>
 
+        <p class="price btn -rounded -white -res-max-1000"><i class="centered">$48</i></p>
+
         <div class="content -right-small -dark">
-          <p class="price">$48</p>
+          <p class="price -res-min-1000">$48</p>
           <h2 class="headline">Multicolor UI Kit <span class="icon icon-hot -rounded -white -shadow -large"></span></h2>
           <p class="headline-author">by <a href="#">Beans UI Goods</a></p>
           <p class="headline-description -small">Glue is a big mobile UI Kit, full of crazy UI elements, organized into 100+ qualitative screens for Sketch and Photoshop.</p>
@@ -316,7 +328,7 @@
 
         <p class="footer-copyright">
           © 2016 <b>UIHead</b>. Market is a place of carefully selected products for web designers and developers.
-          <br>
+          <span class="br"></span>
           You can contact with us via email adress: <a href="mailto:info@pixelbuddha.net">info@pixelbuddha.net</a>
         </p>
       </section>

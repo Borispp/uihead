@@ -53,9 +53,12 @@
       background $white
       color $green
 
-      &:hover,
-      &:active
+      &:hover
         background $green-darker
+        color $white
+
+      &:active
+        background $green-dark
         color $white
 
     &.-white-opacity
@@ -63,10 +66,10 @@
       color $white
 
       &:hover
-        background $green-darker
+        background rgba(255,255,255,.1)
 
       &:active
-        background $green-dark
+        background rgba(0,0,0,.2)
 
   &.icon-menu:before
     content "\EA0B"
@@ -74,13 +77,17 @@
 
   &.icon-bag:before
     content "\EA0A"
+    font-size 24px
 
   &.icon-login:before
     content "\EA0C"
 
-  &.icon-hot:before
-    content ''
-    sprite($s-hot)
+  &.icon-hot
+    &:before
+      content ''
+      sprite($s-hot)
+    &:hover
+      background #fff !important
 
   &.icon-close
     transform rotate(0)
@@ -94,6 +101,10 @@
     &:hover
       transform rotate(90deg)
       background rgba(255,255,255,.8) !important
+
+    &:active
+      transform rotate(90deg)
+      background rgba(255,255,255,.6) !important
 
 // ==============================================
 // Icons from sprite

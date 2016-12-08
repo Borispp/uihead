@@ -155,8 +155,8 @@
   &.-rounded
     box-sizing border-box
     padding 0
-    width 78px
-    height 78px
+    width 74px
+    height 74px
     border-radius 50%
     text-align center
     text-transform uppercase
@@ -164,7 +164,7 @@
 
     &.-default
       font-size 22px
-      line-height 78px
+      line-height 74px
 
   &.-arrow
     &:before
@@ -184,6 +184,19 @@
 
   &.-uppercase
     text-transform uppercase
+
+  .centered
+    font-style normal
+    display inline-block
+    vertical-align middle
+    padding-top 2px
+
+    &:after
+      content ''
+      display inline-block
+      vertical-align middle
+      position relative
+      height 100%
 
 // ==============================================
 // Links style
@@ -333,3 +346,9 @@ input[type="text"]
       transform translate(3px, 0)
     100%
       transform translate(0, 0)
+
+
+@media (max-width 700px)
+  .link
+    &.link-arrow:after
+      display none

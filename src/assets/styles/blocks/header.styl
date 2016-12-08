@@ -92,7 +92,7 @@
   .icon-login,
   .icon-menu
     float left
-    margin-left 6px
+    margin-left 9px
 
 .mobile-menu
   position fixed
@@ -101,12 +101,39 @@
   left 0
   width 100vw
   height 100vh
-  background $black-opacity
+  background rgba(0,0,0,.92)
+  transform translate(0, 0)
+  transition transform 0.4s
+
+  &.-hide
+    display block
+    transform translate(100%, 0)
 
   .icon-close
     position absolute
     top 28px
-    right 44px
+    right 30px
+
+  .mobile-menu-links
+    display inline-block
+    position absolute
+    top 50%
+    left 50%
+    transform translate(-50%, -50%)
+    text-align center
+
+    a
+      font-size 35px
+      line-height 60px
+      font-weight 600
+      color $white
+      text-decoration none
+
+      &:hover
+        color $green-darker
+
+      &:active
+        color rgba(255,255,255,.8)
 
 @media (max-width 850px)
   .header-main-menu
@@ -127,3 +154,13 @@
 
     .deal a:before
       font-size 20px
+
+@media (max-width 700px)
+  .header-main
+    padding 18px 16px
+
+    .site-logo
+      margin-top 4px
+
+      .emoji
+        display none
