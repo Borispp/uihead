@@ -238,11 +238,15 @@ a
 
 .link
   display inline-block
+  position relative
   vertical-align top
   font-size 16px
   font-weight 500
   text-decoration none
   transition color 0.15s
+
+  &:active
+    top 1px
 
   &.-blue
     color $blue
@@ -268,6 +272,25 @@ a
 
     &:hover:after
         animation: link-arrow-animation linear .4s 2;
+
+.overlay-link
+  position absolute
+  top 0
+  left 0
+  width 100%
+  height 100%
+  background rgba(0,0,0,.3)
+
+  .btn
+    position absolute
+    top 50%
+    left 50%
+    transform translate(-50%, -50%) scale(0.85)
+    transition transform 0.15s
+
+  &:hover .btn
+    transform translate(-50%, -50%) scale(1)
+
 
 // ==============================================
 // Form elements

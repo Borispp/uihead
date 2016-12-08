@@ -253,7 +253,7 @@ h4.headline {
   line-height: 24px;
 }
 .headline .icon {
-  margin-left: 10px;
+  margin-left: 16px;
   position: relative;
   top: 10px;
 }
@@ -268,12 +268,13 @@ h4.headline {
   font-size: 20px;
   font-weight: 400;
   line-height: 30px;
-  padding-bottom: 14px;
+  padding-bottom: 20px;
 }
 .headline-description.-small {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0;
+  padding-bottom: 14px;
 }
 .headline-description.-white {
   color: #fff;
@@ -308,7 +309,7 @@ h4.headline {
     line-height: 50px;
   }
   h2.headline {
-    font-size: 28px;
+    font-size: 30px;
     line-height: 36px;
     letter-spacing: -1px;
     padding-bottom: 12px;
@@ -327,6 +328,7 @@ h4.headline {
   .headline-description {
     font-size: 16px;
     line-height: 26px;
+    padding-bottom: 14px;
   }
 }
 @media (max-width: 700px) {
@@ -452,6 +454,9 @@ h4.headline {
   }
   .section.-with-composition .content.-right {
     width: 40%;
+  }
+  .section.-with-composition .content.-right h2.headline {
+    font-size: 28px;
   }
   .section.-with-composition .composition {
     -webkit-transform: scale(0.83);
@@ -894,11 +899,15 @@ a {
 }
 .link {
   display: inline-block;
+  position: relative;
   vertical-align: top;
   font-size: 16px;
   font-weight: 500;
   text-decoration: none;
   transition: color 0.15s;
+}
+.link:active {
+  top: 1px;
 }
 .link.-blue {
   color: #2c99ed;
@@ -925,6 +934,27 @@ a {
 .link.link-arrow:hover:after {
   -webkit-animation: link-arrow-animation linear 0.4s 2;
           animation: link-arrow-animation linear 0.4s 2;
+}
+.overlay-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+}
+.overlay-link .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0.85);
+          transform: translate(-50%, -50%) scale(0.85);
+  transition: -webkit-transform 0.15s;
+  transition: transform 0.15s;
+}
+.overlay-link:hover .btn {
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
 }
 .checkbox input {
   display: none;
@@ -1143,7 +1173,7 @@ input[type="text"]:focus:-ms-input-placeholder {
 .header-main-controls .icon-login,
 .header-main-controls .icon-menu {
   float: left;
-  margin-left: 9px;
+  margin-left: 10px;
 }
 .mobile-menu {
   position: fixed;
@@ -1231,26 +1261,30 @@ input[type="text"]:focus:-ms-input-placeholder {
 }
 .composition img {
   position: absolute;
-  transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
 }
 .composition .composition-1 {
   top: 0;
   left: 30px;
   -webkit-transform: translate(0, -50px);
           transform: translate(0, -50px);
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
 }
 .composition .composition-2 {
   top: 137px;
   left: 92px;
   -webkit-transform: translate(50px, 50px);
           transform: translate(50px, 50px);
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
 }
 .composition .composition-3 {
   top: 182px;
   left: 0;
   -webkit-transform: translate(-50px, 50px);
           transform: translate(-50px, 50px);
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
 }
 .composition.-active img {
   -webkit-transform: translate(0, 0);
@@ -1312,12 +1346,24 @@ input[type="text"]:focus:-ms-input-placeholder {
   float: left;
   width: 47%;
   max-width: 540px;
+  position: relative;
+  font-size: 0;
 }
 .content-image img {
   width: 100%;
   border: 2px solid #fff;
   border-radius: 5px;
   box-shadow: 3px 3px 8px rgba(0,0,0,0.15);
+}
+.content-image .overlay-link {
+  opacity: 0;
+  transition: opacity 0.2s;
+  margin: 2px;
+  border-radius: 3px;
+  height: calc(100% - 4px);
+}
+.content-image:hover .overlay-link {
+  opacity: 1;
 }
 .features {
   padding: 52px 0 0;
@@ -1377,6 +1423,7 @@ input[type="text"]:focus:-ms-input-placeholder {
   float: left;
   width: 55%;
   max-width: 610px;
+  text-align: center;
 }
 .features-image img {
   width: 100%;
@@ -1580,10 +1627,10 @@ input[type="text"]:focus:-ms-input-placeholder {
 @media (max-width: 1160px) {
   .content-image {
     width: 45%;
-    padding-left: 16px;
+    margin-left: 16px;
   }
   .content.-right-middle {
-    padding-right: 16px;
+    margin-right: 16px;
   }
 }
 @media (max-width: 1100px) {
@@ -1775,7 +1822,6 @@ input[type="text"]:focus:-ms-input-placeholder {
     float: none;
     width: calc(100% - 4px);
     max-width: 100%;
-    padding-left: 0;
     margin: 0 6px 15px 0;
   }
   .purchase {
@@ -2135,11 +2181,12 @@ input[type="text"]:focus:-ms-input-placeholder {
   width: 100%;
   max-width: 580px;
   margin: 0 auto 54px;
+  letter-spacing: -1px;
   font-size: 22px;
   line-height: 34px;
   font-weight: 500;
   color: #fff;
-  opacity: 0.5;
+  opacity: 0.55;
 }
 @media (max-width: 1160px) {
   .cd-half-width .hero-slider-content .slider-headline {

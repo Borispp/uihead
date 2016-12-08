@@ -52,27 +52,55 @@ showElement.bindUIActions();
 // Subscription images
 // ==============================================
 
-var $substrateImages = $('.substrate-images');
-var images = $substrateImages.data('images').split(',');
-var imagesLength = images.length;
-var substrateLiLength = $substrateImages.find('li').length;
+var substrateImages = {
+	init: function init() {
+		this.$substrateImages = $('.substrate-images');
+		this.images = this.$substrateImages.data('images').split(',');
+		this.imagesLength = this.images.length;
+		this.substrateLiLength = this.$substrateImages.find('li').length;
 
-$substrateImages.find('li').each(function (i, el) {
-	var randomNumber = Math.floor(Math.random() * imagesLength);
+		this.fillImages();
+		this.changeImage();
+	},
 
-	$(el).css({
-		'background-image': 'url(' + images[randomNumber] + ')'
-	});
-});
+	fillImages: function fillImages() {
+		var _this = this;
 
-setInterval(function () {
-	var randomNumber = Math.floor(Math.random() * imagesLength);
-	var randomLi = Math.floor(Math.random() * substrateLiLength);
+		this.$substrateImages.find('li').each(function (i, el) {
+			var randomNumber = Math.floor(Math.random() * _this.imagesLength);
 
-	$substrateImages.find('li').eq(randomLi).css({
-		'background-image': 'url(' + images[randomNumber] + ')'
-	});
-}, 2000);
+			$(el).css({
+				'background-image': 'url(' + _this.images[randomNumber] + ')'
+			});
+		});
+	},
 
-var emoji = ['emoji-kiss', 'emoji-laugh', 'emoji-wink', 'emoji-kiss2', 'emoji-laugh2', 'emoji-laugh3'];
-$('.site-logo .emoji').addClass(emoji[Math.floor(Math.random() * 6)]);
+	changeImage: function changeImage() {
+		var _this = this;
+
+		setInterval(function () {
+			var randomNumber = Math.floor(Math.random() * _this.imagesLength);
+			var randomLi = Math.floor(Math.random() * _this.substrateLiLength);
+
+			_this.$substrateImages.find('li').eq(randomLi).css({
+				'background-image': 'url(' + _this.images[randomNumber] + ')'
+			});
+		}, 2000);
+	}
+};
+
+substrateImages.init();
+
+// ==============================================
+// Emoji random
+// ==============================================
+
+var emojiRand = {
+	emoji: ['emoji-kiss', 'emoji-laugh', 'emoji-wink', 'emoji-kiss2', 'emoji-laugh2', 'emoji-laugh3'],
+
+	init: function init() {
+		$('.site-logo .emoji').addClass(this.emoji[Math.floor(Math.random() * 6)]);
+	}
+};
+
+emojiRand.init();
