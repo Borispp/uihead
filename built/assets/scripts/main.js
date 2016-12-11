@@ -89,7 +89,9 @@ var substrateImages = {
 	}
 };
 
-substrateImages.init();
+if ($('.substrate-images').length) {
+	substrateImages.init();
+}
 
 // ==============================================
 // Emoji random

@@ -366,6 +366,9 @@ h4.headline {
 .wrapper {
   width: 100%;
 }
+.wrapper.-gray {
+  background: #f2f2f2;
+}
 .base-col {
   width: 100%;
   max-width: 1160px;
@@ -399,6 +402,28 @@ h4.headline {
 .section.-green {
   background: #40be65;
   color: #fff;
+}
+.presentation {
+  text-align: center;
+  padding: 70px 0;
+}
+.presentation-author {
+  font-size: 20px;
+  font-family: 'Playfair Display';
+  font-style: italic;
+}
+.presentation-author a {
+  display: inline-block;
+  line-height: 24px;
+  font-family: 'Poppins';
+  font-style: normal;
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px solid #000;
+}
+.presentation-author a:hover {
+  border-bottom: none;
+  color: #39ab5b;
 }
 .common-wrapper .headline {
   margin: 24px 0 12px;
@@ -507,6 +532,15 @@ h4.headline {
   font-family: 'iconfont';
   font-size: 20px;
   transition: color 0.15s;
+  position: relative;
+}
+.icon .svg-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  transition: fill 0.15s;
 }
 .icon.-shadow {
   box-shadow: 2px 2px 9px rgba(0,0,0,0.15);
@@ -555,6 +589,21 @@ h4.headline {
   background: #f5f7f7;
   color: #9b9b9b;
 }
+.icon.-rounded.-gray .svg-icon {
+  fill: #9b9b9b;
+}
+.icon.-rounded.-gray:hover {
+  background: #39ab5b;
+}
+.icon.-rounded.-gray:hover .svg-icon {
+  fill: #fff;
+}
+.icon.-rounded.-gray:active {
+  background: #339851;
+}
+.icon.-rounded.-gray:active .svg-icon {
+  fill: #fff;
+}
 .icon.-rounded.-white {
   background: #fff;
   color: #40be65;
@@ -591,8 +640,8 @@ h4.headline {
 .icon.icon-hot:before {
   content: '';
   background-image: url("../images/design/sprite.png");
-  background-size: 180px 147px;
-  background-position: -150px -93px;
+  background-size: 189px 151.5px;
+  background-position: -98.5px -47px;
   width: 20px;
   height: 23px;
 }
@@ -625,22 +674,22 @@ h4.headline {
 }
 .icon-sprite.facebook {
   background-image: url("../images/design/sprite.png");
-  background-size: 180px 147px;
-  background-position: -80px -47px;
+  background-size: 189px 151.5px;
+  background-position: -150px -84px;
   width: 32px;
   height: 32px;
 }
 .icon-sprite.twitter {
   background-image: url("../images/design/sprite.png");
-  background-size: 180px 147px;
-  background-position: -47px -47px;
+  background-size: 189px 151.5px;
+  background-position: -150px -51px;
   width: 32px;
   height: 32px;
 }
 .icon-sprite.google-plus {
   background-image: url("../images/design/sprite.png");
-  background-size: 180px 147px;
-  background-position: -113px -47px;
+  background-size: 189px 151.5px;
+  background-position: -47px -71.5px;
   width: 32px;
   height: 32px;
 }
@@ -649,43 +698,43 @@ h4.headline {
 }
 .emoji.emoji-kiss {
   background-image: url("../images/design/sprite.png");
-  background-size: 180px 147px;
-  background-position: -150px 0px;
+  background-size: 189px 151.5px;
+  background-position: 0px -121.5px;
   width: 30px;
   height: 30px;
 }
 .emoji.emoji-kiss2 {
   background-image: url("../images/design/sprite.png");
-  background-size: 180px 147px;
-  background-position: -150px -31px;
+  background-size: 189px 151.5px;
+  background-position: -31px -121.5px;
   width: 30px;
   height: 30px;
 }
 .emoji.emoji-wink {
   background-image: url("../images/design/sprite.png");
-  background-size: 180px 147px;
-  background-position: -102px -97px;
+  background-size: 189px 151.5px;
+  background-position: -111px -71.5px;
   width: 30px;
   height: 30px;
 }
 .emoji.emoji-laugh {
   background-image: url("../images/design/sprite.png");
-  background-size: 180px 147px;
-  background-position: -150px -62px;
+  background-size: 189px 151.5px;
+  background-position: -62px -121.5px;
   width: 30px;
   height: 30px;
 }
 .emoji.emoji-laugh2 {
   background-image: url("../images/design/sprite.png");
-  background-size: 180px 147px;
-  background-position: -40px -97px;
+  background-size: 189px 151.5px;
+  background-position: -93px -121.5px;
   width: 30px;
   height: 30px;
 }
 .emoji.emoji-laugh3 {
   background-image: url("../images/design/sprite.png");
-  background-size: 180px 147px;
-  background-position: -71px -97px;
+  background-size: 189px 151.5px;
+  background-position: -80px -71.5px;
   width: 30px;
   height: 30px;
 }
@@ -831,8 +880,8 @@ h4.headline {
   position: relative;
   left: 1px;
   background-image: url("../images/design/sprite.png");
-  background-size: 180px 147px;
-  background-position: -150px -117px;
+  background-size: 189px 151.5px;
+  background-position: -51.5px -24.5px;
   width: 12.5px;
   height: 17px;
   display: block;
@@ -974,8 +1023,8 @@ a {
   content: '';
   display: inline-block;
   background-image: url("../images/design/sprite.png");
-  background-size: 180px 147px;
-  background-position: -163.5px -117px;
+  background-size: 189px 151.5px;
+  background-position: -65px -24.5px;
   width: 9.5px;
   height: 7px;
   position: absolute;
@@ -1074,13 +1123,17 @@ input[type="text"]:focus:-ms-input-placeholder {
   }
 }
 .header-main {
-  padding: 30px;
+  padding: 26px 30px;
   box-sizing: border-box;
 }
 .header-main:after {
   content: "";
   display: table;
   clear: both;
+}
+.header-main.-light {
+  background: #fff;
+  box-shadow: 4px 4px 15px rgba(0,0,0,0.1);
 }
 .site-logo {
   float: left;
@@ -1091,7 +1144,7 @@ input[type="text"]:focus:-ms-input-placeholder {
 .site-logo .logo-img {
   display: inline-block;
   background-image: url("../images/design/sprite.png");
-  background-size: 180px 147px;
+  background-size: 189px 151.5px;
   background-position: -51.5px 0px;
   width: 97.5px;
   height: 23.5px;
@@ -1107,12 +1160,25 @@ input[type="text"]:focus:-ms-input-placeholder {
 .site-logo .emoji {
   vertical-align: top;
 }
+.site-logo.-light .logo-img {
+  background-image: url("../images/design/sprite.png");
+  background-size: 189px 151.5px;
+  background-position: 0px -47px;
+  width: 97.5px;
+  height: 23.5px;
+}
 .header-main-menu {
   position: absolute;
   min-width: 440px;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
+}
+.header-main-menu.-light a {
+  color: #1b1b1b;
+}
+.header-main-menu.-light a:before {
+  color: #9b9b9b;
 }
 .header-main-menu li {
   display: inline-block;
@@ -1579,21 +1645,21 @@ input[type="text"]:focus:-ms-input-placeholder {
 }
 .about-list .best .pic:before {
   background-image: url("../images/design/sprite.png");
-  background-size: 180px 147px;
-  background-position: 0px -47px;
+  background-size: 189px 151.5px;
+  background-position: 0px -71.5px;
   width: 46px;
   height: 49px;
 }
 .about-list .mark .pic:before {
   background-image: url("../images/design/sprite.png");
-  background-size: 180px 147px;
-  background-position: 0px -97px;
+  background-size: 189px 151.5px;
+  background-position: -150px 0px;
   width: 39px;
   height: 50px;
 }
 .about-list .diamond .pic:before {
   background-image: url("../images/design/sprite.png");
-  background-size: 180px 147px;
+  background-size: 189px 151.5px;
   background-position: 0px 0px;
   width: 50.5px;
   height: 46px;

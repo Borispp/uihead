@@ -1,7 +1,11 @@
 .header-main
-  padding 30px
+  padding 26px 30px
   box-sizing border-box
   clearfix()
+
+  &.-light
+    background $white
+    box-shadow 4px 4px 15px rgba(0,0,0,.1)
 
 .site-logo
   float left
@@ -23,11 +27,21 @@
   .emoji
     vertical-align top
 
+  &.-light .logo-img
+    sprite($s-logo-dark)
+
 .header-main-menu
   position absolute
   min-width 440px
   left 50%
   transform translate(-50%, 0)
+
+  &.-light
+    a
+      color #1b1b1b
+
+      &:before
+        color $gray-text
 
   li
     display inline-block

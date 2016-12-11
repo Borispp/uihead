@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="18" viewBox="0 0 20 18">
+  <defs>
+    <filter id="filter" x="1529" y="259" width="20" height="18" filterUnits="userSpaceOnUse">
+      <feFlood result="flood"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path id="icon" class="cls-1" d="M1531.62,266.986l4.76,0,0.72,1.452a1.009,1.009,0,0,0,1.35.447,1,1,0,0,0,.44-1.342l-4-8a1,1,0,0,0-1.79,0l-4,8a1,1,0,0,0,1.79.895Zm3.76-2-2.76,0,1.38-2.755Zm5.62,3a1,1,0,0,1,1-1h6.01a1,1,0,0,1,0,2H1542A1,1,0,0,1,1541,267.993Zm-12,4a1,1,0,0,1,1-1h18a1,1,0,0,1,0,2h-18A0.993,0.993,0,0,1,1529,271.993Zm0,4a1,1,0,0,1,1-1h18a1,1,0,0,1,0,2h-18A0.993,0.993,0,0,1,1529,275.993Zm12-12a1,1,0,0,1,1-1h6.01a1,1,0,0,1,0,2H1542A1,1,0,0,1,1541,263.994Zm0-4a1,1,0,0,1,1-1h6.01a1,1,0,0,1,0,2H1542A1,1,0,0,1,1541,259.994Z" transform="translate(-1529 -259)"/>
+</svg>
