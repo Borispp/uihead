@@ -92,13 +92,18 @@
     text-transform uppercase
 
     &:after
-      height 1px
+      height 2px
+      background $white
 
     &:hover
-      color $green-darker
+      color $white
+      &:after
+        background $white
 
     &:active
-      color $green-dark
+      color $white
+      &:after
+        background $white
 
 .footer-copyright
   font-size 15px

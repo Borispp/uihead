@@ -1,7 +1,4 @@
 .icon
-  font-family 'iconfont'
-  font-size 20px
-  transition color 0.15s
   position relative
 
   .svg-icon
@@ -20,7 +17,8 @@
     height 38px
     border-radius 50%
     position relative
-    transition color 0.15s linear, background 0.15s linear
+    box-sizing border-box
+    transition color 0.15s linear, background 0.15s linear, border-color 0.15s linear
 
     &.-large
       width 46px
@@ -45,7 +43,8 @@
 
     &.-green
       background $green
-      color $white
+      .svg-icon, g
+        fill $white
 
       &:hover
         background $green-darker
@@ -53,37 +52,69 @@
       &:active
         background $green-dark
 
+    &.-blue
+      background $blue
+      .svg-icon, g
+        fill $white
+
+      &:hover
+        background $blue-darker
+
+      &:active
+        background $blue-dark
+
     &.-gray
       background $gray
-      color $gray-text
-      .svg-icon
+      .svg-icon, g
         fill $gray-text
 
       &:hover
         background $green-darker
-        .svg-icon
+        .svg-icon, g
           fill $white
 
       &:active
         background $green-dark
-        .svg-icon
+        .svg-icon, g
           fill $white
 
     &.-white
       background $white
-      color $green
+      border 1px solid $border-gray
+      .svg-icon, g
+        fill $green
 
       &:hover
         background $green-darker
-        color $white
+        border 1px solid $green-darker
+        .svg-icon, g
+          fill $white
 
       &:active
         background $green-dark
-        color $white
+        border 1px solid $green-dark
+        .svg-icon, g
+          fill $white
+
+    &.-white-dark
+      background $white
+      .svg-icon, g
+        fill $black
+
+      &:hover
+        background rgba(255,255,255,.8)
+        .svg-icon, g
+          fill $black
+
+      &:active
+        background rgba(255,255,255,.6)
+        .svg-icon, g
+          fill $black
 
     &.-white-opacity
       background rgba(255,255,255,.2)
-      color $white
+      .svg-icon, g
+        fill $white
 
       &:hover
         background rgba(255,255,255,.1)
@@ -91,16 +122,8 @@
       &:active
         background rgba(0,0,0,.2)
 
-  &.icon-menu:before
-    content "\EA0B"
-    font-size 11px
-
-  &.icon-bag:before
-    content "\EA0A"
-    font-size 24px
-
-  &.icon-login:before
-    content "\EA0C"
+  .icon-bag
+    fill-rule evenodd
 
   &.icon-hot
     &:before
@@ -109,22 +132,15 @@
     &:hover
       background #fff !important
 
-  &.icon-close
+  &.close-button
     transform rotate(0)
     transition transform 0.2s
 
-    &:before
-      font-size 11px
-      color #000
-      content "\EA0D"
-
     &:hover
       transform rotate(90deg)
-      background rgba(255,255,255,.8) !important
 
     &:active
       transform rotate(90deg)
-      background rgba(255,255,255,.6) !important
 
 
 // ==============================================

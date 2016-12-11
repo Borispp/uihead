@@ -26,21 +26,21 @@ var showElement = {
 	bindUIActions: function bindUIActions() {
 		var _this = this;
 		$elements.show.on('click', function (e) {
+			e.preventDefault();
 			_this.show.call(this, e);
 		});
 		$elements.close.on('click', function (e) {
+			e.preventDefault();
 			_this.hide.call(this, e);
 		});
 	},
 
 	show: function show(e) {
-		e.preventDefault();
 		$($(this).data('show')).removeClass('-hide');
 		$elements.body.addClass('-popup-active');
 	},
 
 	hide: function hide(e) {
-		e.preventDefault();
 		$($(this).data('close')).addClass('-hide');
 		$elements.body.removeClass('-popup-active');
 	}
@@ -106,3 +106,15 @@ var emojiRand = {
 };
 
 emojiRand.init();
+
+// ==============================================
+// Stickit header
+// ==============================================
+$(window).scroll(function () {
+	console.log(window.pageYOffset);
+	if (window.pageYOffset > 50) {
+		$('.header-main').addClass('-stickit');
+	} else {
+		$('.header-main').removeClass('-stickit');
+	}
+});

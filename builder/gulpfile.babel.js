@@ -1,4 +1,4 @@
-var babel, bower, config, consoleErorr, fs, g, gulp, gulpLoadPlugins, pngcrush, svgSprite, uglify, yaml, es2015Preset, iconfont, runTimestamp;
+var babel, bower, config, consoleErorr, fs, g, gulp, gulpLoadPlugins, pngcrush, svgSprite, uglify, yaml, es2015Preset;
 
 fs = require('fs');
 yaml = require('js-yaml');
@@ -9,8 +9,8 @@ bower = require('gulp-bower');
 babel = require('gulp-babel');
 gulpLoadPlugins = require('gulp-load-plugins');
 uglify = require('gulp-uglifyjs');
-iconfont = require('gulp-iconfont');
-runTimestamp = Math.round(Date.now()/1000);
+// iconfont = require('gulp-iconfont');
+// runTimestamp = Math.round(Date.now()/1000);
 
 g = gulpLoadPlugins();
 
@@ -25,21 +25,21 @@ gulp.task('bower', function() {
   return bower().pipe(gulp.dest(config.paths.built.libs.path));
 });
 
-gulp.task('iconfont', function(){
-  return gulp.src([config.paths.src.iconfont])
-    .pipe(iconfont({
-      fontName: 'iconfont', // required
-      prependUnicode: true, // recommended option
-      formats: ['ttf', 'eot', 'woff', 'woff2', 'svg'],
-      normalize: true,
-      timestamp: runTimestamp // recommended to get consistent builds when watching files
-    }))
-      .on('glyphs', function(glyphs, options) {
-        // CSS templating, e.g.
-        console.log(glyphs, options);
-      })
-    .pipe(gulp.dest(config.paths.built.iconfont.font));
-});
+// gulp.task('iconfont', function(){
+//   return gulp.src([config.paths.src.iconfont])
+//     .pipe(iconfont({
+//       fontName: 'iconfont', // required
+//       prependUnicode: true, // recommended option
+//       formats: ['ttf', 'eot', 'woff', 'woff2', 'svg'],
+//       normalize: true,
+//       timestamp: runTimestamp // recommended to get consistent builds when watching files
+//     }))
+//       .on('glyphs', function(glyphs, options) {
+//         // CSS templating, e.g.
+//         console.log(glyphs, options);
+//       })
+//     .pipe(gulp.dest(config.paths.built.iconfont.font));
+// });
 
 gulp.task('sprite', function() {
   var spriteData;
@@ -149,7 +149,6 @@ gulp.task('watch', function() {
   gulp.watch(config.paths.src.scripts.all, ['babel']);
   gulp.watch(config.paths.src.styles.all, ['stylus']);
   gulp.watch(config.paths.src.images.all, ['images']);
-  gulp.watch(config.paths.src.iconfont, ['iconfont']);
   gulp.watch(config.paths.src.sprites.images.all, ['sprite']);
   gulp.watch(config.paths.src.templates.all, ['jade']);
 });
@@ -164,7 +163,7 @@ gulp.task('concat', function() {
   return gulp.src('../built/assets/scripts/**/*.js').pipe(concat('all.js')).pipe(gulp.dest('../built/assets/scripts/'));
 });
 
-gulp.task('default', ['bower', 'sprite', 'stylus', 'images', 'babel', 'jade', 'scripts', 'iconfont']);
+gulp.task('default', ['bower', 'sprite', 'stylus', 'images', 'babel', 'jade', 'scripts']);
 
 gulp.task('dev', ['default', 'watch']);
 

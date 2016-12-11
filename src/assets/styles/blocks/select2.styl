@@ -36,11 +36,11 @@
   border-bottom-right-radius 30px
   overflow hidden
 
+.select2-results__options
+  margin-bottom -2px
+  
 .select2-container--default .select2-results__option
   border-bottom 2px solid $border-gray
-
-  &:last-child
-    border-bottom none
 
 .select2-container--default .select2-results__option,
 .select2-container--default .select2-results__option[aria-selected=true]
@@ -52,3 +52,6 @@
 
 .select2-container--default .select2-results__option--highlighted[aria-selected]
   background $blue !important
+
+[aria-selected="true"]
+  display none !important

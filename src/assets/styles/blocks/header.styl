@@ -1,11 +1,75 @@
 .header-main
   padding 26px 30px
   box-sizing border-box
+  position fixed
+  z-index 3
+  width 100%
+  top 0
+  transition background .15s linear, box-shadow .15s linear, padding .15s linear
   clearfix()
 
-  &.-light
+  .icon
+    cursor pointer
+
+  &.-transparent
+    background transparent
+
+    .icon.-rounded.-white
+      border-color $white
+
+  &.-light,
+  &.-stickit
     background $white
     box-shadow 4px 4px 15px rgba(0,0,0,.1)
+
+    .header-main-menu a
+      color $black-weak
+
+      &:hover
+        color $green-darker
+      &:active
+        color $green-dark
+
+    .site-logo .logo-img
+      sprite($s-logo-dark)
+
+    .icon.-white-opacity
+      background $gray
+      .svg-icon, g
+        fill $gray-text
+
+      &:hover
+        background $green-darker
+        .svg-icon, g
+          fill $white
+
+      &:active
+        background $green-dark
+        .svg-icon, g
+          fill $white
+
+    .icon.-rounded.-white
+      border-color $border-gray
+
+    .btn.-default
+      border-color $border-gray
+      color $gray-text
+
+      &:hover
+        border-color $green-darker
+        color $white
+      &:active
+        border-color $green-dark
+        color $white
+
+  &.-stickit
+    padding 16px 30px
+
+  .icon.-rounded.-white
+    &:hover
+      border-color $green-darker
+    &:active
+      border-color $green-dark
 
 .site-logo
   float left
@@ -32,66 +96,54 @@
 
 .header-main-menu
   position absolute
-  min-width 440px
-  left 50%
+  margin-top -1px
+  min-width 445px
+  left calc(50% + 24px)
   transform translate(-50%, 0)
 
   &.-light
     a
-      color #1b1b1b
+      color $black-weak
 
       &:before
         color $gray-text
 
   li
     display inline-block
-    margin 0 9px
+    margin 0 24px
 
   a
     color $white
     font-size 18px
     text-decoration none
+    position relative
     transition color .15s
+
+    .svg-icon
+      position absolute
+      top 50%
+      transform translate(-100%,-50%)
+      padding-right 8px
+
+    .svg-icon, g
+      fill $gray-text
+      display inline-block
+      vertical-align top
+      transition fill .15s
 
     &:hover
       color $green-darker
-
-      &:before
-        color $green-darker
+      .svg-icon, g
+        fill $green-darker
 
     &:active
       color $green-dark
+      .svg-icon, g
+        fill $green-dark
 
-      &:before
-        color $green-dark
+  .catalog .svg-icon
+    padding-right 6px
 
-
-    &:before
-      font-family 'iconfont'
-      position relative
-      display inline-block
-      vertical-align top
-      margin-right 9px
-      margin-top 0
-      font-size 18px
-      color $gray-text
-      transition color .15s
-
-  .catalog a:before
-    content "\EA05"
-
-  .subscription a:before
-    content "\EA09"
-    font-size 16px
-    margin-top 2px
-
-  .deal a:before
-    content "\EA07"
-    font-size 22px
-    margin-top -3px
-
-  .blog a:before
-    content "\EA04"
 
 .header-main-controls
   float right
@@ -101,10 +153,8 @@
   a
     vertical-align top
 
-  .icon-bag,
-  .btn,
-  .icon-login,
-  .icon-menu
+  .icon,
+  .btn
     float left
     margin-left 10px
 
@@ -114,7 +164,7 @@
   top 0
   left 0
   width 100vw
-  height 100vh
+  height calc(100vh + 1px)
   background rgba(0,0,0,.92)
   transform translate(0, 0)
   transition transform 0.4s
@@ -123,7 +173,7 @@
     display block
     transform translate(100%, 0)
 
-  .icon-close
+  .close-button
     position absolute
     top 28px
     right 30px
@@ -171,7 +221,10 @@
 
 @media (max-width 700px)
   .header-main
-    padding 18px 16px
+    padding 16px 16px
+
+    &.-stickit
+      padding 16px 16px
 
     .site-logo
       margin-top 4px
