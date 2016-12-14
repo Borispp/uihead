@@ -14,7 +14,8 @@ $('.select2').select2({
 var $elements = {
 	body: $('body'),
 	show: $('[data-show]'),
-	close: $('[data-close]')
+	close: $('[data-close]'),
+	tab: $('[data-tab]')
 };
 
 // ==============================================
@@ -47,6 +48,33 @@ var showElement = {
 };
 
 showElement.bindUIActions();
+
+// ==============================================
+// Change Tab
+// ==============================================
+
+var changeTab = {
+
+	bindUIActions: function bindUIActions() {
+		var _this = this;
+		$elements.tab.on('click', function (e) {
+			e.preventDefault();
+			_this.show.call(this, e);
+		});
+	},
+
+	show: function show(e) {
+		var tabGroup = $(this).data('tab-group');
+		var tab = $(this).data('tab');
+
+		$('[data-tab-group="' + tabGroup + '"]').removeClass('-active');
+		$('[data-tab="' + tab + '"]').addClass('-active');
+		$(tabGroup).addClass('-hide');
+		$(tab).removeClass('-hide');
+	}
+};
+
+changeTab.bindUIActions();
 
 // ==============================================
 // Subscription images
@@ -117,4 +145,22 @@ $(window).scroll(function () {
 	} else {
 		$('.header-main').removeClass('-stickit');
 	}
+});
+
+// ==============================================
+// ScrollToPage
+// ==============================================
+var $page = $('html,body');
+var scrollToPage = function scrollToPage(target) {
+	var y = 0;
+	if (target && $(target).length) {
+		y = $(target).offset().top;
+	}
+	$page.animate({ scrollTop: y - 60 }, 'slow', 'swing');
+	return;
+};
+
+$('.scrollto').on('click', function (e) {
+	e.preventDefault();
+	scrollToPage($(this).attr('href'));
 });

@@ -1,0 +1,180 @@
+.items
+  font-size 0
+  margin -17px
+
+  .item,
+  .blog-item
+    display inline-block
+    width calc(100% / 3 - 34px)
+    margin 17px
+
+
+.item,
+.blog-item
+  display block
+  font-size 14px
+  background $white
+  position relative
+  text-align center
+  border-radius 5px
+  box-shadow 0 4px 10px rgba(0,0,0,.15)
+
+  &:hover
+    .headline
+      border-color transparent
+
+  .item-category
+    display inline-block
+    font-size 14px
+    line-height 14px
+    font-family 'Poppins'
+    text-decoration none
+    letter-spacing 2px
+    text-transform uppercase
+    margin 9px 0 5px
+    position relative
+    z-index 3
+
+  .item-link
+    display block
+    position absolute
+    z-index 1
+    top 0
+    left 0
+    width 100%
+    height 100%
+
+  .author-link
+    position relative
+    z-index 2
+
+  .image
+    width 100%
+    padding 2px
+    box-sizing border-box
+    overflow hidden
+
+    img
+      width 100%
+      border-top-left-radius 4px
+      border-top-right-radius 4px
+
+  .item-status
+    position absolute
+    top -10px
+    right -10px
+
+  .headline
+    display inline-block
+    font-size 24px
+    line-height 22px
+    font-family 'Poppins'
+    font-weight 600
+    letter-spacing -1.25px
+    border-bottom 1px solid $black
+    padding-top 28px
+    transition border-color .1s
+
+  .author-name
+    padding-top 9px
+
+    .link
+      font-size 14px
+      position relative
+      z-index 3
+
+  .price
+    border-top 1px solid $border-gray
+    padding 7px 0 5px
+    margin-top 24px
+    font-size 22px
+    font-family 'Poppins'
+    font-weight 600
+    letter-spacing -1.4px
+
+.blog-item
+  text-align left
+  wiil-change transform
+  transition transform .22s
+
+  .item-content
+    padding 18px 30px 29px
+
+    & + .price
+      margin-top 0
+      text-align center
+
+  .headline
+    border-bottom none
+    text-decoration none
+    line-height 32px
+    padding-top 11px
+
+  .item-description
+    overflow hidden
+    max-height 69px
+    padding-top 13px
+    font-size 16px
+    line-height 24px
+    color $gray-text
+    padding-right 18px
+
+  .blog-info
+    border-top 1px solid $border-gray
+    color $gray-text
+    padding 17px 30px
+    clearfix()
+
+    .blog-date
+      float left
+      font-weight 600
+      font-size 14px
+
+    .blog-comments
+      float right
+      font-size 14px
+      text-decoration none
+      color $gray-text
+      position relative
+      z-index 3
+
+      &:before
+        content ''
+        display inline-block
+        vertical-align middle
+        margin-right 8px
+        sprite($s-comment)
+
+  &:hover
+    transform translate(0, -5px)
+
+    .headline
+      text-decoration underline
+
+    .item-category
+      border-bottom 2px solid $blue
+      margin 9px 0 3px
+
+
+@media (max-width 1000px)
+  .items
+
+    .item,
+    .blog-item
+      display inline-block
+      width calc(50% - 34px)
+      margin 17px
+
+@media (max-width 700px)
+
+  .items
+    margin -17px -15px
+
+    .item,
+    .blog-item
+      display inline-block
+      width calc(100% - 34px)
+      margin 17px
+
+    .item-status
+      display none

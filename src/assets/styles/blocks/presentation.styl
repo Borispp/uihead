@@ -1,0 +1,423 @@
+// ==============================================
+// Presentation
+// ==============================================
+.presentation
+  text-align center
+  padding 70px 0 80px
+  position relative
+
+  &.-dark
+    .presentation-author,
+    .presentation-author a,
+    .presentation-headline,
+    .presentation-headline .price,
+    .presentation-links-mobile a
+      color $white
+      border-color $white
+
+    .presentation-links-mobile a
+      &:active, &.-active
+        color $blue
+        border-color $blue
+
+    .btn.-white-shadow
+      &:active, &.-active
+        color $white
+        background $blue
+
+
+.presentation-author
+  font-size 20px
+  font-family 'Playfair Display'
+  font-style italic
+  padding-bottom 22px
+
+  a
+    display inline-block
+    line-height 22px
+    font-family 'Poppins'
+    font-style normal
+    color $black
+    text-decoration none
+    border-bottom 1px solid $black
+    margin-right 7px
+
+    &:hover
+      border-bottom none
+      color $green-darker
+
+.presentation-headline
+  margin-left -10px
+
+  span
+    display inline-block
+    vertical-align middle
+
+  .old-price
+    color $gray-text-light
+    font-size 30px
+    font-weight 600
+    font-family 'Poppins'
+    position relative
+    margin-top -24px
+    letter-spacing -1.5px
+
+    &:before
+      content ''
+      position absolute
+      top calc(50% - 5px)
+      left -1px
+      background $gray-text-light
+      width calc(100% + 3px)
+      height 4px
+
+  .price
+    font-size 60px
+    font-weight 600
+    color $black-weak
+    font-family 'Poppins'
+    margin 0 23px 0 7px
+    letter-spacing -3.2px
+
+  .italic
+    font-size 60px
+    font-style italic
+    font-weight 300
+    font-family 'Playfair Display'
+    margin-top -14px
+    letter-spacing -3px
+
+  .name
+    font-size 60px
+    line-height 64px
+    font-weight 600
+    font-family 'Poppins'
+    letter-spacing -3.4px
+    margin-left 20px
+    margin-bottom 34px
+    position relative
+    top 16px
+
+.presentation-description
+  font-size 20px
+  color $gray-text
+  max-width 670px
+  margin 12px auto 42px
+  line-height 1.5
+  text-align center
+  letter-spacing -0.3
+
+.presentation-links-mobile
+  display none
+
+  a
+    display inline-block
+    font-size 16px
+    letter-spacing -.5px
+    line-height 20px
+    margin 0 10px
+    color $black
+
+    &:hover, &.-active
+      color $blue
+      border-bottom 2px solid $blue
+
+// ==============================================
+// Timer
+// ==============================================
+.timer
+  background $blue
+  display inline-block
+  border-radius 50px
+  padding 0 28px 0 36px
+
+  .timer-item
+    display inline-block
+    padding 27px 18px 18px
+
+  .count
+    display block
+    font-size 30px
+    font-family 'Poppins'
+    color $white
+    font-weight 600
+    line-height 24px
+    letter-spacing -1.5px
+
+  .type
+    display block
+    font-size 12px
+    font-family 'Poppins'
+    color rgba(0, 0, 0, 0.4)
+    font-weight 600
+    letter-spacing -.5px
+
+.presentation-about
+  padding-top 50px
+
+  .svg-icon, .btn
+    display inline-block
+    vertical-align middle
+    margin 0 9px
+
+  .svg-icon
+    margin 0 3px
+
+    &:last-of-type
+      margin-right 8px
+
+.presentation-buttons
+  position absolute
+  top 42px
+  right 40px
+
+  .btn
+    margin-left 8px
+
+
+.previews
+  font-size 0
+
+  .previews-wrapper
+    margin -14px
+
+  .previews-item
+    display inline-block
+    width calc(50% - 28px)
+    margin 14px
+
+    img
+      width 100%
+
+.more
+  width 100%
+  text-align center
+  margin-top 60px
+
+.product-info
+  padding 60px 0 120px
+  vertical-align top
+  font-size 0
+
+  .base-col-large
+    display flex
+
+.product-buy
+  position relative
+  align-self stretch
+  vertical-align top
+  width calc(33% - 28px)
+  margin-left 28px
+  border-radius 5px
+
+  .product-buy-wrapper
+    position absolute
+    width 100%
+    top 50%
+    left 50%
+    transform translate(-50%, -50%)
+    padding-top 9px
+
+.product-spec
+  align-self stretch
+  width 67%
+  min-height 186px
+  background $white
+  border-radius 5px
+  padding 40px 40px
+  box-sizing border-box
+  font-size 0
+
+  &.-dark
+    background $black
+
+
+  .product-extension,
+  .product-description,
+  .product-useful
+    font-family 'Roboto'
+    display inline-block
+    vertical-align top
+    font-size 16px
+    color $gray-text
+    margin-bottom -28px
+    letter-spacing -0.1px
+
+  .product-extension
+    width 23%
+
+    .svg-icon
+      margin-right 6px
+
+  .product-description
+    width 57%
+    padding-right 20px
+    box-sizing border-box
+
+  .product-item
+    padding-bottom 22px
+
+  .product-useful
+    width 20%
+
+  h3
+    font-family 'Roboto'
+    font-size 15px
+    line-height 18px
+    margin-bottom 4px
+    margin-top -1px
+  p
+    line-height 24px
+
+.product-buy
+  background $green
+  transition background .15s
+  text-align center
+  box-sizing border-box
+  min-height 186px
+  padding-top 46px
+
+  &:hover
+    background $green-darker
+
+  .btn
+    margin-bottom 12px
+
+  .link
+    color $white
+
+    &:hover
+      color rgba(255, 255, 255, .8)
+    &:active
+      color rgba(255, 255, 255, .6)
+
+
+@media (max-width 920px)
+  .presentation
+    text-align center
+    padding 50px 0 60px
+
+  .presentation-author
+    padding-bottom 0
+
+  .presentation-headline
+    .price,
+    .italic,
+    .name
+      font-size 55px
+
+    .price
+      margin-right 20px
+    .name
+      margin-left 17px
+
+    .old-price
+      display none
+
+  .presentation-description
+    margin -2px auto 26px
+
+  .presentation-about
+    padding-top 34px
+
+  .product-info
+    padding-bottom 80px
+
+    .base-col-large
+      display block
+
+  .product-spec,
+  .product-buy
+    width 100%
+    margin 0
+
+  .product-spec
+    margin-bottom 30px
+
+@media (max-width 700px)
+  .presentation
+    padding 16px 0 31px
+
+  .presentation-author
+    padding-bottom 26px
+
+  .presentation-headline
+    .price,
+    .italic,
+    .name
+      font-size 32px
+      line-height 38px
+
+    .price
+      margin-top -6px
+      margin-right 12px
+
+    .name
+      margin 10px 0 16px
+      letter-spacing -1.5px
+      top 0
+      display block
+
+  .timer
+    display none
+
+  .presentation-about
+    padding-top 24px
+    height 26px
+    overflow hidden
+
+    .svg-icon
+      display none
+
+  .presentation-description
+    font-size 16px
+    line-height 26px
+    margin-bottom 0
+
+  .presentation-links
+    display none
+
+  .presentation-links-mobile
+    display block
+
+  .previews
+    .previews-wrapper
+      margin -6px 0 0
+
+    .previews-item
+      width 100%
+      margin 7px 0 8px
+
+  .more
+    margin-top 40px
+
+  .product-info
+    padding 40px 0 60px
+
+  .product-spec
+    padding 36px 18px 22px
+    margin-bottom 20px
+
+    .product-extension,
+    .product-description,
+    .product-useful
+      width 100%
+      margin-bottom 0
+      padding-right 0
+      text-align center
+
+      h3,
+      p
+        display inline
+        line-height 20px
+
+    .product-extension
+      margin-bottom 14px
+
+    .product-item
+      padding-bottom 11px
+
+    .product-useful
+      .product-item
+        margin-top -1px
+        padding-bottom 4px

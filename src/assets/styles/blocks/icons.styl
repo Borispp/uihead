@@ -9,7 +9,7 @@
     transition fill .15s
 
   &.-shadow
-    box-shadow 2px 2px 9px rgba(0,0,0,.15)
+    box-shadow 3px 3px 9px rgba(0,0,0,.16)
 
   &.-rounded
     display inline-block
@@ -20,117 +20,122 @@
     box-sizing border-box
     transition color 0.15s linear, background 0.15s linear, border-color 0.15s linear
 
-    &.-large
-      width 46px
-      height 46px
+  &.-large
+    width 46px
+    height 46px
 
-    &:before
-      position absolute
-      top 50%
-      left 50%
-      transform translate(-50%, -50%)
+  &:before
+    position absolute
+    top 50%
+    left 50%
+    transform translate(-50%, -50%)
 
-    &.-notification:after
-      content ""
-      position absolute
-      right 0
-      top 0
-      width 6px
-      height 6px
-      background $blue
-      border 3px solid $white
-      border-radius 50%
+  &.-notification:after
+    content ""
+    position absolute
+    right 0
+    top 0
+    width 6px
+    height 6px
+    background $blue
+    border 3px solid $white
+    border-radius 50%
 
-    &.-green
-      background $green
+  &.-green
+    background $green
+    .svg-icon, g
+      fill $white
+
+    &:hover
+      background $green-darker
+
+    &:active
+      background $green-dark
+
+  &.-blue
+    background $blue
+    .svg-icon, g
+      fill $white
+
+    &:hover
+      background $blue-darker
+
+    &:active
+      background $blue-dark
+
+  &.-gray
+    background $gray
+    .svg-icon, g
+      fill $gray-text
+
+    &:hover
+      background $green-darker
       .svg-icon, g
         fill $white
 
-      &:hover
-        background $green-darker
-
-      &:active
-        background $green-dark
-
-    &.-blue
-      background $blue
+    &:active
+      background $green-dark
       .svg-icon, g
         fill $white
 
-      &:hover
-        background $blue-darker
+  &.-white
+    background $white
+    border 1px solid $border-gray
+    .svg-icon, g
+      fill $green
 
-      &:active
-        background $blue-dark
-
-    &.-gray
-      background $gray
+    &:hover
+      background $green-darker
+      border 1px solid $green-darker
       .svg-icon, g
-        fill $gray-text
+        fill $white
 
-      &:hover
-        background $green-darker
-        .svg-icon, g
-          fill $white
-
-      &:active
-        background $green-dark
-        .svg-icon, g
-          fill $white
-
-    &.-white
-      background $white
-      border 1px solid $border-gray
+    &:active
+      background $green-dark
+      border 1px solid $green-dark
       .svg-icon, g
-        fill $green
+        fill $white
 
-      &:hover
-        background $green-darker
-        border 1px solid $green-darker
-        .svg-icon, g
-          fill $white
+  &.-white-dark
+    background $white
+    .svg-icon, g
+      fill $black
 
-      &:active
-        background $green-dark
-        border 1px solid $green-dark
-        .svg-icon, g
-          fill $white
-
-    &.-white-dark
-      background $white
+    &:hover
+      background rgba(255,255,255,.8)
       .svg-icon, g
         fill $black
 
-      &:hover
-        background rgba(255,255,255,.8)
-        .svg-icon, g
-          fill $black
-
-      &:active
-        background rgba(255,255,255,.6)
-        .svg-icon, g
-          fill $black
-
-    &.-white-opacity
-      background rgba(255,255,255,.2)
+    &:active
+      background rgba(255,255,255,.6)
       .svg-icon, g
-        fill $white
+        fill $black
 
-      &:hover
-        background rgba(255,255,255,.1)
+  &.-white-opacity
+    background rgba(255,255,255,.2)
+    .svg-icon, g
+      fill $white
 
-      &:active
-        background rgba(0,0,0,.2)
+    &:hover
+      background rgba(255,255,255,.1)
+
+    &:active
+      background rgba(0,0,0,.2)
 
   .icon-bag
     fill-rule evenodd
 
   &.icon-hot
+    border none
+
     &:before
       content ''
       sprite($s-hot)
-    &:hover
-      background #fff !important
+
+    &:hover, &:active
+      border none
+      background #fff
+
 
   &.close-button
     transform rotate(0)
@@ -149,6 +154,35 @@
 
 .icon-sprite
   display inline-block
+  position relative
+
+  &:before,
+  &:after
+    content ''
+    position absolute
+    top 0
+    left 0
+    width 32px
+    height 32px
+    border-radius 50%
+    opacity 0
+    transition opacity .15s
+
+  &:before
+    background $white
+
+  &:after
+    background $black
+
+  &:hover:before
+    opacity .12
+
+  &:active
+    &:before
+      opacity 0
+
+    &:after
+      opacity .12
 
   &.facebook
     sprite($s-fb)

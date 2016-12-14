@@ -1,0 +1,73 @@
+// ==============================================
+// About List
+// ==============================================
+
+.about-list
+  font-size 0
+
+  li
+    display inline-block
+    vertical-align top
+    width calc(100% / 3 - 48px)
+    margin 0 24px
+    color $gray-text
+    font-size 16px
+    line-height 28px
+    text-align center
+
+  .pic
+    display inline-block
+    height 82px
+
+    &:before
+      content ''
+      display inline-block
+      margin-bottom 12px
+
+  h2
+    font-size 24px
+    font-family 'Poppins'
+    letter-spacing -1px
+    color $black
+    margin-bottom 12px
+
+  .best .pic:before
+    sprite($s-best)
+  .mark .pic:before
+    sprite($s-mark)
+  .diamond .pic:before
+    sprite($s-diamond)
+
+@media (max-width 1000px)
+
+  .about-list
+    .pic
+      height 70px
+
+    h2
+      font-size 20px
+      line-height 30px
+
+    p
+      font-size 14px
+      line-height 22px
+
+@media (max-width 700px)
+  .about-list
+    li
+      width 100%
+      box-sizing border-box
+      margin 0 0 36px
+
+      &:last-child
+        margin-bottom 0
+
+    .pic
+      height 80px
+
+    h2
+      font-size 24px
+
+    p
+      font-size 16px
+      line-height 26px

@@ -136,7 +136,7 @@
     &:hover
       color $blue
 
-    &:active
+    &:active, &.-active
       color $blue
       border 2px solid $blue
       box-shadow 0 3px 3px rgba(0,0,0,0)
@@ -237,6 +237,13 @@ a
       background $green-dark
       transform translate(0, 0)
 
+.link-default
+  color $green
+  &:hover
+    color $green-darker
+  &:active
+    color $green-dark
+
 .link
   display inline-block
   position relative
@@ -317,6 +324,21 @@ a
   &:hover .btn
     transform translate(-50%, -50%) scale(1)
 
+.list
+  li
+    position relative
+    padding-left 16px
+
+    &:before
+      content ''
+      display block
+      width 6px
+      height 6px
+      border-radius 50%
+      background $black
+      position absolute
+      left 0
+      top calc(50% - 4px)
 
 // ==============================================
 // Form elements
