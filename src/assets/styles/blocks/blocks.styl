@@ -1,43 +1,5 @@
 // ==============================================
-// Composition
-// ==============================================
-
-.composition
-  width 45%
-  max-width 500px
-  height 420px
-  float left
-  position relative
-
-  img
-    position absolute
-    opacity 0
-
-  .composition-1
-    top 0
-    left 30px
-    transform translate(0,90px)
-    transition transform 0.25s linear, opacity 0.3s linear
-
-  .composition-2
-    top 137px
-    left 92px
-    transform translate(0,120px)
-    transition transform 0.3s linear, opacity 0.3s linear
-
-  .composition-3
-    top 182px
-    left 0
-    transform translate(0,150px)
-    transition transform 0.3s linear, opacity 0.3s linear
-
-  &.-active
-    img
-      transform translate(0,0)
-      opacity 1
-
-// ==============================================
-// Composition
+// Content
 // ==============================================
 
 .content
@@ -108,7 +70,7 @@
     width 100%
     border 2px solid $white
     border-radius 5px
-    box-shadow 3px 3px 8px rgba(0,0,0,.15)
+    box-shadow 3px 3px 8px $black-shadow
 
   .overlay-link
     opacity 0
@@ -120,76 +82,6 @@
   &:hover
     .overlay-link
       opacity 1
-
-
-// ==============================================
-// Features
-// ==============================================
-.features
-  padding 52px 0 0
-  color #fff
-
-  .base-col
-    clearfix()
-
-  .content
-    padding 33px 0
-
-    .btn
-      color inherit
-
-  .headline-author
-    margin -24px 0 20px
-
-  .price
-    position relative
-    z-index 2
-    font-size 20px
-    font-weight 600
-    margin-bottom -2px
-
-    s
-      font-size 16px
-      display inline-block
-      vertical-align top
-      position relative
-      top 3px
-      left 3px
-      text-decoration none
-
-      &:before
-        content ''
-        display inline-block
-        width calc(100% + 4px)
-        height 2px
-        background $black
-        position absolute
-        top calc(50% - 2px)
-        left -2px
-
-    &.btn.-rounded
-      cursor default
-      color $black
-      font-size 22px
-      font-weight 500
-
-      &:hover
-        background $white
-      &:active
-        top 0
-
-  .headline-description
-    margin-bottom 12px
-
-.features-image
-  float left
-  width 55%
-  max-width 610px
-  text-align center
-
-  img
-    width 100%
-
 
 // ==============================================
 // Substrate
@@ -232,128 +124,6 @@
       margin 5px
 
 // ==============================================
-// Subscription
-// ==============================================
-
-.section-subscription
-  position relative
-  z-index 2
-  color #fff
-  text-align center
-  padding 54px 0 100px
-
-  .headline-big
-    display block
-    margin 14px 0 14px
-
-  .subscription-form
-    margin-top 38px
-
-  .subscription-name
-    line-height 40px
-    margin-bottom 64px
-
-  .subscription-buyer,
-  .subscription-price,
-  .subscription-submit
-    display inline-block
-
-  .subscription-buyer
-    width 174px
-    text-align left
-    p
-
-  .subscription-price
-    margin 5px 26px 4px
-    font-weight 600
-    position relative
-    top 2px
-
-    .old-price,
-    .price,
-    .duration
-      vertical-align middle
-
-  .old-price
-    font-family 'Poppins'
-    font-size 24px
-    color $gray-text2
-    position relative
-    letter-spacing -1px
-
-    &:after
-      content ''
-      display block
-      width calc(100% + 4px)
-      height 3px
-      background $gray-text2
-      position absolute
-      top calc(50% - 2px)
-      left -2px
-
-  .price
-    font-family 'Poppins'
-    font-size 36px
-    display inline-block
-    margin 0 8px 0 12px
-    letter-spacing -2px
-
-  .duration
-    font-family 'Poppins'
-    font-size 24px
-    position relative
-    top -4px
-    letter-spacing -1px
-
-.subscription-name
-  display inline-block
-  font-size 20px
-  font-weight 500
-  letter-spacing 6px
-  text-transform uppercase
-  border-bottom 2px solid $white
-
-// ==============================================
-// About List
-// ==============================================
-
-.about-list
-  font-size 0
-
-  li
-    display inline-block
-    vertical-align top
-    width calc(100% / 3 - 48px)
-    margin 0 24px
-    color $gray-text
-    font-size 16px
-    line-height 28px
-    text-align center
-
-  .pic
-    display inline-block
-    height 82px
-
-    &:before
-      content ''
-      display inline-block
-      margin-bottom 12px
-
-  h2
-    font-size 24px
-    font-family 'Poppins'
-    letter-spacing -1px
-    color $black
-    margin-bottom 12px
-
-  .best .pic:before
-    sprite($s-best)
-  .mark .pic:before
-    sprite($s-mark)
-  .diamond .pic:before
-    sprite($s-diamond)
-
-// ==============================================
 // Purchase
 // ==============================================
 
@@ -390,6 +160,16 @@
       top calc(50% - 3px)
       background $white
 
+
+.block-shadow
+  background #fff
+  box-shadow 0 4px 10px $black-shadow
+  box-sizing border-box
+  border-radius 4px
+
+.growl
+  opacity .9
+
 @media (max-width 1160px)
   .content-image
     width 45%
@@ -397,115 +177,6 @@
 
   .content.-right-middle
     margin-right 16px
-
-@media (max-width 1100px)
-  .features
-    .content
-      padding 10px 0 30px
-
-    .headline-description
-      margin -8px 0 8px
-
-@media (max-width 1000px)
-  .features
-    text-align center
-    position relative
-
-    &:before
-      content ''
-      position absolute
-      left 0
-      top 0
-      width 100%
-      height 100%
-      background rgba(0,0,0,.8)
-      opacity 0
-      transition opacity 0.2s
-
-    .features-image
-      float none
-      margin 0 auto !important
-      width 100%
-
-    .price.btn.-rounded
-      position absolute
-      right 30px
-      top 30px
-
-    .headline-description
-      display none
-
-    h2.headline
-      font-size 36px
-      padding-bottom 20px
-
-      .icon
-        display none
-
-    .content
-      position absolute
-      top 50%
-      left 50%
-      padding 0
-      transform translate(-50%, -50%)
-      box-sizing border-box
-      opacity 0
-      transition opacity 0.2s
-
-      .headline-author
-        margin-bottom 32px
-
-      &.-light
-        .headline,
-        .headline-author,
-        .headline-description,
-        a
-          color $white
-
-        .headline-author a
-          border-bottom-color $white
-
-      .btn
-        background $white
-        color $black !important
-        border-color $white
-
-        &:hover
-          background rgba(255,255,255,.9)
-
-        &:active
-          background rgba(255,255,255,.8)
-
-    &:hover
-      &:before
-        opacity 1
-
-      .content
-        opacity 1
-
-  .section-subscription
-    padding 40px 0 80px
-
-    .subscription-name
-      margin-bottom 56px
-
-    h2.headline
-      font-size 36px
-      line-height 48px
-      letter-spacing -2px
-      padding-bottom 8px
-
-  .about-list
-    .pic
-      height 70px
-
-    h2
-      font-size 20px
-      line-height 30px
-
-    p
-      font-size 14px
-      line-height 22px
 
 @media (max-width 920px)
   .section.-default .content-image + .content
@@ -517,22 +188,6 @@
     padding 0 16px
 
   .section
-    &.-with-composition
-
-      .base-col
-        width 100%
-
-      .composition
-        transform scale(.62)
-        margin -62px auto -18px
-        position relative
-        left -72px
-        float none
-        width 295px
-
-      h2.headline
-        font-size 22px
-        line-height 30px
 
     .content
       float none !important
@@ -544,46 +199,6 @@
 
     &.-default
       padding 60px 0
-
-  .features
-    .content
-      opacity 0 !important
-
-    .price.btn.-rounded
-      display none !important
-
-  .section-subscription
-
-    .subscription-name
-      font-size 16px
-      line-height 24px
-      letter-spacing 5px
-      margin 8px 0 36px
-
-    h2.headline
-      font-size 30px
-      line-height 38px
-      letter-spacing -1px
-      padding-bottom 2px
-
-  .about-list
-    li
-      width 100%
-      box-sizing border-box
-      margin 0 0 36px
-
-      &:last-child
-        margin-bottom 0
-
-    .pic
-      height 80px
-
-    h2
-      font-size 24px
-
-    p
-      font-size 16px
-      line-height 26px
 
   .sub-headline.-top
     font-size 14px
@@ -601,146 +216,6 @@
     .purchase-currency
       margin-left 30px
 
-  .subscription-signup
-    padding 46px 0 58px !important
 
-    h2.headline
-      padding-bottom 0
-      margin-bottom 28px
-
-// ==============================================
-// Presentation
-// ==============================================
-.presentation
-  text-align center
-  padding 70px 0
-  position relative
-
-.presentation-author
-  font-size 20px
-  font-family 'Playfair Display'
-  font-style italic
-  padding-bottom 22px
-
-  a
-    display inline-block
-    line-height 22px
-    font-family 'Poppins'
-    font-style normal
-    color $black
-    text-decoration none
-    border-bottom 1px solid $black
-    margin-right 7px
-
-    &:hover
-      border-bottom none
-      color $green-darker
-
-.presentation-headline
-  margin-left -63px
-
-  span
-    display inline-block
-    vertical-align middle
-
-  .old-price
-    color $gray-text-light
-    font-size 30px
-    font-weight 600
-    font-family 'Poppins'
-    position relative
-    margin-top -24px
-    letter-spacing -1.5px
-
-    &:before
-      content ''
-      position absolute
-      top calc(50% - 5px)
-      left -1px
-      background $gray-text-light
-      width calc(100% + 3px)
-      height 4px
-
-  .price
-    font-size 60px
-    font-weight 600
-    color $black-weak
-    font-family 'Poppins'
-    margin 0 23px 0 7px
-    letter-spacing -3.2px
-
-  .italic
-    font-size 60px
-    font-style italic
-    font-weight 300
-    font-family 'Playfair Display'
-    margin-top -14px
-    letter-spacing -3px
-
-  .name
-    font-size 60px
-    font-weight 600
-    font-family 'Poppins'
-    letter-spacing -3.4px
-    margin-left 20px
-
-.presentation-description
-  font-size 20px
-  color $gray-text
-  max-width 670px
-  margin 12px auto 42px
-  line-height 1.5
-  text-align center
-  letter-spacing -0.3
-
-// ==============================================
-// Timer
-// ==============================================
-.timer
-  background $blue
-  display inline-block
-  border-radius 50px
-  padding 0 28px 0 36px
-
-  .timer-item
-    display inline-block
-    padding 27px 18px 18px
-
-  .count
-    display block
-    font-size 30px
-    font-family 'Poppins'
-    color $white
-    font-weight 600
-    line-height 24px
-    letter-spacing -1.5px
-
-  .type
-    display block
-    font-size 12px
-    font-family 'Poppins'
-    color rgba(0, 0, 0, 0.4)
-    font-weight 600
-    letter-spacing -.5px
-
-.presentation-about
-  margin-top 50px
-
-  .svg-icon, .btn
-    display inline-block
-    vertical-align middle
-    margin 0 9px
-
-  .svg-icon
-    margin 0 3px
-
-    &:last-of-type
-      margin-right 8px
-
-.presentation-buttons
-  position absolute
-  top 42px
-  right 40px
-
-  .btn
-    margin-left 8px
+  .block-shadow
+    border-radius 0

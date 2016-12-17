@@ -1,0 +1,491 @@
+.profile-content
+  clearfix()
+
+.profile-user-settings,
+  position relative
+  padding 40px
+  width calc(50% - 20px)
+  margin-right 20px
+  overflow hidden
+  float left
+
+  .settings-edit
+    cursor pointer
+    position absolute
+    top -20px
+    right -20px
+
+  .settings-item
+    padding-bottom 24px
+    position relative
+
+  .settings-controls
+    border-top 1px solid $border-gray
+    margin 8px -40px 0
+    padding 40px 40px 0
+
+  .user-info
+    font-size 25px
+    line-height 30px
+    letter-spacing -.3px
+
+  .label
+    line-height 11px
+    padding-bottom 9px
+
+  .growl-success
+    background $green
+    color $white
+    width calc(100% + 80px)
+    margin -40px -40px 40px
+    padding 12px 40px
+    box-sizing border-box
+
+form.settings-info-edit
+  input[type="text"],
+  textarea
+    font-size 18px
+    width 100%
+
+  textarea
+    height 96px
+    line-height 25px
+    padding-top 18px
+    resize none
+    overflow hidden
+
+  .label
+      padding-bottom 15px
+
+  .settings-item
+    padding-bottom 30px
+
+  .settings-controls
+    border none
+    padding 2px 40px 0
+
+.profile-user-payments
+  position relative
+  float right
+  width calc(50% - 20px)
+  margin-left 20px
+
+.subscription-payment
+  padding 42px 40px
+  background $green
+  border-radius 4px
+  font-size 0
+  clearfix()
+
+  .subscription-image,
+  .subscription-content
+    display inline-block
+    vertical-align middle
+
+
+  .subscription-image
+    width calc(34% - 18px)
+    padding-right 18px
+
+    img
+      width 100%
+      max-width 128px
+
+  .subscription-content
+    width calc(62% - 18px)
+    padding-left 18px
+    text-align center
+    font-size 16px
+    color $white
+    margin-top -4px
+
+    h2
+      font-family 'Poppins'
+      font-weight 600
+      font-size 26px
+      line-height 48px
+      letter-spacing -1.4px
+      margin-bottom -8px
+
+    .subscription-until
+      line-height 28px
+      opacity .8
+
+    a
+      color $white
+      position relative
+      text-decoration none
+
+    .subscription-link
+      margin-top 34px
+
+      a
+        font-size 14px
+        text-transform uppercase
+        transition opacity .15s
+
+        &:hover
+          opacity .8
+
+        &:active
+          top 1px
+
+.profile-user-orders
+  margin-top 38px
+  overflow hidden
+
+  .controls
+    padding 40px 0
+    text-align center
+
+  .label
+    padding-bottom 12px
+
+// ==============================================
+// Affiliate
+// ==============================================
+
+.profile-user-affiliate
+  @extend .profile-user-settings
+
+  padding 33px 40px
+  width 100%
+  text-align center
+
+  &.-empty
+    padding-top 44px
+    padding-bottom 55px
+
+    .affiliate-description
+      padding-bottom 8px
+
+  .affiliate-description
+    font-size 14px
+    line-height 24px
+    padding-bottom 2px
+    letter-spacing -.1px
+    color $gray-text
+
+  .affiliate-url
+    display block
+    font-size 30px
+    line-height 38px
+    letter-spacing -.5px
+
+  .affiliate-hint
+    background $gray-bg
+    margin 33px -40px -40px
+    padding 14px 0 22px
+    font-size 18px
+    letter-spacing -.4px
+    color $gray-text
+
+    b
+      font-weight 500
+      color $black
+
+.profile-earnings
+  display flex
+  margin-top 40px
+  clearfix()
+
+  .unpaid-wrapper
+    position absolute
+    width calc(100% - 80px)
+    top calc(50% - 18px)
+    transform translate(0, -50%)
+    box-sizing border-box
+
+  .earnings-unpaid,
+  .earnings-info
+    position relative
+    align-self stretch
+
+  .earnings-unpaid
+    width calc(50% - 20px)
+    margin-right 20px
+    padding 40px
+    border-radius 4px
+    background $blue
+    font-size 0
+    box-sizing border-box
+
+    .image,
+    .unpaid-content
+      display inline-block
+      vertical-align middle
+
+    .image
+      width calc(34% - 12px)
+      padding-right 12px
+      img
+        width 100%
+        max-width 130px
+
+    .unpaid-content
+      width calc(66% - 12px)
+      padding-left 12px
+      font-size 14px
+      color $white
+      text-align center
+
+    .unpaid-summ
+      font-size 50px
+      font-family 'Poppins'
+      line-height 50px
+      letter-spacing -2.5px
+
+    .unpaid-description
+      opacity .8
+      font-size 16px
+      font-weight 500
+
+    .unpaid-total
+      background rgba(0,0,0,.08)
+      position absolute
+      box-sizing border-box
+      width 100%
+      bottom 0
+      margin 0 -40px
+      padding 10px 40px
+      font-size 14px
+      color $white
+      font-weight 500
+      text-align center
+
+  .earnings-info
+    @extend .block-shadow
+
+    float left
+    width calc(50% - 20px)
+    margin-left 20px
+    padding 43px 40px 34px
+
+    h2.earnings-info-headline
+      font-family 'Poppins'
+      font-size 25px
+      letter-spacing -1.5px
+      margin-top -12px
+      padding-bottom 6px
+
+    .earnings-info-description
+      color $gray-text
+      font-size 16px
+      line-height 25px
+      padding-bottom 11px
+      letter-spacing -.25px
+
+.share-products
+  margin 66px 0 0
+
+  h2.share-products-headline
+    font-size 36px
+    font-family 'Poppins'
+    letter-spacing -2px
+    text-align center
+    margin-bottom 58px
+
+
+@media (max-width 1100px)
+  .profile-user-settings
+    width calc(46.2% - 20px)
+
+  .profile-user-payments
+    width calc(53.8% - 20px)
+
+@media (max-width 1000px)
+  .profile-user-settings,
+  .profile-user-payments
+    width 100%
+    margin 0
+
+  .profile-user-affiliate
+    padding-top 36px
+
+  .profile-user-payments
+    padding-top 38px
+
+  .subscription-payment
+    .subscription-image
+      padding-right 3px
+
+    .subscription-content
+      width 59%
+      margin -4px 0 0
+      padding 0
+
+    .subscription-image
+      width calc(34.5% - 20px)
+      margin 0
+      padding 0 0 0 20px
+
+  .profile-header
+    h1.profile-header-headline
+      font-size 55px
+      line-height 60px
+
+    .btn.-large
+      padding 21px 24px
+      top -3px
+
+  .profile
+    padding-top 72px
+    padding-bottom 80px
+
+  .profile-header
+    margin-bottom 59px
+
+  .profile-earnings
+    .earnings-unpaid
+      width calc(50% - 16px)
+      margin-right 16px
+      .image
+        display none
+      .unpaid-content
+        width 100%
+        padding 0
+
+    .earnings-info
+      width calc(50% - 16px)
+      margin-left 16px
+      padding 20px 28px
+
+      h2.earnings-info-headline
+        font-size 20px
+        margin-top 0
+        padding-bottom 12px
+        letter-spacing -1px
+
+  .share-products
+    margin-top 53px
+
+    h2.share-products-headline
+      font-size 28px
+      margin-bottom 48px
+
+  .profile-user-affiliate
+    .affiliate-description
+      line-height 20px
+      padding-bottom 0
+
+    .affiliate-hint
+      margin-top 37px
+      padding 10px 0 16px
+
+@media (max-width 700px)
+
+  .profile-user-settings
+    padding 30px 20px 30px
+    margin 0 -15px
+    width calc(100% + 30px)
+    border-radius 0
+
+    .growl-success
+      margin -30px -20px 30px
+      border-radius 0
+
+    .settings-edit
+      top -10px
+      right 0
+
+    .user-info
+      font-size 18px
+      line-height 24px
+
+    .settings-item
+      padding-bottom 20px
+
+    .settings-controls
+      padding 30px 20px 0
+      margin 8px -20px 0
+
+  .profile-user-payments
+    padding-top 0
+    margin 0 -15px
+    width calc(100% + 30px)
+
+    .subscription-payment
+      border-radius 0
+      padding-bottom 33px
+
+      .subscription-image,
+      .subscription-content
+        width 100%
+
+      .subscription-image
+        padding-left 0
+        padding-bottom 24px
+        text-align center
+
+      .subscription-content
+        .subscription-link
+          margin-top 28px
+
+  .profile-user-orders
+    margin-top 0
+    border-radius 0
+
+    .table-list
+
+      tr td:nth-child(2)
+        display none
+
+      tbody
+        font-size 16px
+        a
+          font-size 16px
+
+    .controls
+      padding 30px 15px
+      text-align left
+
+  .profile-user-affiliate
+    padding 24px 20px
+    width calc(100% + 30px)
+    margin 0 -15px
+
+    .affiliate-url
+      font-size 18px
+      line-height 30px
+      letter-spacing -.4px
+
+    .affiliate-hint
+      margin 28px -20px -24px
+      padding 12px 0
+      font-size 14px
+      letter-spacing -.25px
+      font-weight 400
+
+  .profile-earnings
+    display block
+    width calc(100% + 30px)
+    margin 0 -15px
+
+    .earnings-unpaid
+      width 100%
+      border-radius 0
+      margin 0
+      padding-top 36px
+      padding-bottom 32px
+
+      .unpaid-wrapper
+        position relative
+        width 100%
+        top 0
+        transform translate(0,0)
+
+      .unpaid-content
+        padding 24px 0 60px
+
+    .earnings-info
+      width 100%
+      margin 0
+      padding 30px 15px 34px
+      text-align center
+
+      h2.earnings-info-headline
+        padding-bottom 10px
+
+      .earnings-info-description
+        line-height 24px
+        padding-bottom 8px

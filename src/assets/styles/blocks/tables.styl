@@ -1,0 +1,43 @@
+.table
+  width 100%
+
+.table-list
+  thead
+    font-size 14px
+    color $gray-text
+    td
+      padding 14px 20px 15px
+
+  tbody
+    font-size 18px
+
+    a
+      font-size 18px
+      font-weight 400
+      text-decoration underline
+      &:hover
+        text-decoration none
+
+    tr:nth-child(odd) td
+      background $gray-bg
+
+  td
+    padding 13px 20px
+    letter-spacing -.3px
+
+    &.-right
+      text-align right
+
+  .date
+    font-size 14px
+    font-weight 500
+
+@media (max-width 700px)
+  .table-list
+    thead
+      td
+        padding 15px 20px
+
+    tbody
+      td
+        padding 15px 20px

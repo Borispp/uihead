@@ -38,7 +38,7 @@
 
 .select2-results__options
   margin-bottom -2px
-  
+
 .select2-container--default .select2-results__option
   border-bottom 2px solid $border-gray
 
@@ -55,3 +55,32 @@
 
 [aria-selected="true"]
   display none !important
+
+// ==============================================
+// Select Mobile
+// ==============================================
+.select-mobile
+  position relative
+
+  select
+    background $white
+    border 2px solid $border-gray
+    width 100%
+    height 60px
+    box-sizing border-box
+    border-radius 30px
+    font-size 18px
+    font-weight 500
+    padding 0 28px
+    -webkit-appearance none
+    -moz-appearance none
+
+  &:after
+    content ''
+    position absolute
+    z-index 1
+    top 28px
+    right 34px
+    border-style solid
+    border-width 6px 5px 0 5px
+    border-color $black transparent transparent transparent

@@ -1,0 +1,86 @@
+.page.login
+  padding 97px 0
+
+  .page-header
+    margin-bottom 45px
+
+.login-form
+  width 100%
+  max-width 460px
+  margin 0 auto 12px
+
+  .input
+    width 100%
+
+  .login-item
+    margin-bottom 21px
+    position relative
+
+    &:last-child
+      margin-bottom 0
+
+    .login-hint
+      position absolute
+      right 24px
+      margin-top -42px
+
+      a
+        font-size 14px
+        font-weight 400
+        color $gray-text
+        &:hover
+          color $blue-darker
+        &:active
+          color $blue-dark
+
+  input[type="submit"]
+    width 100%
+
+  .login-social
+    text-align center
+    color $gray-text
+    font-size 14px
+    padding-top 4px
+
+    a
+      font-size 14px
+      font-weight 400
+
+  .form-error-hint
+    display block
+    text-align center
+    margin 0 0 15px
+
+@media (max-width 1000px)
+  .page.login
+    padding-top 67px
+    padding-bottom 60px
+
+  .login-form
+    margin-top -12px
+
+@media (max-width 700px)
+  .page.login
+    padding-top 29px
+    padding-bottom 44px
+
+    .page-header
+      margin-bottom 25px
+
+      .page-description
+        padding-top 14px
+
+  .login-form
+    margin-top 24px
+
+    .login-social
+      padding-top 2px
+
+    .login-item
+      margin-bottom 20px
+
+      .login-hint
+        margin-top -39px
+
+    .form-error-hint
+      margin -2px 0 6px

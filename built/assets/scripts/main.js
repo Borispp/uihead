@@ -8,13 +8,23 @@ $('.select2').select2({
 	minimumResultsForSearch: -1
 });
 
+if (Clipboard) {
+	var clipboard = new Clipboard('[data-clipboard-text]');
+	clipboard.on('success', function (e) {
+		$.growl.notice({ title: "Copied!", message: e.text });
+	}).on('error', function (e) {
+		$.growl.error({ message: 'Something went wrong' });
+	});
+}
+
 // ==============================================
 // Elements
 // ==============================================
 var $elements = {
 	body: $('body'),
 	show: $('[data-show]'),
-	close: $('[data-close]')
+	close: $('[data-close]'),
+	tab: $('[data-tab]')
 };
 
 // ==============================================
@@ -47,6 +57,33 @@ var showElement = {
 };
 
 showElement.bindUIActions();
+
+// ==============================================
+// Change Tab
+// ==============================================
+
+var changeTab = {
+
+	bindUIActions: function bindUIActions() {
+		var _this = this;
+		$elements.tab.on('click', function (e) {
+			e.preventDefault();
+			_this.show.call(this, e);
+		});
+	},
+
+	show: function show(e) {
+		var tabGroup = $(this).data('tab-group');
+		var tab = $(this).data('tab');
+
+		$('[data-tab-group="' + tabGroup + '"]').removeClass('-active');
+		$('[data-tab="' + tab + '"]').addClass('-active');
+		$(tabGroup).addClass('-hide');
+		$(tab).removeClass('-hide');
+	}
+};
+
+changeTab.bindUIActions();
 
 // ==============================================
 // Subscription images
@@ -111,10 +148,27 @@ emojiRand.init();
 // Stickit header
 // ==============================================
 $(window).scroll(function () {
-	console.log(window.pageYOffset);
 	if (window.pageYOffset > 50) {
 		$('.header-main').addClass('-stickit');
 	} else {
 		$('.header-main').removeClass('-stickit');
 	}
+});
+
+// ==============================================
+// ScrollToPage
+// ==============================================
+var $page = $('html,body');
+var scrollToPage = function scrollToPage(target) {
+	var y = 0;
+	if (target && $(target).length) {
+		y = $(target).offset().top;
+	}
+	$page.animate({ scrollTop: y - 60 }, 'slow', 'swing');
+	return;
+};
+
+$('.scrollto').on('click', function (e) {
+	e.preventDefault();
+	scrollToPage($(this).attr('href'));
 });

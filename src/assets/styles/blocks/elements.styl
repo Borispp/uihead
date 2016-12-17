@@ -36,6 +36,7 @@
   font-size 14px
   font-weight 500
   line-height 16px
+  letter-spacing 0
   border-radius 20px
   padding 10px 20px
   text-decoration none
@@ -48,7 +49,7 @@
 
   &.-large
     font-size 18px
-    padding 21px 32px
+    padding 22px 32px
     border-radius 36px
 
   &.-big
@@ -121,6 +122,18 @@
     &:hover
       background $white-opacity
 
+  &.-white-blue
+    @extend .btn.-white
+    color $blue
+
+    &:hover
+      color $white
+      background $blue-darker
+
+    &:active
+      color $white
+      background $blue-dark
+
   &.-text-blue
     color $blue
 
@@ -128,7 +141,7 @@
     font-size 16px
     background $white
     border 2px solid $white
-    padding 11px 22px 10px
+    padding 11px 21px 10px
     color $black
     box-shadow 2px 3px 3px rgba(0,0,0,.1)
     transition color .15s linear, box-shadow .15s linear
@@ -136,7 +149,7 @@
     &:hover
       color $blue
 
-    &:active
+    &:active, &.-active
       color $blue
       border 2px solid $blue
       box-shadow 0 3px 3px rgba(0,0,0,0)
@@ -237,6 +250,13 @@ a
       background $green-dark
       transform translate(0, 0)
 
+.link-default
+  color $green
+  &:hover
+    color $green-darker
+  &:active
+    color $green-dark
+
 .link
   display inline-block
   position relative
@@ -317,6 +337,21 @@ a
   &:hover .btn
     transform translate(-50%, -50%) scale(1)
 
+.list
+  li
+    position relative
+    padding-left 16px
+
+    &:before
+      content ''
+      display block
+      width 6px
+      height 6px
+      border-radius 50%
+      background $black
+      position absolute
+      left 0
+      top calc(50% - 4px)
 
 // ==============================================
 // Form elements
@@ -372,6 +407,58 @@ a
       top -2px
       padding-left 6px
 
+  &.-left-icon
+    position relative
+    padding-left 50px
+
+    .svg-icon
+      position absolute
+      top 0
+      left -50px
+
+    label
+      &:before
+        position relative
+        top 12px
+
+    input:checked + label
+      &:after
+        top 16px
+
+.checkbox-btn
+  input[type="checkbox"]
+    display none
+
+  input:checked + label
+    @extend .btn.-white-shadow:active
+
+label.label
+  cursor pointer
+
+.label
+  display inline-block
+  font-size 14px
+  line-height 24px
+  color $gray-text
+
+.input
+  font-size 18px
+  border 2px solid $border-gray
+  border-radius 30px
+  padding 13px 28px
+  box-sizing border-box
+  transition border-color .2s
+
+  &:focus
+    border-color $blue
+
+  &.-error
+    border-color $border-red-pale
+
+.form-error-hint
+  color $red
+  font-size 14px
+
 // ==============================================
 // Keyframes
 // ==============================================
@@ -390,3 +477,7 @@ a
     &.link-arrow:after,
     &.link-arrow .svg-icon
       display none
+
+  .input
+    padding 10px 24px
+    font-size 16px

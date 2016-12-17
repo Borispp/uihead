@@ -1,0 +1,56 @@
+// ==============================================
+// Composition
+// ==============================================
+
+.composition
+  width 45%
+  max-width 500px
+  height 420px
+  float left
+  position relative
+
+  img
+    position absolute
+    opacity 0
+
+  .composition-1
+    top 0
+    left 30px
+    transform translate(0,90px)
+    transition transform 0.25s linear, opacity 0.3s linear
+
+  .composition-2
+    top 137px
+    left 92px
+    transform translate(0,120px)
+    transition transform 0.3s linear, opacity 0.3s linear
+
+  .composition-3
+    top 182px
+    left 0
+    transform translate(0,150px)
+    transition transform 0.3s linear, opacity 0.3s linear
+
+  &.-active
+    img
+      transform translate(0,0)
+      opacity 1
+
+@media (max-width 700px)
+  .section
+    &.-with-composition
+
+      .base-col
+        width 100%
+
+      .composition
+        transform scale(.62)
+        margin -62px auto -18px
+        position relative
+        left -72px
+        float none
+        width 295px
+
+      h2.headline
+        font-size 22px
+        line-height 30px
