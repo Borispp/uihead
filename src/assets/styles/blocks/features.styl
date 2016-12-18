@@ -2,14 +2,56 @@
 // Features
 // ==============================================
 .features
-  padding 52px 0 0
   color #fff
 
   .base-col
-    clearfix()
+    font-size 0
+    height 450px
+    position relative
 
-  .content
-    padding 33px 0
+    &:before
+      content ''
+      display inline-block
+      height 100%
+      vertical-align middle
+
+  .features-content
+    width calc(44% - 45px)
+    padding-left 45px
+    margin-top -10px
+    display inline-block
+    vertical-align middle
+
+    &.-light
+      .headline,
+      .headline-description,
+      .headline-author,
+      .price
+        color $black
+
+      .price s:before
+        background $black
+
+      .headline-author
+        a
+          color $black
+
+    &.-dark
+      .headline,
+      .headline-description,
+      .headline-author,
+      .price
+        color $white
+
+      .price s:before
+        background $white
+
+      .headline-author
+        color $white
+
+        a
+          color $white
+          border-color $white
 
     .btn
       color inherit
@@ -58,13 +100,15 @@
     margin-bottom 12px
 
 .features-image
-  float left
-  width 55%
+  display inline-block
+  vertical-align bottom
+  width 56%
   max-width 610px
   text-align center
 
   img
     width 100%
+    max-width 540px
 
 @media (max-width 1100px)
   .features
@@ -82,6 +126,7 @@
     &:before
       content ''
       position absolute
+      z-index 1
       left 0
       top 0
       width 100%
@@ -110,32 +155,35 @@
       .icon
         display none
 
-    .content
+    .features-content
       position absolute
+      z-index 1
       top 50%
       left 50%
       padding 0
-      transform translate(-50%, -50%)
+      margin-top 0
+      transform translate(-50%, -50%) scale(.8)
       box-sizing border-box
       opacity 0
-      transition opacity 0.2s
+      transition opacity .15s linear, transform .1s linear
 
       .headline-author
         margin-bottom 32px
+
+      h2.headline
+        letter-spacing -2px
 
       &.-light
         .headline,
         .headline-author,
         .headline-description,
-        a
-          color $white
-
         .headline-author a
+          color $white
           border-bottom-color $white
 
       .btn
         background $white
-        color $black !important
+        color $black
         border-color $white
 
         &:hover
@@ -148,13 +196,18 @@
       &:before
         opacity 1
 
-      .content
+      .features-content
+        transform translate(-50%, -50%) scale(1)
         opacity 1
 
 @media (max-width 700px)
   .features
-    .content
-      opacity 0 !important
+    .base-col
+      height 240px
+
+    .features-content
+      width 100%
+      opacity 0
 
     .price.btn.-rounded
-      display none !important
+      opacity 0

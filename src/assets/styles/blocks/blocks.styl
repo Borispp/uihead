@@ -22,66 +22,11 @@
   &.-centered
     text-align center
 
-  &.-light
-    .headline,
-    .headline-description,
-    .headline-author,
-    .price
-      color $black
-
-    .price s:before
-      background $black
-
-    .headline-author
-      a
-        color $black
-
-  &.-dark
-    .headline,
-    .headline-description,
-    .headline-author,
-    .price
-      color $white
-
-    .price s:before
-      background $white
-
-    .headline-author
-      color $white
-
-      a
-        color $white
-        border-color $white
-
 .sub-headline
   margin-bottom 16px
 
   &.-top
     margin -40px 0 46px
-
-.content-image
-  float left
-  width 47%
-  max-width 540px
-  position relative
-  font-size 0
-
-  img
-    width 100%
-    border 2px solid $white
-    border-radius 5px
-    box-shadow 3px 3px 8px $black-shadow
-
-  .overlay-link
-    opacity 0
-    transition opacity 0.2s
-    margin 2px
-    border-radius 3px
-    height calc(100% - 4px)
-
-  &:hover
-    .overlay-link
-      opacity 1
 
 // ==============================================
 // Substrate
@@ -123,44 +68,6 @@
       background-size cover
       margin 5px
 
-// ==============================================
-// Purchase
-// ==============================================
-
-.purchase
-  padding-top 12px
-
-  .purchase-currency,
-  .purchase-price,
-  .purchase-old-price
-    display inline-block
-    vertical-align middle
-
-  .purchase-currency
-    font-size 15px
-    font-weight 600
-    margin-top -26px
-
-  .purchase-price
-    font 600 50px 'Poppins'
-    margin 0 8px 0 6px
-
-  .purchase-old-price
-    font 600 27px 'Poppins'
-    margin -18px 30px 0 0
-    letter-spacing -2px
-    position relative
-
-    &:before
-      content ''
-      width calc(100% + 4px)
-      height 3px
-      position absolute
-      left -2px
-      top calc(50% - 3px)
-      background $white
-
-
 .block-shadow
   background #fff
   box-shadow 0 4px 10px $black-shadow
@@ -189,13 +96,13 @@
 
   .section
 
-    .content
-      float none !important
-      width 100% !important
-      margin-top 0 !important
-
-      &.-mobile-centered
-        text-align center
+    // .content
+    //   float none !important
+    //   width 100% !important
+    //   margin-top 0 !important
+    //
+    //   &.-mobile-centered
+    //     text-align center
 
     &.-default
       padding 60px 0
@@ -209,13 +116,6 @@
     width calc(100% - 4px)
     max-width 100%
     margin 0 6px 15px 0
-
-  .purchase
-    padding-top 0
-
-    .purchase-currency
-      margin-left 30px
-
 
   .block-shadow
     border-radius 0

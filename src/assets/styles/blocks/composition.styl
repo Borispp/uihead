@@ -1,13 +1,19 @@
 // ==============================================
 // Composition
 // ==============================================
+.section
+  &.-with-composition
+    padding 100px 0 120px
+    font-size 0
 
 .composition
   width 45%
   max-width 500px
   height 420px
-  float left
+  display inline-block
+  vertical-align middle
   position relative
+  top -6px
 
   img
     position absolute
@@ -36,21 +42,100 @@
       transform translate(0,0)
       opacity 1
 
+.composition-content
+  display inline-block
+  vertical-align middle
+  width calc(55% - 64px)
+  padding-left 64px
+  max-width 540px
+  margin-top 22px
+
+
+@media (max-width 1160px)
+  .section.-with-composition
+    padding 70px 0 90px
+
+    .base-col
+      width 1130px
+      float right
+
+    .content.-right
+      width 45%
+      padding-right 36px
+
+    .composition
+      transform scale(0.95)
+      top -4px
+
+@media (max-width 1000px)
+  .section.-with-composition
+    padding 60px 0 80px
+
+    .base-col
+      width 1050px
+      float right
+
+      h2.headline
+        font-size 28px
+
+    .composition
+      transform scale(0.83)
+
+@media (max-width 920px)
+  .section.-with-composition
+    padding 42px 0 38px
+
+    .base-col
+      width 880px
+      float right
+
+    .composition
+      transform scale(0.75)
+      left -50px
+      top -14px
+
+    .composition-content
+      margin-top 0
+      width calc(54% - 85px)
+      padding-left 85px
+
+      h2.headline
+        letter-spacing -1.75px
+
+      .headline-description
+        font-size 16px
+        line-height 26px
+        padding-bottom 14px
+        letter-spacing -.3px
+
 @media (max-width 700px)
   .section
     &.-with-composition
+      padding 42px 0 54px
 
       .base-col
         width 100%
 
       .composition
-        transform scale(.62)
-        margin -62px auto -18px
+        width 100%
+        display block
+        transform scale(.635)
+        margin -58px auto -43px
         position relative
-        left -72px
+        left -68px
         float none
         width 295px
 
-      h2.headline
-        font-size 22px
-        line-height 30px
+      .composition-content
+        width 100%
+        max-width 100%
+        padding-left 0
+        text-align center
+
+        h2.headline
+          font-size 22px
+          line-height 30px
+          letter-spacing -1.2
+
+        .headline-description
+          padding-bottom 12px

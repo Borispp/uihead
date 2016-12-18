@@ -1,12 +1,17 @@
 .header-main
   padding 26px 30px
   box-sizing border-box
-  position fixed
+  position absolute
   z-index 3
   width 100%
   top 0
-  transition background .15s linear, box-shadow .15s linear, padding .15s linear
+  will-change transform
+  opacity 0
+  transition background .15s linear, box-shadow .15s linear, opacity .15s linear
   clearfix()
+
+  &.-show
+    opacity 1
 
   .icon
     cursor pointer
@@ -16,6 +21,10 @@
 
     .icon.-rounded.-white
       border-color $white
+
+  &.-stickit
+    position fixed
+    animation header-animation linear .15s 1
 
   &.-light,
   &.-stickit
@@ -251,3 +260,9 @@
 
       .emoji
         display none
+
+@keyframes header-animation
+  0%
+    opacity 0
+  100%
+    opacity 1

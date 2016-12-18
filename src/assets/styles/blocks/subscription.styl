@@ -8,18 +8,18 @@
   z-index 2
   color #fff
   text-align center
-  padding 54px 0 100px
+  padding 64px 0 94px
 
   .headline-big
     display block
-    margin 14px 0 14px
+    margin 0 0 15px
 
   .subscription-form
-    margin-top 38px
+    margin-top 33px
 
   .subscription-name
     line-height 40px
-    margin-bottom 64px
+    margin-bottom 66px
 
   .subscription-buyer,
   .subscription-price,
@@ -32,7 +32,7 @@
     p
 
   .subscription-price
-    margin 5px 26px 4px
+    margin 5px 26px 4px 24px
     font-weight 600
     position relative
     top 2px
@@ -84,10 +84,13 @@
 @media (max-width 1000px)
 
   .section-subscription
-    padding 40px 0 80px
+    padding 55px 0 74px
 
     .subscription-name
-      margin-bottom 56px
+      margin-bottom 53px
+
+    .headline-big
+      margin-bottom 12px
 
     h2.headline
       font-size 36px
@@ -97,6 +100,7 @@
 
 @media (max-width 700px)
   .section-subscription
+    padding 55px 0 60px
 
     .subscription-name
       font-size 16px
@@ -104,8 +108,21 @@
       letter-spacing 5px
       margin 8px 0 36px
 
+    .headline-big
+      margin-bottom 15px
+
     h2.headline
       font-size 30px
       line-height 38px
-      letter-spacing -1px
+      letter-spacing -1.5px
       padding-bottom 2px
+
+    .subscription-buyer,
+    .subscription-price,
+    .subscription-submit
+      display block
+      margin 0 auto
+
+    .subscription-price
+      margin-top 7px
+      margin-bottom 4px

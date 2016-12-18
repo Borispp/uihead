@@ -2,10 +2,12 @@
 // Init common plugins
 // ==============================================
 
+// Select2
 $('.select2').select2({
 	minimumResultsForSearch: -1
 });
 
+// Copy clipboard
 if (Clipboard) {
 	var clipboard = new Clipboard('[data-clipboard-text]');
 	clipboard
@@ -17,155 +19,185 @@ if (Clipboard) {
 		});
 }
 
+// Massonry
+$('.blog-items').masonry({
+  itemSelector: '.blog-item'
+});
+
 // ==============================================
 // Elements
 // ==============================================
 var $elements = {
+	page: $('html, body'),
 	body: $('body'),
 	show: $('[data-show]'),
 	close: $('[data-close]'),
-	tab: $('[data-tab]')
+	tab: $('[data-tab]'),
+	header: $('.header-main')
 }
 
 // ==============================================
 // Open popups or menu
 // ==============================================
 
-var showElement = {
+var showElement = (function () {
+	var methods = {
+		bindUIActions: function () {
+			var _this = this;
+			$elements.show.on('click', function (e) {
+				e.preventDefault()
+				_this.show.call(this, e)
+			});
+			$elements.close.on('click', function (e) {
+				e.preventDefault()
+				_this.hide.call(this, e)
+			})
+		},
 
-	bindUIActions: function () {
-		var _this = this;
-		$elements.show.on('click', function (e) {
-			e.preventDefault()
-			_this.show.call(this, e)
-		});
-		$elements.close.on('click', function (e) {
-			e.preventDefault()
-			_this.hide.call(this, e)
-		})
-	},
+		show: function(e) {
+			$($(this).data('show')).removeClass('-hide')
+			$elements.body.addClass('-popup-active')
+		},
 
-	show: function(e) {
-		$($(this).data('show')).removeClass('-hide')
-		$elements.body.addClass('-popup-active')
-	},
+		hide: function (e) {
+			$($(this).data('close')).addClass('-hide')
+			$elements.body.removeClass('-popup-active')
+		}
+	};
 
-	hide: function (e) {
-		$($(this).data('close')).addClass('-hide')
-		$elements.body.removeClass('-popup-active')
-	}
-};
-
-showElement.bindUIActions()
+	return methods.bindUIActions()
+})();
 
 // ==============================================
 // Change Tab
 // ==============================================
 
-var changeTab = {
+var changeTab = (function (){
 
-	bindUIActions: function () {
-		var _this = this;
-		$elements.tab.on('click', function (e) {
-			e.preventDefault()
-			_this.show.call(this, e)
-		});
-	},
+	var methods = {
+		bindUIActions: function () {
+			var _this = this;
+			$elements.tab.on('click', function (e) {
+				e.preventDefault()
+				_this.show.call(this, e)
+			});
+		},
 
-	show: function(e) {
-		var tabGroup = $(this).data('tab-group');
-		var tab = $(this).data('tab');
+		show: function(e) {
+			var tabGroup = $(this).data('tab-group');
+			var tab = $(this).data('tab');
 
-		$('[data-tab-group="' + tabGroup + '"]').removeClass('-active');
-		$('[data-tab="' + tab + '"]').addClass('-active');
-		$(tabGroup).addClass('-hide');
-		$(tab).removeClass('-hide');
+			$('[data-tab-group="' + tabGroup + '"]').removeClass('-active');
+			$('[data-tab="' + tab + '"]').addClass('-active');
+			$(tabGroup).addClass('-hide');
+			$(tab).removeClass('-hide');
+		}
 	}
-};
 
-changeTab.bindUIActions()
+	return methods.bindUIActions()
+})();
 
 // ==============================================
 // Subscription images
 // ==============================================
 
-var substrateImages = {
-	init: function () {
-		this.$substrateImages = $('.substrate-images');
-		this.images = this.$substrateImages.data('images').split(',');
-		this.imagesLength = this.images.length
-		this.substrateLiLength = this.$substrateImages.find('li').length
+var substrateImages = (function () {
+	var methods = {
+		init: function () {
+			this.$substrateImages = $('.substrate-images');
+			this.images = this.$substrateImages.data('images').split(',');
+			this.imagesLength = this.images.length
+			this.substrateLiLength = this.$substrateImages.find('li').length
 
-		this.fillImages()
-		this.changeImage()
-	},
+			this.fillImages()
+			this.changeImage()
+		},
 
-	fillImages: function () {
-		var _this = this;
+		fillImages: function () {
+			var _this = this;
 
-		this.$substrateImages.find('li').each(function (i, el) {
-			var randomNumber = Math.floor(Math.random() * _this.imagesLength);
+			this.$substrateImages.find('li').each(function (i, el) {
+				var randomNumber = Math.floor(Math.random() * _this.imagesLength);
 
-			$(el).css({
-				'background-image': 'url(' + _this.images[randomNumber] + ')'
-			})
-		});
-	},
+				$(el).css({
+					'background-image': 'url(' + _this.images[randomNumber] + ')'
+				})
+			});
+		},
 
-	changeImage: function () {
-		var _this = this;
+		changeImage: function () {
+			var _this = this;
 
-		setInterval(function () {
-			var randomNumber = Math.floor(Math.random() * _this.imagesLength)
-			var randomLi = Math.floor(Math.random() * _this.substrateLiLength)
+			setInterval(function () {
+				var randomNumber = Math.floor(Math.random() * _this.imagesLength)
+				var randomLi = Math.floor(Math.random() * _this.substrateLiLength)
 
-			_this.$substrateImages.find('li').eq(randomLi).css({
-				'background-image': 'url(' + _this.images[randomNumber] + ')'
-			})
+				_this.$substrateImages.find('li').eq(randomLi).css({
+					'background-image': 'url(' + _this.images[randomNumber] + ')'
+				})
 
-		}, 2000);
+			}, 2000);
+		}
 	}
-}
 
-if ($('.substrate-images').length) {
-	substrateImages.init()
-}
+	if ($('.substrate-images').length) {
+		return methods.init()
+	}
+})();
+
 
 // ==============================================
 // Emoji random
 // ==============================================
 
-var emojiRand = {
-	emoji: ['emoji-kiss', 'emoji-laugh', 'emoji-wink', 'emoji-kiss2', 'emoji-laugh2', 'emoji-laugh3'],
+var emojiRand = (function (){
+	var methods = {
+		emoji: ['emoji-kiss', 'emoji-laugh', 'emoji-wink', 'emoji-kiss2', 'emoji-laugh2', 'emoji-laugh3'],
 
-	init: function () {
-		$('.site-logo .emoji').addClass(this.emoji[Math.floor(Math.random() * 6)])
-	}
-}
+		init: function () {
+			$('.site-logo .emoji').addClass(this.emoji[Math.floor(Math.random() * 6)])
+		}
+	};
 
-emojiRand.init()
+	return methods.init();
+})();
 
 // ==============================================
 // Stickit header
 // ==============================================
-$(window).scroll(function () {
-	if (window.pageYOffset > 50) {
-		$('.header-main').addClass('-stickit');
+var headerStickit = function () {
+	$elements.header.addClass('-show');
+
+	if (window.pageYOffset > 70) {
+		$elements.header.addClass('-stickit');
 	} else {
-		$('.header-main').removeClass('-stickit');
+		$elements.header.removeClass('-stickit');
 	}
+}
+
+var timer;
+$(window).scroll(function() {
+	if(timer) {
+		window.clearTimeout(timer);
+	}
+	timer = window.setTimeout(function() {
+		headerStickit();
+		console.log('Fire');
+	}, 50);
 });
+
+headerStickit();
 
 // ==============================================
 // ScrollToPage
 // ==============================================
-var $page = $('html,body');
+
 var scrollToPage = (target) => {
 	var y = 0;
 	if (target && $(target).length) {
 		y = $(target).offset().top;
 	}
-	$page.animate({ scrollTop: y-60 }, 'slow', 'swing')
+	$elements.page.animate({ scrollTop: y-60 }, 'slow', 'swing')
 	return
 }
 

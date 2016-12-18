@@ -1,37 +1,144 @@
-// .section-items
-//   text-align center
-//   padding 84px 0 72px
-//
-//   .headline
-//     font-size 60px
-//     font-family 'Poppins'
-//     font-weight 600
-//     letter-spacing -3.5px
-//
-//   .headline-description
-//     padding-top 12px
-//     padding-bottom 0
-//
-// @media (max-width 1000px)
-//   .section-items
-//     padding 55px 0
-//
-//     .headline
-//       font-size 55px
-//       line-height 64px
-//       padding-bottom 6px
-//
-// @media (max-width 700px)
-//   section.section-items
-//     padding 30px 0 46px
-//
-//     .headline
-//       font-size 32px
-//       line-height 38px
-//       padding-bottom 2px
-//       letter-spacing -2px
-//
-//     .headline-description
-//       font-size 16px
-//       line-height 26px
-//       letter-spacing -.25px
+.section.best-offer
+  padding 102px 0 98px
+
+  .base-col-large
+    clearfix()
+
+  .best-offer-wrapper
+    font-size 0
+
+  .content-image
+    display inline-block
+    vertical-align middle
+    width 48%
+    max-width 548px
+    position relative
+    margin-left 0
+    font-size 0
+
+    img
+      width 100%
+      border 2px solid $white
+      border-radius 5px
+      box-shadow 3px 3px 8px $black-shadow
+
+    .overlay-link
+      opacity 0
+      transition opacity 0.2s
+      margin 2px
+      border-radius 3px
+      height calc(100% - 4px)
+
+    &:hover
+      .overlay-link
+        opacity 1
+
+  .offer-content
+    display inline-block
+    vertical-align middle
+    width calc(52% - 80px)
+    padding-top 7px
+    padding-left 60px
+    text-align center
+
+  h2.headline
+    padding-bottom 19px
+
+
+.purchase
+  padding-top 4px
+
+  .purchase-currency,
+  .purchase-price,
+  .purchase-old-price
+    display inline-block
+    vertical-align middle
+
+  .purchase-currency
+    font-size 15px
+    font-weight 600
+    margin-top -26px
+
+  .purchase-price
+    font 600 50px 'Poppins'
+    margin 0 8px 0 6px
+
+  .purchase-old-price
+    font 600 27px 'Poppins'
+    margin -18px 30px 0 0
+    letter-spacing -2px
+    position relative
+
+    &:before
+      content ''
+      width calc(100% + 4px)
+      height 3px
+      position absolute
+      left -2px
+      top calc(50% - 3px)
+      background $white
+
+
+@media (max-width 1000px)
+  .section.best-offer
+    padding 90px 0 85px
+
+    h2.headline
+      font-size 30px
+      line-height 48px
+      letter-spacing -1.75px
+      padding-bottom 16px
+
+    .headline-description
+      font-size 16px
+      letter-spacing -.25px
+      line-height 27px
+      padding-bottom 12px
+
+    .content-image
+      width 47%
+
+    .offer-content
+      width calc(53% - 40px)
+      padding-top 8px
+      padding-left 40px
+
+  .sub-headline.-top
+    margin -40px 0 44px
+    letter-spacing 4.3px
+
+@media (max-width 750px)
+  .section.best-offer
+    padding 34px 0 60px
+
+    .content-image,
+    .offer-content
+      display block
+      width 100%
+      padding-left 0
+      padding-right 0px
+
+    .sub-headline.-top
+      margin 0 0 32px
+
+    .content-image
+      margin 0 auto 32px
+      left -1px
+
+    h2.headline
+      font-size 25px
+      line-height 30px
+      padding-bottom 11px
+
+    .headline-description
+      line-height 26px
+      padding-bottom 6px
+
+  .purchase
+    padding-top 0
+
+    .purchase-currency
+      margin-left 30px
+
+    .purchase-price
+      margin-bottom 7px

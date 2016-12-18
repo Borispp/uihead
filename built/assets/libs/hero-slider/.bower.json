@@ -7,8 +7,7 @@
     "branch": "master",
     "commit": "d6d91703ee86e85ea6d9d50622280a39fef42bba"
   },
-  "_source": "git://github.com/CodyHouse/hero-slider.git",
+  "_source": "https://github.com/CodyHouse/hero-slider.git",
   "_target": "*",
-  "_originalSource": "CodyHouse/hero-slider",
-  "_direct": true
+  "_originalSource": "CodyHouse/hero-slider"
 }
