@@ -447,6 +447,7 @@ label.label
   border-radius 30px
   padding 13px 28px
   box-sizing border-box
+  -webkit-appearance none
   transition border-color .2s
 
   &:focus
@@ -455,9 +456,35 @@ label.label
   &.-error
     border-color $border-red-pale
 
+input.input
+  height 62px
+
 .form-error-hint
   color $red
   font-size 14px
+
+.close
+  display inline-block
+  background #f2f2f2
+  width 23px
+  height 23px
+  border-radius 50%
+  text-align center
+  line-height 22px
+  overflow hidden
+  box-sizing border-box
+  padding-top 7px
+  transition background .15s
+
+  .svg-icon
+    fill $gray-text
+    transition fill .15s
+
+  &:hover
+    background $black
+
+    .svg-icon
+      fill $white
 
 // ==============================================
 // Keyframes
@@ -481,3 +508,6 @@ label.label
   .input
     padding 10px 24px
     font-size 16px
+
+  textarea.input
+    min-height 120px

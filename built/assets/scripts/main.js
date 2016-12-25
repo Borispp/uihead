@@ -20,9 +20,15 @@ if (Clipboard) {
 }
 
 // Massonry
-$('.blog-items').masonry({
+var $blogItems = $('.blog-items').masonry({
 	itemSelector: '.blog-item'
 });
+
+if ($blogItems.length) {
+	$blogItems.imagesLoaded().progress(function () {
+		$blogItems.masonry('layout');
+	});
+}
 
 // ==============================================
 // Elements
@@ -30,17 +36,23 @@ $('.blog-items').masonry({
 var $elements = {
 	page: $('html, body'),
 	body: $('body'),
+	overlay: $('#overlay'),
+	footerMain: $('.footer-main'),
 	show: $('[data-show]'),
+	showPopup: $('[data-showPopup]'),
 	close: $('[data-close]'),
+	closePopup: $('[data-closePopup]'),
 	tab: $('[data-tab]'),
-	header: $('.header-main')
+	header: $('.header-main'),
+	mobileLinks: $('.mobile-menu-links a'),
+	presentationButtons: $('.presentation-buttons')
 };
 
 // ==============================================
-// Open popups or menu
+// Open Menu
 // ==============================================
 
-var showElement = function () {
+var showMenu = function () {
 	var methods = {
 		bindUIActions: function bindUIActions() {
 			var _this = this;
@@ -57,10 +69,65 @@ var showElement = function () {
 		show: function show(e) {
 			$($(this).data('show')).removeClass('-hide');
 			$elements.body.addClass('-popup-active');
+			setTimeout(function () {
+				$($(this).data('show')).addClass('-shown');
+
+				$elements.mobileLinks.each(function (i, el) {
+					setTimeout(function () {
+						$($elements.mobileLinks.get(i)).addClass('-show');
+					}.bind(this), 50 * (i + 1));
+				});
+			}.bind(this), 400);
 		},
 
 		hide: function hide(e) {
-			$($(this).data('close')).addClass('-hide');
+			$($(this).data('close')).removeClass('-shown');
+			var linksLength = $elements.mobileLinks.length;
+
+			$elements.mobileLinks.each(function (i, el) {
+				setTimeout(function () {
+					$($elements.mobileLinks.get(i)).removeClass('-show');
+				}.bind(this), 50 * i);
+			});
+
+			setTimeout(function () {
+				$($(this).data('close')).addClass('-hide');
+				$elements.body.removeClass('-popup-active');
+			}.bind(this), linksLength * 50);
+		}
+	};
+
+	return methods.bindUIActions();
+}();
+
+// ==============================================
+// Open Popups
+// ==============================================
+
+var showElement = function () {
+	var methods = {
+		bindUIActions: function bindUIActions() {
+			var _this = this;
+			$elements.showPopup.on('click', function (e) {
+				e.preventDefault();
+				_this.show.call(this, e);
+			});
+			$elements.closePopup.on('click', function (e) {
+				e.preventDefault();
+				_this.hide.call(this, e);
+			});
+		},
+
+		show: function show(e) {
+			console.log($(this).data('showpopup'));
+			$($(this).data('showpopup')).removeClass('-hide');
+			$elements.overlay.removeClass('-hide');
+			$elements.body.addClass('-popup-active');
+		},
+
+		hide: function hide(e) {
+			$($(this).data('closepopup')).addClass('-hide');
+			$elements.overlay.addClass('-hide');
 			$elements.body.removeClass('-popup-active');
 		}
 	};
@@ -161,6 +228,89 @@ var emojiRand = function () {
 }();
 
 // ==============================================
+// Ui Items random
+// ==============================================
+
+var uiItems = function () {
+	var methods = {
+		$elements: {
+			uiItems: $('.ui-items'),
+			uiList: $('.ui-list'),
+			uiItem: $('.ui-item.-hide'),
+			uiItemActive: $('.ui-item.-active')
+		},
+
+		init: function init() {
+			this.variables = {
+				uiItemWidth: this.$elements.uiItem.outerWidth(),
+				uiItemCount: this.$elements.uiItem.length,
+				uiItemActiveCount: this.$elements.uiItemActive.length,
+				i: this.$elements.uiItemActive.length + 1,
+				iActive: 0,
+				changeSpeed: 3000
+			};
+
+			this.$elements.uiItems.on('mouseover', function (e) {
+				this.onOver();
+			}.bind(this)).on('mouseout', function (e) {
+				this.changeItem();
+			}.bind(this));
+
+			// this.setWidth()
+			this.setActive();
+			this.changeItem();
+		},
+
+		setWidth: function setWidth() {
+			this.$elements.uiList.css({ 'width': this.variables.uiItemWidth * this.variables.uiItemCount });
+		},
+
+		setActive: function setActive() {
+			for (var i = 0; i < this.variables.uiItemActiveCount; i++) {
+				this.appendItem(this.$elements.uiItemActive[i], this.$elements.uiItem[i]);
+			}
+		},
+
+		appendItem: function appendItem(li, item) {
+			item = $(item).find('.ui-content').clone();
+			$(li).append(item[0]);
+			item.fadeIn('slow');
+		},
+
+		changeItem: function changeItem() {
+			this.interval = setInterval(function () {
+
+				$(this.$elements.uiItemActive[this.variables.iActive]).find('.ui-content').fadeOut('slow', function () {
+					$(this).remove();
+				});
+				// $(this.$elements.uiItemActive[iActive]).find('.ui-content').remove()
+				this.appendItem(this.$elements.uiItemActive[this.variables.iActive], this.$elements.uiItem[this.variables.i]);
+
+				this.variables.i++;
+				this.variables.iActive++;
+
+				if (this.variables.i > this.variables.uiItemCount - 1) {
+					this.variables.i = 0;
+				}
+				if (this.variables.iActive > this.variables.uiItemActiveCount - 1) {
+					this.variables.iActive = 0;
+				}
+			}.bind(this), this.variables.changeSpeed);
+		},
+
+		onOver: function onOver() {
+			clearInterval(this.interval);
+		}
+	};
+
+	if (!methods.$elements.uiItems.length) {
+		return;
+	}
+
+	return methods.init();
+}();
+
+// ==============================================
 // Stickit header
 // ==============================================
 var headerStickit = function headerStickit() {
@@ -173,6 +323,16 @@ var headerStickit = function headerStickit() {
 	}
 };
 
+console.log($elements.footerMain.offset());
+
+var presentationButtonsStickit = function presentationButtonsStickit() {
+	if (document.body.clientHeight - $elements.footerMain.offset().top + window.pageYOffset > 100) {
+		$elements.presentationButtons.addClass('-hide');
+	} else {
+		$elements.presentationButtons.removeClass('-hide');
+	}
+};
+
 var timer;
 $(window).scroll(function () {
 	if (timer) {
@@ -180,11 +340,67 @@ $(window).scroll(function () {
 	}
 	timer = window.setTimeout(function () {
 		headerStickit();
-		console.log('Fire');
 	}, 50);
+
+	presentationButtonsStickit();
 });
 
 headerStickit();
+
+// ==============================================
+// Countdown
+// ==============================================
+
+(function () {
+	var methods = {
+		init: function init() {
+			this.end = new Date($('[data-end]').data('end')); // In GMT
+			this.$els = {
+				days: $('.days'),
+				hours: $('.hours'),
+				minutes: $('.minutes'),
+				seconds: $('.seconds'),
+				timer: $('.timer')
+			};
+
+			this.$els.timer.addClass('-active');
+
+			this.showRemaining();
+			this.timer = this.start();
+		},
+
+		showRemaining: function showRemaining() {
+			var _second = 1000;
+			var _minute = _second * 60;
+			var _hour = _minute * 60;
+			var _day = _hour * 24;
+			var timer;
+
+			var now = new Date();
+			var distance = this.end - now;
+			if (distance < 0) {
+				clearInterval(this.timer);
+				this.$els.timer.addClass('-finish');
+				return;
+			}
+			var days = Math.floor(distance / _day);
+			var hours = Math.floor(distance % _day / _hour);
+			var minutes = Math.floor(distance % _hour / _minute);
+			var seconds = Math.floor(distance % _minute / _second);
+
+			this.$els.days.html(days);
+			this.$els.hours.html(hours);
+			this.$els.minutes.html(minutes);
+			this.$els.seconds.html(seconds);
+		},
+
+		start: function start() {
+			return setInterval(this.showRemaining.bind(this), 1000);
+		}
+	};
+
+	methods.init();
+})();
 
 // ==============================================
 // ScrollToPage

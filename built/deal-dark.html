@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
@@ -90,23 +91,26 @@
         <h2 class="presentation-headline"><span class="old-price">$58</span> <span class="price">$8</span> <span class="italic">for</span> <span class="name">Stamp UI Kit</span></h2>
         <p class="presentation-description">Stamp is versatile and compelling pack of 75 UI cards, made with hundreds of elements to help you present client’s ideas in the best way.</p>
 
-        <div class="timer">
+        <!-- GMT -->
+        <div id="jsClockDiv" class="timer" data-end="2016-12-31T23:59:59">
           <p class="timer-item" style="margin-right: 10px">
-            <span class="count">12</span>
+            <span class="count days">12</span>
             <span class="type">days</span>
           </p>
           <p class="timer-item">
-            <span class="count">18</span>
+            <span class="count hours">18</span>
             <span class="type">hours</span>
           </p>
           <p class="timer-item">
-            <span class="count">22</span>
+            <span class="count minutes">22</span>
             <span class="type">minutes</span>
           </p>
           <p class="timer-item" style="margin-left: -6px">
-            <span class="count">35</span>
+            <span class="count seconds">35</span>
             <span class="type">seconds</span>
           </p>
+
+          <div class="success-message">Complete!</div>
         </div>
 
         <div class="presentation-about">
@@ -114,21 +118,105 @@
           <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" class="svg-icon"><defs><style>.cls-13 { fill: #fdc02d; fill-rule: evenodd; }</style></defs><path id="sketch" class="cls-13" d="M26.51 18.36l-1.732-2.43 1.233-.91 1.918 1.46zM20 26.98l-4.76-6.31h9.522zm-6.014-11.96l1.593.95-1.83 2.73-1.68-2.22zm3.29 1.55l5.85.05 1.64 2.3H15.7zm-.855-3.41h7.16l.985.75-1.275.96-6.23-.05-1.574-.94zm13.256 2.45l-3.018-2.3a.776.776 0 0 0-.23-.17l-2.032-1.55a.837.837 0 0 0-.524-.18H16.13a.84.84 0 0 0-.526.18l-5.28 4.02a.885.885 0 0 0-.167 1.23l9.15 12.12a.868.868 0 0 0 1.385 0l9.152-12.12a.884.884 0 0 0-.17-1.23zM20 0A20 20 0 1 1 0 20 20 20 0 0 1 20 0z"/></svg>
 
           <span class="presentation-links">
-            <a href="#" class="btn -white-shadow -active">Preview</a>
-            <a href="#" class="btn -white-shadow">Description</a>
-            <a href="#" class="btn -white-shadow">Full Preview</a>
+            <a href=".presentation-about" class="btn -white-shadow scrollto -active" data-tab='.previews' data-tab-group='.product-tab'>Preview</a>
+            <a href=".presentation-about" class="btn -white-shadow scrollto" data-tab='.product-description' data-tab-group='.product-tab'>Description</a>
+            <a href=".presentation-about" class="btn -white-shadow scrollto" data-tab='.product-related' data-tab-group='.product-tab'>Related</a>
+            <a href=".presentation-about" class="btn -white-shadow scrollto" data-tab='.product-full-preview' data-tab-group='.product-tab'>Full Preview</a>
           </span>
 
           <span class="presentation-links-mobile">
-            <a href="#" class="link -active">Preview</a>
-            <a href="#" class="link">Description</a>
-            <a href="#" class="link">Full Preview</a>
+            <a href="#" class="link -active" data-tab='.previews' data-tab-group='.product-tab'>Preview</a>
+            <a href="#" class="link" data-tab='.product-description' data-tab-group='.product-tab'>Description</a>
+            <a href="#" class="link" data-tab='.product-related' data-tab-group='.product-tab'>Related</a>
+            <a href="#" class="link" data-tab='.product-full-preview' data-tab-group='.product-tab'>Full Preview</a>
           </span>
         </div>
       </div>
     </section>
 
-    <section class="section previews">
+    <section class="section product-related product-tab -hide">
+      <div class="base-col-large">
+        <div class="items">
+          <div class="item">
+            <a href="#" class="item-link"></a>
+            <span class="icon icon-hot -rounded -white -shadow -large item-status"></span>
+            <div class="image"><img src="./assets/images/content/glue.jpg" alt=""></div>
+            <p class="headline">Glue UI Kit</p>
+            <p class="author-name">by <a href="#beans" class="link -green">Beans UI Goods</a></p>
+            <p class="price">$34</p>
+          </div>
+          <div class="item">
+            <a href="#" class="item-link"></a>
+            <span class="icon icon-hot -rounded -white -shadow -large item-status"></span>
+            <div class="image"><img src="./assets/images/content/chameleon.jpg" alt=""></div>
+            <p class="headline">Chameleon UI Kit</p>
+            <p class="author-name">by <a href="#beans" class="link -green">Beans UI Goods</a></p>
+            <p class="price">$34</p>
+          </div>
+          <div class="item">
+            <a href="#" class="item-link"></a>
+            <span class="icon icon-hot -rounded -white -shadow -large item-status"></span>
+            <div class="image"><img src="./assets/images/content/module.jpg" alt=""></div>
+            <p class="headline">Module 01 UI Kit</p>
+            <p class="author-name">by <a href="#beans" class="link -green">Beans UI Goods</a></p>
+            <p class="price">$34</p>
+          </div>
+          <div class="item">
+            <a href="#" class="item-link"></a>
+            <span class="icon icon-hot -rounded -white -shadow -large item-status"></span>
+            <div class="image"><img src="./assets/images/content/chameleon.jpg" alt=""></div>
+            <p class="headline">Fashion UI Kit</p>
+            <p class="author-name">by <a href="#beans" class="link -green">Beans UI Goods</a></p>
+            <p class="price">$34</p>
+          </div>
+          <div class="item">
+            <a href="#" class="item-link"></a>
+            <span class="icon icon-hot -rounded -white -shadow -large item-status"></span>
+            <div class="image"><img src="./assets/images/content/module.jpg" alt=""></div>
+            <p class="headline">Aware Mobile UI Kit</p>
+            <p class="author-name">by <a href="#beans" class="link -green">Beans UI Goods</a></p>
+            <p class="price">$34</p>
+          </div>
+          <div class="item">
+            <a href="#" class="item-link"></a>
+            <span class="icon icon-hot -rounded -white -shadow -large item-status"></span>
+            <div class="image"><img src="./assets/images/content/glue.jpg" alt=""></div>
+            <p class="headline">Aware Mobile UI Kit</p>
+            <p class="author-name">by <a href="#beans" class="link -green">Beans UI Goods</a></p>
+            <p class="price">$34</p>
+          </div>
+        </div>
+
+        <div class="more -res-min-700">
+          <a href="#" class="btn -blue -big">Full Preview</a>
+        </div>
+      </div>
+    </section>
+    <section class="section product-description product-tab -hide">
+      <div class="base-col-large">
+        <div class="product-description-wrapper">
+          Stamp is versatile and compelling pack of 75 UI cards, made with hundreds of elements to help you present client’s ideas in the best
+          way. Cards divided in 9 content categories, supplemented with many variations of headers, footers and headlines and carefully
+          assembled in Sketch and Photoshop source files. Files can be used as you want – change text styles, colors, add or replace photos
+          and graphics. Customize layouts templates as much, or as little, as you want.
+
+          <ul class="list">
+            <li>100+ Components</li>
+            <li>100% Vector based</li>
+            <li>9 Content categories</li>
+            <li>Bootstrap grid</li>
+            <li>Layered & named</li>
+            <li>Google fonts</li>
+          </ul>
+        </div>
+
+        <div class="more -res-min-700">
+          <a href="#" class="btn -blue -big">Full Preview</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section previews product-tab">
       <div class="base-col-large">
         <div class="previews-wrapper">
           <div class="previews-item"><img src="./assets/images/content/ui-stamp-image1.jpg" alt=""></div>

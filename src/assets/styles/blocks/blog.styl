@@ -1,0 +1,461 @@
+.page.blog-post
+  padding 58px 0 0
+
+  .page-header
+    margin-bottom 63px
+
+    h1.page-header-headline
+      padding 25px 0 0
+      line-height 70px
+
+.page.blog-page
+  padding 74px 0 0
+
+  .page-header
+    margin-bottom 72px
+
+    .page-description
+      width 100%
+      max-width 750px
+      margin 0 auto
+      line-height 30px
+      padding-top 35px
+
+  .related-blog
+    padding-top 0px
+
+  .more
+    margin 80px auto
+    text-align center
+
+.blog-tags
+  margin 8px 0 0 30px
+  position absolute
+
+  &.-desktop
+    display inline-block
+
+  &.-mobile
+    display none
+    margin 8px 0 12px 0
+
+  li
+    display inline-block
+    vertical-align top
+    font-size 24px
+    background $white
+    letter-spacing -1.5px
+    line-height 24px
+    padding 12px 12px 10px
+    border-radius 2px
+
+    .close
+      position relative
+      display inline-block
+      vertical-align middle
+      top 0
+      margin-left 6px
+      line-height 19px
+      padding-top 0
+
+.blog-breadcrumbs
+  margin 0 auto
+  text-align center
+
+  li
+    display inline-block
+
+    &:before
+      content ''
+      display inline-block
+      vertical-align middle
+      width 7px
+      height 7px
+      border-radius 50%
+      background $black
+      margin -6px 14px 0
+
+    &:first-child:before
+      display none
+
+  a
+    font-size 20px
+    line-height 65px
+    letter-spacing 2px
+    text-transform uppercase
+    text-decoration none
+    color $black
+
+    &:hover
+      color $green-darker
+
+    &:active
+      color $green-dark
+
+.blog-post-content
+  color $gray-dark
+  font-size 22px
+  line-height 34px
+  letter-spacing -.5px
+
+  h2.headline
+    color $black-weak
+    font-size 36px
+    line-height 48px
+    letter-spacing -2px
+    padding 12px 0 31px
+
+  p
+    padding-bottom 26px
+
+  a.link
+    font-size 22px
+    text-decoration underline
+
+  .image-full
+    padding-top 16px
+    margin-bottom 74px
+
+    img
+      width 100%
+
+  .image-large
+    width calc(100% + 392px)
+    margin 48px -196px 72px
+    img
+      width 100%
+
+  .image-default
+    width 100%
+    margin 29px 0 44px
+
+    img
+      width 100%
+
+  .image-definition
+    display block
+    color $gray-text
+    font-size 14px
+    line-height 34px
+    letter-spacing -.25px
+    padding-top 12px
+
+  .blockquote
+    color $black-weak
+    font-size 24px
+    letter-spacing -.25px
+    font-weight 500
+    line-height 36px
+    margin 14px 0 42px
+    position relative
+
+    &:before
+      content ''
+      display block
+      width 4px
+      height calc(100% - 14px)
+      background #e1e1e1
+      position absolute
+      top 9px
+      left -54px
+
+.blog-author
+  font-size 0
+  padding 30px 30px 36px 33px
+  box-sizing border-box
+  background $white
+  width 100%
+  max-width 756px
+  margin 50px auto -104px
+  border-radius 4px
+  box-shadow 0 4px 10px $black-shadow
+
+  .blog-author-avatar
+    display inline-block
+    width 100px
+    vertical-align top
+
+  .blog-author-content
+    display inline-block
+    width calc(100% - 100px)
+    font-size 18px
+    letter-spacing -.5px
+    box-sizing border-box
+    line-height 28px
+    padding-top 4px
+    padding-left 32px
+    color $black-weak
+
+    .blog-author-name
+      font-size 20px
+      color $gray-text
+      padding-bottom 9px
+      letter-spacing -.25px
+
+      b
+        color $black-weak
+
+    .blog-author-about
+      letter-spacing -.5px
+
+    a.link
+      font-size 18px
+      text-decoration underline
+
+.comments
+  background $white
+  padding 173px 0 72px
+
+.recomendation
+  padding 0 0 80px
+
+  .recommendations-more
+    padding 80px 0 0
+    text-align center
+
+
+@media (max-width 1000px)
+  .page.blog-post
+    padding 38px 0 0
+
+    .page-header
+      margin-bottom 51px
+
+      h1.page-header-headline
+        padding 3px 0 0
+        font-size 50px
+        line-height 55px
+        letter-spacing -2.5px
+
+    .blog-post-content
+      font-size 18px
+      line-height 28px
+      letter-spacing -.3px
+
+      h2.headline
+        font-size 28px
+        line-height 36px
+        letter-spacing -1.75px
+        padding 5px 0 27px
+
+      .image-definition
+        padding-top 9px
+
+      a.link
+        font-size 18px
+
+      .blockquote
+        color $black-weak
+        font-size 18px
+        letter-spacing -.25px
+        font-weight 500
+        line-height 28px
+        margin 4px 0 31px
+        padding-left 34px
+        position relative
+
+        &:before
+          content ''
+          display block
+          width 4px
+          height calc(100% - 8px)
+          background #e1e1e1
+          position absolute
+          top 4px
+          left 0
+
+      .image-full
+        padding-top 0
+        margin-bottom 54px
+
+        img
+          width 100%
+
+      .image-large
+        width 100%
+        margin 14px 0 43px
+
+        img
+          width 100%
+
+      .image-default
+        width 100%
+        margin 20px 0 34px
+
+        img
+          width 100%
+
+  .blog-author
+    max-width 723px
+    margin 20px auto -104px
+    padding 30px 30px 32px 33px
+
+    .blog-author-content
+      font-size 16px
+      line-height 26px
+      padding-top 0
+      margin-top -2px
+
+      .blog-author-name
+        font-size 18px
+        padding-bottom 12px
+
+  .comments
+    padding 154px 0 51px
+
+
+@media (max-width 700px)
+
+  .blog-breadcrumbs
+    a
+      font-size 16px
+      line-height 24px
+
+    li:before
+      width 5px
+      height 5px
+      margin -4px 9px 0
+
+  .page.blog-post
+    padding 18px 0 0
+
+    .page-header
+      margin-bottom 30px
+
+      h1.page-header-headline
+        padding 9px 0 0
+        font-size 32px
+        line-height 38px
+        letter-spacing -1.75px
+
+    .blog-post-content
+      font-size 16px
+      line-height 26px
+      letter-spacing -.25px
+
+      a.link
+        font-size 16px
+
+      h2.headline
+        font-size 22px
+        line-height 30px
+        letter-spacing -1.25px
+        padding 5px 0 10px
+
+      p
+        padding-bottom 12px
+
+      .image-definition
+        padding 10px 15px 0
+        line-height 20px
+
+      .blockquote
+        color $black-weak
+        font-size 16px
+        letter-spacing -.25px
+        font-weight 500
+        line-height 26px
+        margin 7px 0 19px
+        padding-left 0
+        position relative
+
+        &:before
+          display none
+
+      .image-full
+        padding-top 6px
+        margin-bottom 25px
+
+        img
+          width 100%
+
+      .image-large,
+      .image-default
+        width calc(100% + 30px)
+        margin 14px -15px 24px
+
+        img
+          width 100%
+
+  .blog-author
+    max-width 100%
+    margin 17px auto -104px
+    padding 35px 20px 31px
+    border-radius 0
+
+    .blog-author-avatar
+      width 100%
+      text-align center
+      margin-bottom 27px
+
+    .blog-author-content
+      width 100%
+      font-size 14px
+      line-height 24px
+      padding 0
+      text-align center
+
+      a.link
+        font-size 14px
+
+      .blog-author-name
+        font-size 18px
+        padding-bottom 11px
+
+      .blog-author-about
+        letter-spacing -.25px
+
+  .comments
+    padding 154px 0 51px
+
+  .recomendation
+    padding-bottom 40px
+    box-shadow inset 0 4px 10px $black-shadow
+
+    .related-blog
+      padding 34px 0 0
+
+      h2.title
+        margin-bottom 33px
+
+    .recommendations-more
+      padding-top 40px
+
+@media (max-width 1000px)
+  .page.blog-page
+    padding-top 56px
+
+    .page-header
+      margin-bottom 55px
+
+      .page-description
+        padding-top 19px
+
+    .more
+      margin 60px auto
+
+  .blog-tags
+    &.-desktop
+      display none
+    &.-mobile
+      display block
+      position relative
+
+@media (max-width 700px)
+
+  .page.blog-page
+    padding-top 28px
+
+    .page-header
+      margin-bottom 36px
+
+      .page-description
+        padding-top 14px
+        line-height 26px
+
+    .more
+      margin 40px auto
+
+  .blog-tags
+    position static
+    margin -6px 0 15px

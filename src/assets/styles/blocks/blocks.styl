@@ -77,6 +77,162 @@
 .growl
   opacity .9
 
+.promo-block
+  width 100%
+  font-size 0
+
+  .promo-content
+    width calc(57% - 80px)
+    display inline-block
+    vertical-align middle
+    padding-left 10px
+    padding-right 70px
+    text-align center
+    margin-bottom -24px
+
+  .promo-image
+    width 43%
+    display inline-block
+    vertical-align middle
+
+    img
+      width 100%
+
+.counters
+  font-size 0
+  margin 164px 0 138px
+
+  .counter-item
+    font-size 18px
+    display inline-block
+    vertical-align middle
+    width calc(100% / 3)
+    text-align center
+
+  .counter-number
+    font 600 96px/100px 'Poppins'
+    letter-spacing -5px
+    position relative
+
+    &.-plus
+      &:after
+        content '+'
+        font-size 35px
+        line-height 35px
+        position absolute
+        top 4px
+        margin-left 2px
+
+    &.-percents
+      &:after
+        content '%'
+        font-size 24px
+        line-height 24px
+        position absolute
+        top 8px
+        margin-left 2px
+
+  .counter-headline
+    font 600 36px/48px 'Poppins'
+    letter-spacing -2px
+    padding-top 6px
+
+  .counter-description
+    color $gray-text
+    font-size 18px
+    line-height 28px
+    display inline-block
+    width 170px
+
+.buy-subscription
+  font-size 0
+  margin 0 -20px
+
+  .buy-subscription-item
+    padding 60px 20px
+    box-sizing border-box
+    font-size 14px
+    display inline-block
+    width calc(50% - 40px)
+    margin 0 20px
+    border-radius 4px
+    color $white
+    text-align center
+
+    h2.headline
+      padding 7px 0 12px
+
+    .subscription-image
+      height 180px
+
+      img
+        width 100%
+        max-width 130px
+
+    .subscription-price
+      .currency,
+      .price,
+      .old-price
+        display inline-block
+        vertical-align top
+
+      .currency
+        margin-left -20px
+        margin-right 2px
+        font-size 24px
+        line-height 40px
+
+      .price
+        font-size 96px
+        letter-spacing -5px
+        line-height 100px
+        font-weight 600
+        font-family 'Poppins'
+
+      .old-price
+        font-size 46px
+        line-height 58px
+        position absolute
+        font-weight bold
+        font-family 'Poppins'
+        letter-spacing -2px
+        margin 0 0 0 16px
+        opacity .8
+
+        &:before
+          content ''
+          display block
+          position absolute
+          top calc(50% - 5px)
+          width calc(100% + 2px)
+          height 5px
+          background $white
+
+    .subscription-description
+      font-size 16px
+      line-height 28px
+      font-weight 500
+      padding-bottom 24px
+
+    &.-green
+      background $green
+
+      .btn.-white
+        color $green
+
+    &.-black
+      background $black
+
+      .btn.-white
+        color $black
+
+.reviews
+  padding 94px 0 120px
+
+  h2.headline
+    text-align center
+    margin-bottom 40px
+
 @media (max-width 1160px)
   .content-image
     width 45%
@@ -84,6 +240,114 @@
 
   .content.-right-middle
     margin-right 16px
+
+@media (max-width 1000px)
+  .promo-block
+
+    .promo-content
+      width calc(53% - 64px)
+      padding-left 24px
+      padding-right 40px
+      text-align left
+      margin-bottom 0
+
+      h2.headline
+        font-size 28px
+        line-height 36px
+        letter-spacing -1.5px
+
+      .headline-description
+        font-size 16px
+        line-height 26px
+        letter-spacing -.25px
+
+    .promo-image
+      width 46%
+      margin-top -22px
+
+
+  .counters
+    font-size 0
+    margin 106px 0 116px
+
+    .counter-number
+      font 600 70px/56px 'Poppins'
+      letter-spacing -4px
+      position relative
+
+      &.-plus
+        &:after
+          font-size 30px
+          top -9px
+
+      &.-percents
+        &:after
+          font-size 28px
+          top -5px
+          margin-left 3px
+
+    .counter-headline
+      font 600 30px/48px 'Poppins'
+      letter-spacing -2px
+      padding-top 6px
+
+    .counter-description
+      color $gray-text
+      font-size 16px
+      line-height 24px
+      display inline-block
+      width 185px
+
+
+  .buy-subscription
+
+    .buy-subscription-item
+      padding 60px 20px 50px
+      font-size 14px
+      width calc(50% - 32px)
+      margin 0 16px
+
+      h2.headline
+        padding 7px 0 15px
+        font-size 28px
+        letter-spacing -1.75px
+
+      .subscription-image
+        height 160px
+
+      .subscription-price
+
+        .currency
+          font-size 24px
+          line-height 34px
+
+        .price
+          font-size 70px
+          letter-spacing -4px
+          line-height 70px
+
+        .old-price
+          font-size 30px
+          line-height 34px
+          letter-spacing -2px
+          margin 0 0 0 12px
+
+      .subscription-description
+        font-size 14px
+        line-height 24px
+        font-weight 500
+        padding-bottom 28px
+
+  .reviews
+    padding 60px 0 82px
+
+    h2.headline
+      font-size 28px
+      line-height 36px
+      letter-spacing -1.75px
+      text-align center
+      margin-bottom 44px
+
 
 @media (max-width 920px)
   .section.-default .content-image + .content
@@ -119,3 +383,67 @@
 
   .block-shadow
     border-radius 0
+
+
+  .promo-block
+    .promo-content
+      width 100%
+      padding 36px 0 0
+      text-align center
+
+      h2.headline
+        font-size 22px
+        line-height 30px
+        letter-spacing -1.25px
+        padding-bottom 13px
+
+    .promo-image
+      width 100%
+
+      &.desktop
+        display none
+
+  .counters
+    font-size 0
+    margin 35px 0 9px
+
+    .counter-item
+      font-size 18px
+      padding-bottom 46px
+      width 100%
+
+  .buy-subscription
+    margin 0 -15px
+
+    .buy-subscription-item
+      width 100%
+      margin 0
+      border-radius 0
+
+      h2.headline
+        padding 9px 0 17px
+
+  .reviews
+    padding 36px 0 60px
+
+    h2.headline
+      font-size 22px
+      line-height 30px
+      letter-spacing -1.25px
+      margin-bottom 20px
+
+    .reviews-items
+
+      .review-item
+        padding 24px 18px 18px
+
+      .review-content
+        font-size 16px
+        line-height 26px
+        min-height 0
+
+      .reviewer
+        margin 22px -18px 0
+
+      .reviewer-avatar
+        display none

@@ -3,7 +3,8 @@
   margin -17px
 
   .item,
-  .blog-item
+  .blog-item,
+  .review-item
     display inline-block
     vertical-align top
     width calc(100% / 3 - 34px)
@@ -11,7 +12,8 @@
 
 
 .item,
-.blog-item
+.blog-item,
+.review-item
   font-size 14px
   background $white
   position relative
@@ -19,9 +21,12 @@
   border-radius 5px
   box-shadow 0 4px 10px rgba(0,0,0,.15)
 
+  transform translate(0,0)
+  transition transform .22s linear, box-shadow .22s linear
+
   &:hover
-    .headline
-      border-color transparent
+    transform translate(0,-5px)
+    box-shadow 0 4px 10px rgba(0,0,0,.25)
 
   .item-category
     display inline-block
@@ -34,6 +39,9 @@
     margin 9px 0 5px
     position relative
     z-index 3
+
+    &:hover
+      text-decoration underline
 
   .item-link
     display block
@@ -66,14 +74,22 @@
 
   .headline
     display inline-block
+    position relative
+    z-index 2
     font-size 24px
-    line-height 22px
+    line-height 30px
     font-family 'Poppins'
     font-weight 600
     letter-spacing -1.25px
-    border-bottom 1px solid $black
-    padding-top 28px
-    transition border-color .1s
+    margin-top 28px
+    padding-top 0
+
+    a
+      color $black
+      text-decoration none
+
+      &:hover
+        text-decoration underline
 
   .author-name
     padding-top 9px
@@ -92,13 +108,6 @@
     font-weight 600
     letter-spacing -1.4px
 
-  .best-offer
-    padding-top 9px
-    text-transform capitalize
-    color $blue
-    font-size 14px
-    font-weight 600
-
   .partner-link
     padding 21px 0 30px
 
@@ -106,10 +115,15 @@
       position relative
       z-index 3
 
+.best-offer
+  padding-top 9px
+  text-transform capitalize
+  color $blue
+  font-size 14px
+  font-weight 600
+
 .blog-item
   text-align left
-  wiil-change transform
-  transition transform .22s
 
   .item-content
     padding 16px 30px 27px
@@ -122,7 +136,8 @@
     border-bottom none
     text-decoration none
     line-height 34px
-    padding-top 11px
+    margin-top 11px
+    padding-top 0
 
   .item-description
     overflow hidden
@@ -164,25 +179,67 @@
         opacity 1
         color $black-weak
 
-  &:hover
-    transform translate(0, -5px)
+.reviews-items
 
-    .headline
-      text-decoration underline
+  .review-item
+    padding 33px 30px 18px
+    box-sizing border-box
 
-    .item-category
-      border-bottom 2px solid $blue
-      margin 9px 0 3px
+  .review-content
+    font-size 18px
+    line-height 28px
+    min-height 220px
+    text-align left
+
+  .reviewer-avatar
+    width 66px
+    height 66px
+    border-radius 50%
+    position absolute
+    right 30px
+    top 0
+    transform translate(0, -50%)
+    overflow hidden
+
+    img
+      width 100%
+      position absolute
+      top 50%
+      left 50%
+      transform translate(-50%, -50%)
+
+  .reviewer
+    position relative
+    border-top 1px solid $border-gray
+    margin 20px -30px 0
+    padding 20px 30px 2px
+    box-sizing border-box
+    text-align left
+
+    .reviewer-name
+      font-weight 600
+      font-family 'Poppins'
+      font-size 14px
+      line-height 20px
+      text-transform uppercase
+
+    .reviewer-position
+      color $gray-text
+      font-size 14px
 
 
 @media (max-width 1000px)
   .items
-
     .item,
-    .blog-item
+    .blog-item,
+    .review-item
       display inline-block
       width calc(50% - 34px)
       margin 17px
+
+  .reviews-items .review-item
+    width calc(50% - 30px)
+    margin 15px
 
 @media (max-width 700px)
 
@@ -190,11 +247,25 @@
     margin -10px -15px
 
     .item,
-    .blog-item
+    .blog-item,
+    .review-item
       display inline-block
       width calc(100% - 34px)
       margin-top 10px
       margin-bottom 10px
+
+      .headline
+        font-size 24px
+        line-height 30px
+        margin-top 24px
+        padding-top 0
+
+      .item-description
+        font-size 14px
+        line-height 22px
+
+      .author-name
+        padding-top 4px
 
     .item-status
       display none

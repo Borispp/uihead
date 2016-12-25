@@ -391,9 +391,10 @@
     var checkComposition = function () {
       if (document.body.clientHeight - compositionPosition + window.pageYOffset > 220) {
         $composition.addClass("-active")
-      } else {
-        $composition.removeClass("-active")
       }
+      // else {
+      //   $composition.removeClass("-active")
+      // }
     }
 
     $(window).scroll(function () {

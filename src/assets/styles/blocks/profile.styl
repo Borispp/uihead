@@ -1,6 +1,15 @@
 .profile-content
   clearfix()
 
+  &.-large
+    .affiliate-url
+      padding 17px 0 12px
+      font-weight 600
+      font-family 'Poppins'
+      letter-spacing -1.75px
+      font-size 28px
+      line-height 35px
+
 .profile-user-settings,
   position relative
   padding 40px
@@ -372,6 +381,21 @@ form.settings-info-edit
       margin-top 37px
       padding 10px 0 16px
 
+  .profile-content
+
+    &.-large
+      .profile-user-affiliate
+        padding 23px 20px
+
+        .affiliate-hint
+          margin-top 22px
+          padding 14px 0 32px
+
+      .affiliate-url
+        font-size 22px
+        padding 0
+        letter-spacing -1.5px
+
 @media (max-width 700px)
 
   .profile-user-settings
@@ -395,8 +419,8 @@ form.settings-info-edit
     .settings-item
       padding-bottom 20px
 
-    .settings-controls
-      padding 30px 20px 0
+    form.settings-info-edit .settings-controls
+      padding 0 20px 0
       margin 8px -20px 0
 
   .profile-user-payments
@@ -489,3 +513,21 @@ form.settings-info-edit
       .earnings-info-description
         line-height 24px
         padding-bottom 8px
+
+
+
+  .profile-content
+
+    &.-large
+      .profile-user-affiliate
+        padding 23px 20px
+
+        .affiliate-hint
+          margin-top 20px
+          padding 16px 0 19px
+
+      .affiliate-url
+        font-size 20px
+        line-height 30px
+        padding 0
+        letter-spacing -1.25px
