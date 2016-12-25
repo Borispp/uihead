@@ -44,6 +44,42 @@
   h2.headline
     padding-bottom 19px
 
+.section.fracture-gray
+  background #f2f2f2
+  position relative
+
+  &:before
+    content ''
+    display block
+    position absolute
+    top 0
+    z-index 0
+    width 100%
+    height 200px
+    background-color $white
+    background-image url('../images/content/fracture.png')
+    background-position -30px calc(100% + 1px)
+    background-repeat repeat-x
+    background-size 1060px 80px
+    animation background-moving linear 10s infinite;
+
+  .base-col-large
+    position relative
+    z-index 1
+
+.subscription-page
+  background #f2f2f2
+  position relative
+
+  &:before
+    @extend .section.fracture-gray:before
+    height 80px
+    background-position -30px 1px
+    transform rotate(180deg)
+    top auto
+    bottom 0
+
+
 
 .purchase
   padding-top 4px
@@ -142,3 +178,11 @@
 
     .purchase-price
       margin-bottom 7px
+
+@keyframes background-moving
+  0%
+    background-position-x 0px
+  99.99%
+    background-position-x 1060px
+  100%
+    background-position-x 0px

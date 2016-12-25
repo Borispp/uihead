@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
@@ -90,23 +91,26 @@
         <h2 class="presentation-headline"><span class="old-price">$58</span> <span class="price">$8</span> <span class="italic">for</span> <span class="name">Stamp UI Kit</span></h2>
         <p class="presentation-description">Stamp is versatile and compelling pack of 75 UI cards, made with hundreds of elements to help you present client’s ideas in the best way.</p>
 
-        <div class="timer">
+        <!-- GMT -->
+        <div id="jsClockDiv" class="timer" data-end="2016-12-31T23:59:59">
           <p class="timer-item" style="margin-right: 10px">
-            <span class="count">12</span>
+            <span class="count days">12</span>
             <span class="type">days</span>
           </p>
           <p class="timer-item">
-            <span class="count">18</span>
+            <span class="count hours">18</span>
             <span class="type">hours</span>
           </p>
           <p class="timer-item">
-            <span class="count">22</span>
+            <span class="count minutes">22</span>
             <span class="type">minutes</span>
           </p>
           <p class="timer-item" style="margin-left: -6px">
-            <span class="count">35</span>
+            <span class="count seconds">35</span>
             <span class="type">seconds</span>
           </p>
+
+          <div class="success-message">Complete!</div>
         </div>
 
         <div class="presentation-about">
@@ -226,7 +230,7 @@
         </div>
 
         <div class="more">
-          <a href="#" class="btn -blue -big">Full Preview</a>
+          <a href="#" class="btn -blue -big" data-showpopup='#fullPreview'>Full Preview</a>
         </div>
       </div>
     </section>
@@ -236,6 +240,7 @@
         <div class="product-spec">
           <div class="product-extension">
             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" class="svg-icon"><defs><style>.cls-12 { fill: #3898ea; fill-rule: evenodd; }</style></defs><path class="cls-12" d="M11.84 12.06a.312.312 0 0 1 .3-.16c.862-.04 2.142-.06 3.475-.06 3.73 0 5.186 2.03 5.186 4.62 0 3.39-2.477 4.85-5.52 4.85-.512 0-.69-.03-1.052-.03v5.13a.135.135 0 0 1-.16.16H12a.137.137 0 0 1-.162-.16V12.06zm2.4 7.1c.31.02.552.02 1.09.02 1.576 0 3.06-.54 3.06-2.67 0-1.69-1.065-2.55-2.856-2.55-.54 0-1.05.03-1.293.04v5.16zm11.584-1.59c-1.066 0-1.428.53-1.428.97 0 .48.242.82 1.67 1.55 2.114 1.02 2.775 1.99 2.775 3.42 0 2.14-1.642 3.29-3.866 3.29a5.8 5.8 0 0 1-2.76-.58.18.18 0 0 1-.107-.21v-1.97c0-.13.067-.17.16-.1a5.007 5.007 0 0 0 2.707.79c1.065 0 1.51-.44 1.51-1.05 0-.48-.31-.9-1.67-1.6-1.915-.91-2.708-1.83-2.708-3.36 0-1.73 1.36-3.16 3.718-3.16a6.227 6.227 0 0 1 2.41.38.285.285 0 0 1 .134.27v1.82a.137.137 0 0 1-.2.14 4.53 4.53 0 0 0-2.346-.6zM20 0A20 20 0 1 1 0 20 20 20 0 0 1 20 0z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" class="svg-icon"><defs><style>.cls-13 { fill: #fdc02d; fill-rule: evenodd; }</style></defs><path id="sketch" class="cls-13" d="M26.51 18.36l-1.732-2.43 1.233-.91 1.918 1.46zM20 26.98l-4.76-6.31h9.522zm-6.014-11.96l1.593.95-1.83 2.73-1.68-2.22zm3.29 1.55l5.85.05 1.64 2.3H15.7zm-.855-3.41h7.16l.985.75-1.275.96-6.23-.05-1.574-.94zm13.256 2.45l-3.018-2.3a.776.776 0 0 0-.23-.17l-2.032-1.55a.837.837 0 0 0-.524-.18H16.13a.84.84 0 0 0-.526.18l-5.28 4.02a.885.885 0 0 0-.167 1.23l9.15 12.12a.868.868 0 0 0 1.385 0l9.152-12.12a.884.884 0 0 0-.17-1.23zM20 0A20 20 0 1 1 0 20 20 20 0 0 1 20 0z"/></svg>
             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" class="svg-icon"><defs><style>.cls-13 { fill: #fdc02d; fill-rule: evenodd; }</style></defs><path id="sketch" class="cls-13" d="M26.51 18.36l-1.732-2.43 1.233-.91 1.918 1.46zM20 26.98l-4.76-6.31h9.522zm-6.014-11.96l1.593.95-1.83 2.73-1.68-2.22zm3.29 1.55l5.85.05 1.64 2.3H15.7zm-.855-3.41h7.16l.985.75-1.275.96-6.23-.05-1.574-.94zm13.256 2.45l-3.018-2.3a.776.776 0 0 0-.23-.17l-2.032-1.55a.837.837 0 0 0-.524-.18H16.13a.84.84 0 0 0-.526.18l-5.28 4.02a.885.885 0 0 0-.167 1.23l9.15 12.12a.868.868 0 0 0 1.385 0l9.152-12.12a.884.884 0 0 0-.17-1.23zM20 0A20 20 0 1 1 0 20 20 20 0 0 1 20 0z"/></svg>
           </div>
 
@@ -303,6 +308,17 @@
         </p>
       </section>
     </footer>
+  </div>
+
+  <div class="popup -hide" id="fullPreview">
+    <div class="popup-content">
+      <a href="#" class="icon close-button -rounded -white-dark" data-closepopup="#fullPreview">
+        <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9"><path d="M8.64 1.987L6.14 4.5l2.467 2.475A1.173 1.173 0 0 1 6.95 8.637L4.486 6.162 2.02 8.637a1.167 1.167 0 0 1-1.656 0 1.18 1.18 0 0 1 0-1.662L2.83 4.5.33 1.986A1.173 1.173 0 0 1 1.984.325l2.5 2.512 2.5-2.512A1.173 1.173 0 0 1 8.64 1.987z"></path></svg>
+      </a>
+      <div class="full-preview">
+        <div class="images"><div class="image"><img src="https://res.cloudinary.com/robot/image/upload/w_2112,q_100,c_fit/v1477016464/pufkxlqjrd2i0e5kiyrk.jpg"></div><div class="image"><img src="https://res.cloudinary.com/robot/image/upload/w_2112,q_100,c_fit/v1477016468/ohhdyqboiirbzac8le5i.jpg"></div><div class="image"><img src="https://res.cloudinary.com/robot/image/upload/w_2112,q_100,c_fit/v1477016464/vbmthuajo0eb3yjcf4gi.jpg"></div></div>
+      </div>
+    </div>
   </div>
 
   <div id="overlay" class="-hide"></div>

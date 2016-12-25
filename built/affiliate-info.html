@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta charset="UTF-8">
+  <title>UI Head: Affiliate Info</title>
+  <link href="assets/libs/select2/dist/css/select2.min.css" rel="stylesheet" />
+  <link href="assets/libs/growl/stylesheets/jquery.growl.css" rel="stylesheet" type="text/css" />
+  <link href="assets/styles/main.css" rel="stylesheet" type="text/css">
+
+  <link rel="icon" href="assets/images/content/favicon.png" type="image/x-icon" />
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600&amp;subset=latin-ext" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i" rel="stylesheet">
+
+</head>
+<body>
+
+  <div class="wrapper -gray">
+    <header class="header-main -light">
+      <a href="#" class="site-logo">
+        <span class="emoji"></span>
+        <span class="logo-img"></span>
+      </a>
+
+      <ul class="header-main-menu -res-min-1000">
+        <li class="catalog">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48" class="svg-icon"><g fill="none"><g fill="#4D4D4D"><path d="M6.2 22.2L7.8 38.2C8 40.3 9.9 42 12 42L36 42C38.1 42 40 40.3 40.2 38.2L41.8 22.2C42 19.9 40.3 18 38 18L10 18C7.7 18 6 19.9 6.2 22.2L6.2 22.2ZM37.8 22L36.2 37.8C36.2 37.9 36.1 38 36 38L12 38C11.9 38 11.8 37.9 11.8 37.8L10.2 22 37.8 22ZM14 8C14 6.9 14.9 6 16 6L32 6C33.1 6 34 6.9 34 8 34 9.1 33.1 10 32 10L16 10C14.9 10 14 9.1 14 8ZM10 14C10 12.9 10.9 12 12 12L36 12C37.1 12 38 12.9 38 14 38 15.1 37.1 16 36 16L12 16C10.9 16 10 15.1 10 14Z"/></g></g></svg>
+            Catalog
+          </a>
+        </li>
+        <li class="subscription">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 24 16" class="svg-icon"><path class="cls-1" d="M8 12.645a3.52 3.52 0 0 1 1.88 1.36H22V2S10.27 2 9.88 1.994A3.524 3.524 0 0 1 8 3.354V3.5a1 1 0 0 1-2 0v-.146A3.505 3.505 0 0 1 4.13 2H2v12h2.13A3.5 3.5 0 0 1 6 12.646V12.5a1 1 0 0 1 2 0v.146zM1 16a1 1 0 0 1-1-1V1a1 1 0 0 1 1-1h4a.782.782 0 0 1 .67.475 1.374 1.374 0 0 0 2.66-.01A.778.778 0 0 1 9 0h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H9a.79.79 0 0 1-.68-.466 1.36 1.36 0 0 0-2.64 0A.78.78 0 0 1 5 16H1zm5-9.5a1 1 0 1 1 1 1 1 1 0 0 1-1-1zm0 3a1 1 0 1 1 1 1 1 1 0 0 1-1-1zM11 5a1 1 0 0 1 1-1h7a1 1 0 0 1 0 2h-7a1 1 0 0 1-1-1zm0 3a1 1 0 0 1 1-1h5a1 1 0 0 1 0 2h-5a1 1 0 0 1-1-1zm0 3a1 1 0 0 1 1-1h5a1 1 0 0 1 0 2h-5a1 1 0 0 1-1-1z"/></svg>
+            Subscription
+          </a>
+        </li>
+        <li class="deal">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="22" viewBox="0 0 23 22" class="svg-icon"><path class="cls-1" d="M11.95 21.05a1.188 1.188 0 0 0-.92 0l-1.5.736a2.14 2.14 0 0 1-2.81-.9l-.79-1.482a1.167 1.167 0 0 0-.74-.538l-1.65-.288A2.12 2.12 0 0 1 1.8 16.21l.23-1.667a1.156 1.156 0 0 0-.28-.87L.58 12.465a2.118 2.118 0 0 1 0-2.93l1.17-1.207a1.153 1.153 0 0 0 .28-.872L1.8 5.79a2.124 2.124 0 0 1 1.74-2.367l1.65-.288a1.156 1.156 0 0 0 .74-.538l.79-1.482a2.145 2.145 0 0 1 2.81-.9l1.5.734a1.188 1.188 0 0 0 .92 0l1.51-.735a2.142 2.142 0 0 1 2.81.9l.79 1.482a1.16 1.16 0 0 0 .74.538l1.65.288a2.122 2.122 0 0 1 1.74 2.368l-.24 1.668a1.163 1.163 0 0 0 .29.87l1.17 1.207a2.118 2.118 0 0 1 0 2.93l-1.17 1.207a1.163 1.163 0 0 0-.29.87l.24 1.67a2.123 2.123 0 0 1-1.74 2.366l-1.65.288a1.16 1.16 0 0 0-.74.538l-.79 1.482a2.146 2.146 0 0 1-2.81.9zm2.5-1.115l.79-1.482a3.23 3.23 0 0 1 2.2-1.593s1.72-.343 1.71-.37l-.23-1.668a3.18 3.18 0 0 1 .83-2.562s1.2-1.3 1.18-1.322l-1.18-1.2a3.18 3.18 0 0 1-.83-2.562s.2-1.745.17-1.75l-1.65-.288a3.213 3.213 0 0 1-2.2-1.593s-.85-1.52-.87-1.51l-1.51.735a3.233 3.233 0 0 1-2.73 0s-1.58-.728-1.59-.707l-.79 1.482a3.23 3.23 0 0 1-2.2 1.593l-1.65.287c-.03.006.17 1.75.17 1.75a3.152 3.152 0 0 1-.84 2.563l-1.17 1.2c-.02.022 1.17 1.322 1.17 1.322a3.154 3.154 0 0 1 .84 2.562l-.24 1.667c0 .028 1.72.37 1.72.37a3.234 3.234 0 0 1 2.2 1.593s.85 1.52.87 1.51l1.51-.735a3.237 3.237 0 0 1 2.73 0s1.58.728 1.59.707zm-5.31-5.26l6.17-6.1a1.01 1.01 0 0 0 0-1.437 1.044 1.044 0 0 0-1.46 0l-6.17 6.1a1.01 1.01 0 0 0 0 1.437 1.044 1.044 0 0 0 1.46 0zm-.22-4.783a1.525 1.525 0 1 0-1.54-1.525 1.535 1.535 0 0 0 1.54 1.525zm5.14 5.08a1.525 1.525 0 1 0-1.54-1.523 1.534 1.534 0 0 0 1.54 1.523z"/></svg>
+            Deal
+          </a>
+        </li>
+        <li class="blog">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18" class="svg-icon"><path class="cls-1" d="M2.62 7.986h4.76l.72 1.452a1.01 1.01 0 0 0 1.35.447 1 1 0 0 0 .44-1.342l-4-8a1 1 0 0 0-1.79 0l-4 8a1 1 0 0 0 1.79.895zm3.76-2H3.62L5 3.23zm5.62 3a1 1 0 0 1 1-1h6.01a1 1 0 0 1 0 2H13a1 1 0 0 1-1-.993zm-12 4a1 1 0 0 1 1-1h18a1 1 0 0 1 0 2H1a.993.993 0 0 1-1-.993zm0 4a1 1 0 0 1 1-1h18a1 1 0 0 1 0 2H1a.993.993 0 0 1-1-.993zm12-12a1 1 0 0 1 1-1h6.01a1 1 0 0 1 0 2H13a1 1 0 0 1-1-.992zm0-4a1 1 0 0 1 1-1h6.01a1 1 0 0 1 0 2H13a1 1 0 0 1-1-.992z"/></svg>
+            Blog
+          </a>
+        </li>
+      </ul>
+
+      <div class="header-main-controls">
+        <a href="#" class="icon -rounded -gray -notification">
+          <svg width="24px" height="24px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" class="svg-icon"><g fill="none" fill-rule="evenodd"><path d="M14 12h-1.996c-2.215 0-4.116 1.786-4.253 3.988l-1.5 24.024C6.11 42.212 7.785 44 9.99 44h28.02c2.205 0 3.878-1.786 3.74-3.988l-1.5-24.024C40.11 13.788 38.206 12 35.995 12H34v-.005C34 6.48 29.52 2 24 2c-5.516 0-10 4.478-10 9.995V12zm4 0h12v-.005C30 8.69 27.31 6 24 6c-3.308 0-6 2.688-6 5.995V12zm16 4h1.996c.1 0 .255.147.26.238l1.486 23.757-27.47.005 1.47-23.762c.007-.095.16-.238.262-.238H14v4c0 1.105.895 2 2 2s2-.895 2-2v-4h12v4c0 1.105.895 2 2 2s2-.895 2-2v-4zM14 34c0-1.105.898-2 1.99-2h16.02c1.1 0 1.99.888 1.99 2 0 1.105-.898 2-1.99 2H15.99c-1.1 0-1.99-.888-1.99-2z"/></g></svg>
+        </a>
+        <a href="#" class="icon -rounded -gray -res-max-700">
+
+          <svg width="25px" height="25px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" class="svg-icon"><g fill="#4D4D4D" fill-rule="evenodd"><path d="M30.826 13.826C31.57 15.04 32 16.47 32 18c0 4.418-3.582 8-8 8-4.17 0-7.596-3.192-7.967-7.266.82-1.315 2.158-2.73 4.127-2.73 2.8 0 8.23 0 10.666-2.178zM15.056 26h-3.1c-1.092 0-2.23.866-2.526 1.934L6.07 40.097c-.295 1.072.366 1.933 1.476 1.932L40.41 42c1.116 0 1.77-.866 1.472-1.932l-3.38-12.14c-.3-1.07-1.43-1.93-2.53-1.93h-3.028c1.9-2.123 3.056-4.927 3.056-8 0-6.627-5.373-12-12-12s-12 5.373-12 12c0 3.073 1.155 5.877 3.056 8zm19.863 4l-21.914.004L10.786 38l26.383.002L34.92 30z" id="Combined-Shape"/></g></svg>
+        </a>
+        <a href="#" class="btn -default -uppercase -res-min-700">Login</a>
+        <a href="#" data-show=".mobile-menu" class="icon -rounded -white -res-max-1000">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12" viewBox="0 0 18 12" class="svg-icon"><path d="M1 10h16a1 1 0 0 1 0 2H1a1 1 0 0 1 0-2zM1 0h16a1 1 0 0 1 0 2H1a1 1 0 0 1 0-2zm0 5h16a1 1 0 0 1 0 2H1a1 1 0 0 1 0-2z"/></svg>
+        </a>
+      </div>
+  	</header>
+
+    <div class="mobile-menu -hide">
+      <a href="#" data-close=".mobile-menu" class="icon close-button -rounded -white-dark">
+        <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9">
+          <path d="M335.641,124.987l-2.5,2.512,2.466,2.476a1.173,1.173,0,0,1-1.656,1.662l-2.466-2.475-2.466,2.475a1.167,1.167,0,0,1-1.655,0,1.181,1.181,0,0,1,0-1.662l2.465-2.476-2.5-2.512a1.173,1.173,0,0,1,1.656-1.662l2.5,2.512,2.5-2.512A1.173,1.173,0,0,1,335.641,124.987Z" transform="translate(-327 -123)"/>
+        </svg>
+      </a>
+      <ul class="mobile-menu-links">
+        <li><a href="#">Catalog</a></li>
+        <li><a href="#">Subsciption</a></li>
+        <li><a href="#">Deal</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </div>
+
+    <section class="section page afilliate-info">
+      <div class="base-col-large">
+        <header class="page-header">
+          <svg width="128px" height="120px" class="svg-icon"><path fill-rule="evenodd"  fill="rgb(44, 153, 237)" d="M127.098,63.391 L125.238,65.068 C125.256,65.195 125.277,65.322 125.277,65.455 L125.277,87.273 C125.277,93.391 121.687,98.182 117.106,98.182 L114.383,98.182 L114.383,100.909 C114.370,105.410 110.708,109.078 106.221,109.091 L57.192,109.091 C57.131,109.091 57.074,109.077 57.015,109.073 C51.028,115.771 42.343,120.000 32.681,120.000 C14.660,120.000 0.000,105.318 0.000,87.273 C0.000,74.093 7.825,62.715 19.064,57.534 L19.064,10.909 C19.082,4.908 23.965,0.018 29.950,-0.000 L114.383,-0.000 C120.376,0.018 125.259,4.908 125.277,10.901 L125.277,31.391 C125.652,31.391 126.029,31.441 126.385,31.599 C127.367,32.037 128.000,33.013 128.000,34.091 L128.000,61.364 C128.000,62.138 127.673,62.874 127.098,63.391 ZM114.383,92.727 L117.106,92.727 C118.190,92.727 119.830,90.551 119.830,87.273 L119.830,69.942 L114.383,74.851 L114.383,92.727 ZM5.447,87.273 C5.447,102.311 17.664,114.546 32.681,114.546 C47.698,114.546 59.915,102.311 59.915,87.273 C59.915,72.234 47.698,60.000 32.681,60.000 C17.664,60.000 5.447,72.234 5.447,87.273 ZM119.830,10.909 C119.821,7.914 117.374,5.463 114.375,5.454 L29.958,5.454 C28.740,5.458 27.624,5.881 26.715,6.567 C27.020,6.991 27.208,7.507 27.231,8.069 C27.277,8.482 27.771,10.909 32.681,10.909 L46.298,10.909 C47.802,10.909 49.021,12.130 49.021,13.636 C49.021,15.142 47.802,16.364 46.298,16.364 L32.681,16.364 C28.787,16.364 26.194,15.211 24.511,13.703 L24.511,55.581 C26.272,55.126 28.095,54.827 29.958,54.672 L29.958,46.363 C29.958,44.857 31.177,43.636 32.681,43.636 C34.185,43.636 35.404,44.857 35.404,46.363 L35.404,54.668 C52.154,56.060 65.362,70.147 65.362,87.273 C65.362,89.132 65.198,90.952 64.899,92.727 L80.340,92.727 C81.844,92.727 83.064,93.949 83.064,95.455 C83.064,96.961 81.844,98.182 80.340,98.182 L64.000,98.182 C63.830,98.182 63.666,98.162 63.505,98.132 C62.826,100.060 61.952,101.892 60.941,103.636 L106.213,103.636 C107.706,103.632 108.932,102.405 108.936,100.901 L108.936,76.364 L94.952,76.364 C86.029,76.213 78.885,68.860 78.979,59.971 C78.885,51.139 86.031,43.786 94.907,43.637 L108.936,43.636 L108.936,19.091 C108.932,17.595 107.706,16.367 106.205,16.364 L57.192,16.364 C55.688,16.364 54.468,15.142 54.468,13.636 C54.468,12.130 55.688,10.909 57.192,10.909 L106.213,10.909 C110.708,10.922 114.370,14.588 114.383,19.082 L114.383,40.239 L119.830,35.330 L119.830,10.909 ZM122.553,40.214 L113.481,48.391 C113.437,48.431 113.387,48.458 113.341,48.494 C113.264,48.555 113.188,48.615 113.105,48.667 C113.031,48.713 112.955,48.751 112.879,48.790 C112.798,48.831 112.718,48.871 112.632,48.904 C112.548,48.936 112.462,48.960 112.376,48.983 C112.292,49.006 112.210,49.029 112.124,49.044 C112.027,49.060 111.931,49.067 111.834,49.073 C111.775,49.077 111.719,49.091 111.660,49.091 L94.952,49.091 C89.106,49.189 84.363,54.070 84.426,59.971 C84.363,65.929 89.106,70.811 94.998,70.909 L110.615,70.909 L122.553,60.149 L122.553,40.214 ZM92.596,62.727 C91.091,62.727 89.872,61.506 89.872,60.000 C89.872,58.494 91.091,57.273 92.596,57.273 C94.100,57.273 95.319,58.494 95.319,60.000 C95.319,61.506 94.100,62.727 92.596,62.727 ZM32.681,38.182 C31.177,38.182 29.958,36.961 29.958,35.455 C29.958,33.948 31.177,32.727 32.681,32.727 C34.185,32.727 35.404,33.948 35.404,35.455 C35.404,36.961 34.185,38.182 32.681,38.182 ZM35.404,73.637 L35.404,84.546 L46.298,84.546 C47.802,84.546 49.021,85.767 49.021,87.273 C49.021,88.779 47.802,90.000 46.298,90.000 L35.404,90.000 L35.404,100.909 C35.404,102.415 34.185,103.636 32.681,103.636 C31.177,103.636 29.958,102.415 29.958,100.909 L29.958,90.000 L19.064,90.000 C17.560,90.000 16.341,88.779 16.341,87.273 C16.341,85.767 17.560,84.546 19.064,84.546 L29.958,84.546 L29.958,73.637 C29.958,72.131 31.177,70.909 32.681,70.909 C34.185,70.909 35.404,72.131 35.404,73.637 Z" class="svg-icon"/></svg>
+          <h1 class="page-header-headline">Earn 30% commission</h1>
+          <p class="page-description">Stamp is versatile and compelling pack of 75 UI cards, made with hundreds of elements to help you present client’s ideas in the best way. </p>
+        </header>
+
+        <div class="profile-content -large">
+          <div class="profile-user-affiliate block-shadow">
+            <p class="affiliate-url"><a href="#" class="link-underline -green">Login</a> to get your refferal code and share high quality products!</p>
+            <p class="affiliate-hint">The minimum amount for payout is <strong>$100</strong></p>
+          </div>
+        </div>
+
+        <div class="about-features">
+          <ul class="about-list">
+            <li class="best">
+              <span class="pic"></span>
+              <h2>Best Content</h2>
+              <p>
+                We use a well-proven process to deliver a tailor made User Experience to our Clients. Every step was honed during countless hours spent.
+              </p>
+            </li>
+            <li class="mark">
+              <span class="pic"></span>
+              <h2>Special Offers</h2>
+              <p>
+                We use a well-proven process to deliver a tailor made User Experience to our Clients. Every step was honed during countless hours spent.
+              </p>
+            </li>
+            <li class="diamond">
+              <span class="pic"></span>
+              <h2>Exclusive Content</h2>
+              <p>
+                We use a well-proven process to deliver a tailor made User Experience to our Clients. Every step was honed during countless hours spent.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer-main">
+
+      <section class="section footer-info">
+        <div class="site-social">
+          <a href="#" class="site-logo">
+            <span class="emoji"></span>
+            <span class="logo-img"></span>
+          </a>
+
+          <a href="#" class="icon-sprite facebook"></a>
+          <a href="#" class="icon-sprite twitter"></a>
+          <a href="#" class="icon-sprite google-plus"></a>
+
+        </div>
+
+        <ul class="footer-menu">
+          <li class="footer-menu-item"><a href="#" class="link-underline">CATALOG</a></li>
+          <li class="footer-menu-item"><a href="#" class="link-underline">Subscription</a></li>
+          <li class="footer-menu-item"><a href="#" class="link-underline">BLOG</a></li>
+          <li class="footer-menu-item"><a href="#" class="link-underline">Press kit</a></li>
+          <li class="footer-menu-item"><a href="#" class="link-underline">License</a></li>
+          <li class="footer-menu-item"><a href="#" class="link-underline">Submit product</a></li>
+          <li class="footer-menu-item"><a href="#" class="link-underline">affiliate</a></li>
+        </ul>
+
+        <p class="footer-copyright">
+          © 2016 <b>UIHead</b>. Market is a place of carefully selected products for web designers and developers.
+          <span class="br"></span>
+          You can contact with us via email adress: <a href="mailto:info@pixelbuddha.net">info@pixelbuddha.net</a>
+        </p>
+      </section>
+    </footer>
+  </div>
+
+  <div id="overlay" class="-hide"></div>
+
+  <script src="assets/libs/jquery/dist/jquery.min.js"></script>
+	<script src="assets/libs/select2/dist/js/select2.min.js"></script>
+	<script src="assets/libs/hero-slider/js/main.js"></script>
+  <script src="assets/libs/growl/javascripts/jquery.growl.js" type="text/javascript"></script>
+	<script src="assets/libs/clipboard/dist/clipboard.min.js"></script>
+  <script src="assets/libs/masonry/dist/masonry.pkgd.min.js"></script>
+  <script src="assets/scripts/main.js"></script>
+
+</body>
+</html>

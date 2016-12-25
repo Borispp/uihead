@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta charset="UTF-8">
+  <title>UI Head: Subscription</title>
+  <link href="assets/libs/select2/dist/css/select2.min.css" rel="stylesheet" />
+  <link href="assets/libs/growl/stylesheets/jquery.growl.css" rel="stylesheet" type="text/css" />
+  <link href="assets/styles/main.css" rel="stylesheet" type="text/css">
+
+  <link rel="icon" href="assets/images/content/favicon.png" type="image/x-icon" />
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600&amp;subset=latin-ext" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i" rel="stylesheet">
+
+</head>
+<body>
+
+  <div class="wrapper">
+    <header class="header-main -light">
+      <a href="#" class="site-logo">
+        <span class="emoji"></span>
+        <span class="logo-img"></span>
+      </a>
+
+      <ul class="header-main-menu -res-min-1000">
+        <li class="catalog">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48" class="svg-icon"><g fill="none"><g fill="#4D4D4D"><path d="M6.2 22.2L7.8 38.2C8 40.3 9.9 42 12 42L36 42C38.1 42 40 40.3 40.2 38.2L41.8 22.2C42 19.9 40.3 18 38 18L10 18C7.7 18 6 19.9 6.2 22.2L6.2 22.2ZM37.8 22L36.2 37.8C36.2 37.9 36.1 38 36 38L12 38C11.9 38 11.8 37.9 11.8 37.8L10.2 22 37.8 22ZM14 8C14 6.9 14.9 6 16 6L32 6C33.1 6 34 6.9 34 8 34 9.1 33.1 10 32 10L16 10C14.9 10 14 9.1 14 8ZM10 14C10 12.9 10.9 12 12 12L36 12C37.1 12 38 12.9 38 14 38 15.1 37.1 16 36 16L12 16C10.9 16 10 15.1 10 14Z"/></g></g></svg>
+            Catalog
+          </a>
+        </li>
+        <li class="subscription">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 24 16" class="svg-icon"><path class="cls-1" d="M8 12.645a3.52 3.52 0 0 1 1.88 1.36H22V2S10.27 2 9.88 1.994A3.524 3.524 0 0 1 8 3.354V3.5a1 1 0 0 1-2 0v-.146A3.505 3.505 0 0 1 4.13 2H2v12h2.13A3.5 3.5 0 0 1 6 12.646V12.5a1 1 0 0 1 2 0v.146zM1 16a1 1 0 0 1-1-1V1a1 1 0 0 1 1-1h4a.782.782 0 0 1 .67.475 1.374 1.374 0 0 0 2.66-.01A.778.778 0 0 1 9 0h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H9a.79.79 0 0 1-.68-.466 1.36 1.36 0 0 0-2.64 0A.78.78 0 0 1 5 16H1zm5-9.5a1 1 0 1 1 1 1 1 1 0 0 1-1-1zm0 3a1 1 0 1 1 1 1 1 1 0 0 1-1-1zM11 5a1 1 0 0 1 1-1h7a1 1 0 0 1 0 2h-7a1 1 0 0 1-1-1zm0 3a1 1 0 0 1 1-1h5a1 1 0 0 1 0 2h-5a1 1 0 0 1-1-1zm0 3a1 1 0 0 1 1-1h5a1 1 0 0 1 0 2h-5a1 1 0 0 1-1-1z"/></svg>
+            Subscription
+          </a>
+        </li>
+        <li class="deal">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="22" viewBox="0 0 23 22" class="svg-icon"><path class="cls-1" d="M11.95 21.05a1.188 1.188 0 0 0-.92 0l-1.5.736a2.14 2.14 0 0 1-2.81-.9l-.79-1.482a1.167 1.167 0 0 0-.74-.538l-1.65-.288A2.12 2.12 0 0 1 1.8 16.21l.23-1.667a1.156 1.156 0 0 0-.28-.87L.58 12.465a2.118 2.118 0 0 1 0-2.93l1.17-1.207a1.153 1.153 0 0 0 .28-.872L1.8 5.79a2.124 2.124 0 0 1 1.74-2.367l1.65-.288a1.156 1.156 0 0 0 .74-.538l.79-1.482a2.145 2.145 0 0 1 2.81-.9l1.5.734a1.188 1.188 0 0 0 .92 0l1.51-.735a2.142 2.142 0 0 1 2.81.9l.79 1.482a1.16 1.16 0 0 0 .74.538l1.65.288a2.122 2.122 0 0 1 1.74 2.368l-.24 1.668a1.163 1.163 0 0 0 .29.87l1.17 1.207a2.118 2.118 0 0 1 0 2.93l-1.17 1.207a1.163 1.163 0 0 0-.29.87l.24 1.67a2.123 2.123 0 0 1-1.74 2.366l-1.65.288a1.16 1.16 0 0 0-.74.538l-.79 1.482a2.146 2.146 0 0 1-2.81.9zm2.5-1.115l.79-1.482a3.23 3.23 0 0 1 2.2-1.593s1.72-.343 1.71-.37l-.23-1.668a3.18 3.18 0 0 1 .83-2.562s1.2-1.3 1.18-1.322l-1.18-1.2a3.18 3.18 0 0 1-.83-2.562s.2-1.745.17-1.75l-1.65-.288a3.213 3.213 0 0 1-2.2-1.593s-.85-1.52-.87-1.51l-1.51.735a3.233 3.233 0 0 1-2.73 0s-1.58-.728-1.59-.707l-.79 1.482a3.23 3.23 0 0 1-2.2 1.593l-1.65.287c-.03.006.17 1.75.17 1.75a3.152 3.152 0 0 1-.84 2.563l-1.17 1.2c-.02.022 1.17 1.322 1.17 1.322a3.154 3.154 0 0 1 .84 2.562l-.24 1.667c0 .028 1.72.37 1.72.37a3.234 3.234 0 0 1 2.2 1.593s.85 1.52.87 1.51l1.51-.735a3.237 3.237 0 0 1 2.73 0s1.58.728 1.59.707zm-5.31-5.26l6.17-6.1a1.01 1.01 0 0 0 0-1.437 1.044 1.044 0 0 0-1.46 0l-6.17 6.1a1.01 1.01 0 0 0 0 1.437 1.044 1.044 0 0 0 1.46 0zm-.22-4.783a1.525 1.525 0 1 0-1.54-1.525 1.535 1.535 0 0 0 1.54 1.525zm5.14 5.08a1.525 1.525 0 1 0-1.54-1.523 1.534 1.534 0 0 0 1.54 1.523z"/></svg>
+            Deal
+          </a>
+        </li>
+        <li class="blog">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18" class="svg-icon"><path class="cls-1" d="M2.62 7.986h4.76l.72 1.452a1.01 1.01 0 0 0 1.35.447 1 1 0 0 0 .44-1.342l-4-8a1 1 0 0 0-1.79 0l-4 8a1 1 0 0 0 1.79.895zm3.76-2H3.62L5 3.23zm5.62 3a1 1 0 0 1 1-1h6.01a1 1 0 0 1 0 2H13a1 1 0 0 1-1-.993zm-12 4a1 1 0 0 1 1-1h18a1 1 0 0 1 0 2H1a.993.993 0 0 1-1-.993zm0 4a1 1 0 0 1 1-1h18a1 1 0 0 1 0 2H1a.993.993 0 0 1-1-.993zm12-12a1 1 0 0 1 1-1h6.01a1 1 0 0 1 0 2H13a1 1 0 0 1-1-.992zm0-4a1 1 0 0 1 1-1h6.01a1 1 0 0 1 0 2H13a1 1 0 0 1-1-.992z"/></svg>
+            Blog
+          </a>
+        </li>
+      </ul>
+
+      <div class="header-main-controls">
+        <a href="#" class="icon -rounded -gray -notification">
+          <svg width="24px" height="24px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" class="svg-icon"><g fill="none" fill-rule="evenodd"><path d="M14 12h-1.996c-2.215 0-4.116 1.786-4.253 3.988l-1.5 24.024C6.11 42.212 7.785 44 9.99 44h28.02c2.205 0 3.878-1.786 3.74-3.988l-1.5-24.024C40.11 13.788 38.206 12 35.995 12H34v-.005C34 6.48 29.52 2 24 2c-5.516 0-10 4.478-10 9.995V12zm4 0h12v-.005C30 8.69 27.31 6 24 6c-3.308 0-6 2.688-6 5.995V12zm16 4h1.996c.1 0 .255.147.26.238l1.486 23.757-27.47.005 1.47-23.762c.007-.095.16-.238.262-.238H14v4c0 1.105.895 2 2 2s2-.895 2-2v-4h12v4c0 1.105.895 2 2 2s2-.895 2-2v-4zM14 34c0-1.105.898-2 1.99-2h16.02c1.1 0 1.99.888 1.99 2 0 1.105-.898 2-1.99 2H15.99c-1.1 0-1.99-.888-1.99-2z"/></g></svg>
+        </a>
+        <a href="#" class="icon -rounded -gray -res-max-700">
+
+          <svg width="25px" height="25px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" class="svg-icon"><g fill="#4D4D4D" fill-rule="evenodd"><path d="M30.826 13.826C31.57 15.04 32 16.47 32 18c0 4.418-3.582 8-8 8-4.17 0-7.596-3.192-7.967-7.266.82-1.315 2.158-2.73 4.127-2.73 2.8 0 8.23 0 10.666-2.178zM15.056 26h-3.1c-1.092 0-2.23.866-2.526 1.934L6.07 40.097c-.295 1.072.366 1.933 1.476 1.932L40.41 42c1.116 0 1.77-.866 1.472-1.932l-3.38-12.14c-.3-1.07-1.43-1.93-2.53-1.93h-3.028c1.9-2.123 3.056-4.927 3.056-8 0-6.627-5.373-12-12-12s-12 5.373-12 12c0 3.073 1.155 5.877 3.056 8zm19.863 4l-21.914.004L10.786 38l26.383.002L34.92 30z" id="Combined-Shape"/></g></svg>
+        </a>
+        <a href="#" class="btn -default -uppercase -res-min-700">Login</a>
+        <a href="#" data-show=".mobile-menu" class="icon -rounded -white -res-max-1000">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12" viewBox="0 0 18 12" class="svg-icon"><path d="M1 10h16a1 1 0 0 1 0 2H1a1 1 0 0 1 0-2zM1 0h16a1 1 0 0 1 0 2H1a1 1 0 0 1 0-2zm0 5h16a1 1 0 0 1 0 2H1a1 1 0 0 1 0-2z"/></svg>
+        </a>
+      </div>
+  	</header>
+
+    <div class="mobile-menu -hide">
+      <a href="#" data-close=".mobile-menu" class="icon close-button -rounded -white-dark">
+        <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9">
+          <path d="M335.641,124.987l-2.5,2.512,2.466,2.476a1.173,1.173,0,0,1-1.656,1.662l-2.466-2.475-2.466,2.475a1.167,1.167,0,0,1-1.655,0,1.181,1.181,0,0,1,0-1.662l2.465-2.476-2.5-2.512a1.173,1.173,0,0,1,1.656-1.662l2.5,2.512,2.5-2.512A1.173,1.173,0,0,1,335.641,124.987Z" transform="translate(-327 -123)"/>
+        </svg>
+      </a>
+      <ul class="mobile-menu-links">
+        <li><a href="#">Catalog</a></li>
+        <li><a href="#">Subsciption</a></li>
+        <li><a href="#">Deal</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </div>
+
+    <section class="section page subscription-page">
+
+      <div class="presentation-buttons -res-min-920">
+        <a href="#" class="btn -rounded -green -default">$8</a>
+      </div>
+
+      <div class="base-col-large">
+        <header class="page-header">
+          <h1 class="page-header-headline">
+            Unlimited Access
+          </h1>
+          <p class="page-description">That's right, a $16,307 value means you're saving 97% on all of our products. This is hands-down the best deal for design assets around.</p>
+        </header>
+      </div>
+
+      <div class="ui-items">
+        <ul class="ui-list">
+          <li class="ui-item -active"></li>
+          <li class="ui-item -active"></li>
+          <li class="ui-item -active"></li>
+          <li class="ui-item -active"></li>
+        </ul>
+
+        <ul class="ui-list-content">
+          <li class="ui-item -hide">
+            <div class="ui-content">
+              <a href="#" class="ui-content-link"></a>
+              <div class="item-image">
+                <img src="./assets/images/content/ui1.jpg" alt="">
+              </div>
+
+              <h2 class="headline"><a href="#">Chameleon UI Kit</a></h2>
+              <p class="author-name">by <a href="#beans" class="link -green">Beans UI Goods</a></p>
+            </div>
+          </li>
+          <li class="ui-item -hide">
+
+            <div class="ui-content">
+              <a href="#" class="ui-content-link"></a>
+              <div class="item-image">
+                <img src="./assets/images/content/ui2.jpg" alt="">
+              </div>
+              <h2 class="headline"><a href="#">Awair Mobile Kit</a></h2>
+              <p class="best-offer">Best Offer</p>
+            </div>
+          </li>
+          <li class="ui-item -hide">
+
+            <div class="ui-content">
+              <a href="http://yandex.ru" class="ui-content-link"></a>
+              <div class="item-image">
+                <img src="./assets/images/content/ui3.jpg" alt="">
+              </div>
+              <h2 class="headline"><a href="#">Chameleon UI Kit</a></h2>
+              <p class="author-name">by <a href="#beans" class="link -green">Beans UI Goods</a></p>
+            </div>
+          </li>
+          <li class="ui-item -hide">
+            <div class="ui-content">
+              <a href="#" class="ui-content-link"></a>
+              <div class="item-image">
+                <img src="./assets/images/content/ui4.jpg" alt="">
+              </div>
+              <h2 class="headline"><a href="#">Glue UI Kit</a></h2>
+              <p class="author-name">by <a href="#beans" class="link -green">Beans UI Goods</a></p>
+            </div>
+          </li>
+          <li class="ui-item -hide">
+            <div class="ui-content">
+              <a href="#" class="ui-content-link"></a>
+              <div class="item-image">
+                <img src="./assets/images/content/ui5.jpg" alt="">
+              </div>
+              <h2 class="headline"><a href="#">Glue UI Kit</a></h2>
+              <p class="author-name">by <a href="#beans" class="link -green">Beans UI Goods</a></p>
+            </div>
+          </li>
+          <li class="ui-item -hide">
+            <div class="ui-content">
+              <a href="#" class="ui-content-link"></a>
+              <div class="item-image">
+                <img src="./assets/images/content/ui6.jpg" alt="">
+              </div>
+              <h2 class="headline"><a href="#">Glue UI Kit</a></h2>
+              <p class="author-name">by <a href="#beans" class="link -green">Beans UI Goods</a></p>
+            </div>
+          </li>
+          <li class="ui-item -hide">
+            <div class="ui-content">
+              <a href="#" class="ui-content-link"></a>
+              <div class="item-image">
+                <img src="./assets/images/content/ui7.jpg" alt="">
+              </div>
+              <h2 class="headline"><a href="#">Glue UI Kit</a></h2>
+              <p class="author-name">by <a href="#beans" class="link -green">Beans UI Goods</a></p>
+            </div>
+          </li>
+          <li class="ui-item -hide">
+            <div class="ui-content">
+              <a href="#" class="ui-content-link"></a>
+              <div class="item-image">
+                <img src="./assets/images/content/ui8.jpg" alt="">
+              </div>
+              <h2 class="headline"><a href="#">Glue UI Kit</a></h2>
+              <p class="author-name">by <a href="#beans" class="link -green">Beans UI Goods</a></p>
+            </div>
+          </li>
+          <li class="ui-item -hide">
+            <div class="ui-content">
+              <a href="#" class="ui-content-link"></a>
+              <div class="item-image">
+                <img src="./assets/images/content/ui9.jpg" alt="">
+              </div>
+              <h2 class="headline"><a href="#">Glue UI Kit</a></h2>
+              <p class="author-name">by <a href="#beans" class="link -green">Beans UI Goods</a></p>
+            </div>
+          </li>
+          <li class="ui-item -hide">
+            <div class="ui-content">
+              <a href="#" class="ui-content-link"></a>
+              <div class="item-image">
+                <img src="./assets/images/content/ui10.jpg" alt="">
+              </div>
+              <h2 class="headline"><a href="#">Glue UI Kit</a></h2>
+              <p class="author-name">by <a href="#beans" class="link -green">Beans UI Goods</a></p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+
+      <div class="section -with-composition">
+        <div class="base-col">
+          <div class="composition">
+            <img src="./assets/images/content/composition1.png" alt="" class="composition-1"/>
+            <img src="./assets/images/content/composition2.png" alt="" class="composition-2" />
+            <img src="./assets/images/content/composition3.png" alt="" class="composition-3" />
+          </div>
+
+          <div class="composition-content">
+            <h2 class="headline">All products what you really need in one place with <a href="#" class="link-underline">UIHead</a></h2>
+            <p class="headline-description">Readymag gives you freedom over your creative process: you don’t have to think about any technical aspects. There are no limits and absolutely no coding, just creative process.</p>
+            <p>
+              <a href="#" class="link -blue link-arrow">
+                Discover All Products
+                <svg xmlns="http://www.w3.org/2000/svg" width="5" height="9" viewBox="0 0 5 9" class="svg-icon"><path class="cls-1" d="M700.938,3997.17a0.542,0.542,0,0,0-.779,0,0.561,0.561,0,0,0,0,.79l3.472,3.54-3.472,3.53a0.573,0.573,0,0,0,0,.8,0.554,0.554,0,0,0,.779,0l3.864-3.93a0.575,0.575,0,0,0,0-.8Zm0,0a0.542,0.542,0,0,0-.779,0,0.561,0.561,0,0,0,0,.79l3.472,3.54-3.472,3.53a0.573,0.573,0,0,0,0,.8,0.554,0.554,0,0,0,.779,0l3.864-3.93a0.575,0.575,0,0,0,0-.8Z" transform="translate(-700 -3997)"/></svg>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section subscription-features">
+      <div class="base-col">
+        <div class="promo-block">
+          <div class="promo-image -res-max-700">
+            <img src="./assets/images/content/logotypes.png" alt="">
+          </div>
+
+          <div class="promo-content">
+            <h2 class="headline">Only <a href="#" class="link-underline">high quality</a> products from top authors</h2>
+            <p class="headline-description">Readymag gives you freedom over your creative process: you don’t have to think about any technical aspects. There are no limits and no coding, just creative process.</p>
+          </div>
+
+          <div class="promo-image desktop">
+            <img src="./assets/images/content/logotypes.png" alt="">
+          </div>
+        </div>
+
+        <div class="counters">
+          <div class="counter-item">
+            <p class="counter-number counter-num" data-val="30">1</p>
+            <p class="counter-headline">Products</p>
+            <p class="counter-description">for UI designers on this moment</p>
+          </div>
+          <div class="counter-item">
+            <p class="counter-number counter-num -plus" data-val="3000">1</p>
+            <p class="counter-headline">Elements</p>
+            <p class="counter-description">for your unlimited creative process</p>
+          </div>
+          <div class="counter-item">
+            <p class="counter-number counter-num -percents" data-val="98">1</p>
+            <p class="counter-headline">Savings</p>
+            <p class="counter-description">if you buy unlimited access today</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section fracture-gray">
+      <div class="base-col-large">
+        <div class="buy-subscription">
+          <div class="buy-subscription-item -green">
+            <div class="subscription-image">
+              <img src="./assets/images/content/astronaut.png" alt="">
+            </div>
+            <div class="subscription-price">
+              <span class="currency">$</span>
+              <span class="price">99</span>
+              <span class="old-price">129</span>
+            </div>
+
+            <h2 class="headline">Unlimited Personal</h2>
+
+            <p class="subscription-description">
+              All design assets from UI Head <br>
+              One year acces for all new products <br>
+              Personal license for commercial use <br>
+            </p>
+
+            <p>
+              <a href="#" class="btn -white -large">Purchase</a>
+            </p>
+          </div>
+
+          <div class="buy-subscription-item -black">
+            <div class="subscription-image">
+              <img src="./assets/images/content/shuttle.png" alt="">
+            </div>
+            <div class="subscription-price">
+              <span class="currency">$</span>
+              <span class="price">199</span>
+              <span class="old-price">229</span>
+            </div>
+
+            <h2 class="headline">Unlimited Team</h2>
+
+            <p class="subscription-description">
+              All design assets from UI Head <br>
+              One year acces for all new products <br>
+              Personal license for commercial use <br>
+            </p>
+
+            <p>
+              <a href="#" class="btn -white -large">Purchase</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="reviews">
+          <h2 class="headline">Our <a href="#" class="link-underline">Happy</a> Subscribers</h2>
+
+          <div class="items reviews-items">
+            <div class="review-item">
+              <a href="#" class="item-link"></a>
+              <div class="review-content">"If you are looking at blank cassettes on the web, you may be very confused at the difference in price. You may see some for as low as $.17 each" </div>
+              <div class="reviewer">
+                <div class="reviewer-avatar">
+                  <img src="https://pp.vk.me/c604528/v604528844/1d506/UkdPS35O-KU.jpg" alt="">
+                </div>
+                <p class="reviewer-name">MATTIE BANKS</p>
+                <p class="reviewer-position">from Stampsy</p>
+              </div>
+            </div>
+
+            <div class="review-item">
+              <a href="#" class="item-link"></a>
+              <div class="review-content">"There are number of instructions to be followed at the time of refilling an inkjet cartridge. So whenever your printer ink runs dry you need to follow the below steps for inkjet cartridge refill"</div>
+              <div class="reviewer">
+                <div class="reviewer-avatar">
+                  <img src="https://scontent-otp1-1.xx.fbcdn.net/v/t1.0-0/p206x206/36841_105210302863894_3793272_n.jpg?oh=d6d69dd276b9e3e51998a9b5f222dffb&oe=58F42DF2" alt="">
+                </div>
+                <p class="reviewer-name">MATTIE BANKS</p>
+                <p class="reviewer-position">from Stampsy</p>
+              </div>
+            </div>
+
+            <div class="review-item">
+              <a href="#" class="item-link"></a>
+              <div class="review-content">"I firmly believe that any man's finest hour, the greatest fulfillment of all that he holds dear, is that moment when he has worked"</div>
+              <div class="reviewer">
+                <div class="reviewer-avatar">
+                  <img src="https://pp.vk.me/c604528/v604528844/1d506/UkdPS35O-KU.jpg" alt="">
+                </div>
+                <p class="reviewer-name">MATTIE BANKS</p>
+                <p class="reviewer-position">from Stampsy</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer-main">
+
+      <section class="section footer-info">
+        <div class="site-social">
+          <a href="#" class="site-logo">
+            <span class="emoji"></span>
+            <span class="logo-img"></span>
+          </a>
+
+          <a href="#" class="icon-sprite facebook"></a>
+          <a href="#" class="icon-sprite twitter"></a>
+          <a href="#" class="icon-sprite google-plus"></a>
+
+        </div>
+
+        <ul class="footer-menu">
+          <li class="footer-menu-item"><a href="#" class="link-underline">CATALOG</a></li>
+          <li class="footer-menu-item"><a href="#" class="link-underline">Subscription</a></li>
+          <li class="footer-menu-item"><a href="#" class="link-underline">BLOG</a></li>
+          <li class="footer-menu-item"><a href="#" class="link-underline">Press kit</a></li>
+          <li class="footer-menu-item"><a href="#" class="link-underline">License</a></li>
+          <li class="footer-menu-item"><a href="#" class="link-underline">Submit product</a></li>
+          <li class="footer-menu-item"><a href="#" class="link-underline">affiliate</a></li>
+        </ul>
+
+        <p class="footer-copyright">
+          © 2016 <b>UIHead</b>. Market is a place of carefully selected products for web designers and developers.
+          <span class="br"></span>
+          You can contact with us via email adress: <a href="mailto:info@pixelbuddha.net">info@pixelbuddha.net</a>
+        </p>
+      </section>
+    </footer>
+  </div>
+
+  <div id="overlay" class="-hide"></div>
+
+  <script src="assets/libs/jquery/dist/jquery.min.js"></script>
+	<script src="assets/libs/select2/dist/js/select2.min.js"></script>
+	<script src="assets/libs/hero-slider/js/main.js"></script>
+  <script src="assets/libs/growl/javascripts/jquery.growl.js" type="text/javascript"></script>
+	<script src="assets/libs/clipboard/dist/clipboard.min.js"></script>
+  <script src="assets/libs/masonry/dist/masonry.pkgd.min.js"></script>
+  <script src="assets/scripts/main.js"></script>
+
+  <script type="text/javascript">
+    var $composition = $(".composition")
+    var compositionPosition = $composition.offset().top;
+
+    // Composition animation
+    var checkComposition = function () {
+      if (document.body.clientHeight - compositionPosition + window.pageYOffset > 220) {
+        $composition.addClass("-active")
+      }
+    }
+
+    // Autoincrease
+    var countersOffset = $('.counters').offset().top;
+	  var executed = false;
+
+    var counterFlow = function () {
+			$('.counter-num').each(function() {
+	      $(this).prop('Counter', 1).animate({
+	        Counter: $(this).data('val')
+	      },
+				{
+	        duration: 2000,
+	        easing: 'swing',
+	        step: function(now) {
+	          $(this).text(Math.ceil(now));
+	        }
+	      });
+	    });
+		}
+
+    var checkCounter = function () {
+      if (document.body.clientHeight - countersOffset + window.pageYOffset > 20) {
+        counterFlow()
+      }
+    }
+
+    $(window).scroll(function () {
+      checkComposition()
+      checkCounter()
+    });
+    checkComposition()
+    checkCounter()
+  </script>
+
+</body>
+</html>
