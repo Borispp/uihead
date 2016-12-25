@@ -152,13 +152,13 @@
         li
             &.selected
                 h2
-                    -webkit-transition opacity 0.4s 0.2s, -webkit-transform 0.5s 0.2s
-                    -moz-transition opacity 0.4s 0.2s, -moz-transform 0.5s 0.2s
-                    transition opacity 0.4s 0.2s, transform 0.5s 0.2s
+                    // -webkit-transition opacity 0.4s 0.2s, -webkit-transform 0.5s 0.2s
+                    // -moz-transition opacity 0.4s 0.2s, -moz-transform 0.5s 0.2s
+                    // transition opacity 0.4s 0.2s, transform 0.5s 0.2s
                 p
-                    -webkit-transition opacity 0.4s 0.3s, -webkit-transform 0.5s 0.3s
-                    -moz-transition opacity 0.4s 0.3s, -moz-transform 0.5s 0.3s
-                    transition opacity 0.4s 0.3s, transform 0.5s 0.3s
+                    // -webkit-transition opacity 0.4s 0.3s, -webkit-transform 0.5s 0.3s
+                    // -moz-transition opacity 0.4s 0.3s, -moz-transform 0.5s 0.3s
+                    // transition opacity 0.4s 0.3s, transform 0.5s 0.3s
                 .cd-btn
                     -webkit-transition opacity 0.4s 0.4s, -webkit-transform 0.5s 0.4s, background-color 0.2s 0s
                     -moz-transition opacity 0.4s 0.4s, -moz-transform 0.5s 0.4s, background-color 0.2s 0s
@@ -349,6 +349,18 @@
     &.-lighter:before
       background rgba(0,0,0,.5)
 
+.cd-hero-slider li.selected
+  .slider-content
+    .slider-top-description,
+    .slider-headline,
+    .slider-btn
+      transform translate3d(0,0,0)
+      opacity 1
+
+    .slider-description
+      transform translate3d(0,0,0)
+      opacity 0.55
+
 .slider-content
   width 100%
   max-width 900px
@@ -357,15 +369,25 @@
   top 50%
   left 50%
   transform translate(-50%, -50%)
+  // opacity 0
+  // transition transform .4s cubic-bezier(0.460, 0.120, 0.110, 0.975), opacity .4s cubic-bezier(0.460, 0.120, 0.110, 0.975);
+  // transition-delay .5s
   box-sizing border-box
 
   .slider-top-description
+    display inline-block
     color $white
     font-size 21px
     font-weight 500
     letter-spacing 1.5px
     font-family 'Poppins'
     text-transform uppercase
+
+    will-change transform
+    transform translate3d(0, 40px, 0)
+    opacity 0
+    transition transform .4s cubic-bezier(0.460, 0.120, 0.110, 0.975), opacity .4s cubic-bezier(0.460, 0.120, 0.110, 0.975);
+    transition-delay .4s
 
     b
       font-weight 600
@@ -379,6 +401,12 @@
     letter-spacing -3.25px
     margin 42px 0 40px
 
+    will-change transform
+    transform translate3d(0, 50px, 0)
+    opacity 0
+    transition transform .45s cubic-bezier(0.460, 0.120, 0.110, 0.975), opacity .45s cubic-bezier(0.460, 0.120, 0.110, 0.975);
+    transition-delay .5s
+
     b
       font-weight 600
 
@@ -391,7 +419,21 @@
     line-height 34px
     font-weight 500
     color $white
-    opacity 0.55
+    // opacity 0.55
+
+    will-change transform
+    transform translate3d(0, 40px, 0)
+    opacity 0
+    transition transform .5s cubic-bezier(0.460, 0.120, 0.110, 0.975), opacity .5s cubic-bezier(0.460, 0.120, 0.110, 0.975);
+    transition-delay .55s
+
+  .slider-btn
+    will-change transform
+    transform translate3d(0, 40px, 0)
+    opacity 0
+    transition transform .55s cubic-bezier(0.460, 0.120, 0.110, 0.975), opacity .55s cubic-bezier(0.460, 0.120, 0.110, 0.975);
+    transition-delay .6s
+
 
 @media (max-width 1160px)
   .cd-half-width .slider-content

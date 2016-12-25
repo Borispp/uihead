@@ -414,7 +414,7 @@
 
     // Composition animation
     var checkComposition = function () {
-      if (document.body.clientHeight - compositionPosition + window.pageYOffset > 220) {
+      if (document.documentElement.clientHeight - compositionPosition + window.pageYOffset > 220) {
         $composition.addClass("-active")
       }
     }
@@ -439,7 +439,7 @@
 		}
 
     var checkCounter = function () {
-      if (document.body.clientHeight - countersOffset + window.pageYOffset > 20) {
+      if (document.documentElement.clientHeight - countersOffset + window.pageYOffset > -20) {
         counterFlow()
       }
     }

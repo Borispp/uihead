@@ -93,7 +93,7 @@ var showMenu = function () {
 			setTimeout(function () {
 				$($(this).data('close')).addClass('-hide');
 				$elements.body.removeClass('-popup-active');
-			}.bind(this), linksLength * 50);
+			}.bind(this), linksLength * 70);
 		}
 	};
 
@@ -326,7 +326,7 @@ var headerStickit = function headerStickit() {
 console.log($elements.footerMain.offset());
 
 var presentationButtonsStickit = function presentationButtonsStickit() {
-	if (document.body.clientHeight - $elements.footerMain.offset().top + window.pageYOffset > 100) {
+	if (document.documentElement.clientHeight - $elements.footerMain.offset().top + window.pageYOffset > 100) {
 		$elements.presentationButtons.addClass('-hide');
 	} else {
 		$elements.presentationButtons.removeClass('-hide');
