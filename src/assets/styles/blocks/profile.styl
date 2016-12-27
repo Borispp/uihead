@@ -10,7 +10,7 @@
       font-size 28px
       line-height 35px
 
-.profile-user-settings,
+.profile-user-settings
   position relative
   padding 40px
   width calc(50% - 20px)
@@ -398,6 +398,10 @@ form.settings-info-edit
 
 @media (max-width 700px)
 
+  form.settings-info-edit
+    .settings-item
+      padding-bottom 20px
+
   .profile-user-settings
     padding 30px 20px 30px
     margin 0 -15px
@@ -419,8 +423,14 @@ form.settings-info-edit
     .settings-item
       padding-bottom 20px
 
-    form.settings-info-edit .settings-controls
-      padding 0 20px 0
+    .settings-controls
+      padding 30px 20px 0
+      margin 8px -20px 0
+
+
+  form.settings-info-edit
+    .settings-controls
+      padding 3px 20px 0
       margin 8px -20px 0
 
   .profile-user-payments

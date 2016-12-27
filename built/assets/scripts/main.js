@@ -256,7 +256,7 @@ var uiItems = function () {
 				this.changeItem();
 			}.bind(this));
 
-			// this.setWidth()
+			this.setWidth();
 			this.setActive();
 			this.changeItem();
 		},

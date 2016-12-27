@@ -19,16 +19,17 @@
   position relative
   text-align center
   border-radius 5px
-  box-shadow 0 4px 10px rgba(0,0,0,.15)
+  box-shadow 0 4px 10px $black-shadow
 
   transform translate(0,0)
-  transition transform .22s linear, box-shadow .22s linear
+  transition transform .18s linear, box-shadow .18s linear
 
   &:hover
     transform translate(0,-5px)
-    box-shadow 0 4px 10px rgba(0,0,0,.25)
+    box-shadow 0 10px 40px $black-shadow-hover
 
   .item-category
+    @extend .link-underline
     display inline-block
     font-size 14px
     line-height 14px
@@ -36,12 +37,21 @@
     text-decoration none
     letter-spacing 2.25px
     text-transform uppercase
-    margin 9px 0 5px
+    padding 9px 0 5px
     position relative
     z-index 3
 
-    &:hover
-      text-decoration underline
+    &:after
+      background $blue
+      width calc(100% - 2px)
+      height 2px
+      bottom 1px
+
+    &:active:after
+      background $blue-darker
+
+    // &:hover
+    //   text-decoration underline
 
   .item-link
     display block
@@ -95,9 +105,14 @@
     padding-top 9px
 
     .link
+      @extend .link-underline
       font-size 14px
       position relative
       z-index 3
+
+      &:after
+        height 2px
+        bottom 3px
 
   .price
     border-top 1px solid $border-gray

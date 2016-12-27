@@ -3,7 +3,8 @@
   text-align center
   overflow-x hidden
   width 100%
-  padding-bottom 12px
+  padding-bottom 36px
+  margin-bottom -24px
   position relative
   z-index 3
 
@@ -84,7 +85,7 @@
 
 
     &:hover
-      box-shadow 0 4px 10px rgba(0,0,0,.15)
+      box-shadow 0 10px 40px $black-shadow-hover
       background $white
       z-index 1
 
@@ -93,13 +94,36 @@
       .author-name
         opacity 1
 
-@media (max-width 1300px)
-  .ui-list li:last-child
-    display none
+@media (max-width 2530px)
 
-@media (max-width 950px)
-  .ui-list li.ui-item.-active:first-child:hover,
+  .ui-list li.ui-item.-active:nth-child(1):hover,
+  .ui-list li.ui-item.-active:nth-last-child(1):hover
+    box-shadow none
+    background none
+    z-index 1
+
+    h2.headline,
+    .best-offer,
+    .author-name
+      opacity 0
+
+@media (max-width 1900px)
+
+  .ui-list li.ui-item.-active:nth-child(2):hover,
   .ui-list li.ui-item.-active:nth-last-child(2):hover
+    box-shadow none
+    background none
+    z-index 1
+
+    h2.headline,
+    .best-offer,
+    .author-name
+      opacity 0
+
+@media (max-width 1200px)
+
+  .ui-list li.ui-item.-active:nth-child(3):hover,
+  .ui-list li.ui-item.-active:nth-last-child(3):hover
     box-shadow none
     background none
     z-index 1
