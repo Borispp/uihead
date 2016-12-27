@@ -23,6 +23,15 @@
 .section.subscription-features
   padding 102px 0 0
 
+  #subscriptionFeaturesImage
+    transform translate(0, 200px)
+    opacity 0
+    transition transform .25s linear, opacity .25s linear
+
+    &.-active
+      transform translate(0, 0)
+      opacity 1
+
 @media (min-width 1000px)
   .page.subscription-page
     .composition-content
@@ -73,3 +82,4 @@
 
   .section.subscription-features
     padding 34px 0 0
+    background #f2f2f2
