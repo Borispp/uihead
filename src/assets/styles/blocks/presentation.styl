@@ -105,7 +105,7 @@
   margin 12px auto 42px
   line-height 1.5
   text-align center
-  letter-spacing -0.3
+  letter-spacing -0.3px
 
 .presentation-links-mobile
   display none
@@ -130,6 +130,7 @@
   display inline-block
   border-radius 50px
   padding 0 28px 0 36px
+  margin-bottom 50px
 
   min-width 320px
   opacity 0
@@ -178,7 +179,7 @@
     letter-spacing -.5px
 
 .presentation-about
-  padding-top 50px
+  // padding-top 50px
 
   .svg-icon, .btn
     display inline-block
@@ -341,6 +342,7 @@
     padding-bottom 0
 
   .presentation-headline
+
     .price,
     .italic,
     .name
@@ -390,6 +392,9 @@
       margin-right 0
 
   .presentation-headline
+    &.-no-price
+      margin-top -24px
+
     .price,
     .italic,
     .name

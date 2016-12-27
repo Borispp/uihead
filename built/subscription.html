@@ -249,7 +249,7 @@
             <p class="headline-description">Readymag gives you freedom over your creative process: you don’t have to think about any technical aspects. There are no limits and no coding, just creative process.</p>
           </div>
 
-          <div class="promo-image desktop">
+          <div id="subscriptionFeaturesImage" class="promo-image desktop">
             <img src="./assets/images/content/logotypes.png" alt="">
           </div>
         </div>
@@ -333,7 +333,7 @@
               <div class="review-content">"If you are looking at blank cassettes on the web, you may be very confused at the difference in price. You may see some for as low as $.17 each" </div>
               <div class="reviewer">
                 <div class="reviewer-avatar">
-                  <img src="https://pp.vk.me/c604528/v604528844/1d506/UkdPS35O-KU.jpg" alt="">
+                  <img src="https://images.britcdn.com/wp-content/uploads/2015/09/man-braid-3.jpg" alt="">
                 </div>
                 <p class="reviewer-name">MATTIE BANKS</p>
                 <p class="reviewer-position">from Stampsy</p>
@@ -345,7 +345,7 @@
               <div class="review-content">"There are number of instructions to be followed at the time of refilling an inkjet cartridge. So whenever your printer ink runs dry you need to follow the below steps for inkjet cartridge refill"</div>
               <div class="reviewer">
                 <div class="reviewer-avatar">
-                  <img src="https://scontent-otp1-1.xx.fbcdn.net/v/t1.0-0/p206x206/36841_105210302863894_3793272_n.jpg?oh=d6d69dd276b9e3e51998a9b5f222dffb&oe=58F42DF2" alt="">
+                  <img src="https://images.britcdn.com/wp-content/uploads/2015/09/man-braid-3.jpg" alt="">
                 </div>
                 <p class="reviewer-name">MATTIE BANKS</p>
                 <p class="reviewer-position">from Stampsy</p>
@@ -357,7 +357,7 @@
               <div class="review-content">"I firmly believe that any man's finest hour, the greatest fulfillment of all that he holds dear, is that moment when he has worked"</div>
               <div class="reviewer">
                 <div class="reviewer-avatar">
-                  <img src="https://pp.vk.me/c604528/v604528844/1d506/UkdPS35O-KU.jpg" alt="">
+                  <img src="https://images.britcdn.com/wp-content/uploads/2015/09/man-braid-3.jpg" alt="">
                 </div>
                 <p class="reviewer-name">MATTIE BANKS</p>
                 <p class="reviewer-position">from Stampsy</p>
@@ -414,12 +414,18 @@
 
   <script type="text/javascript">
     var $composition = $(".composition")
+    var $subscriptionFeaturesImage = $("#subscriptionFeaturesImage")
     var compositionPosition = $composition.offset().top;
+    var subscriptionFeaturesImagePosition = $subscriptionFeaturesImage.offset().top;
 
     // Composition animation
     var checkComposition = function () {
       if (document.documentElement.clientHeight - compositionPosition + window.pageYOffset > 220) {
         $composition.addClass("-active")
+      }
+
+      if (document.documentElement.clientHeight - subscriptionFeaturesImagePosition + window.pageYOffset > 50) {
+        $subscriptionFeaturesImage.addClass("-active")
       }
     }
 

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta charset="UTF-8">
+  <title>UI Head: Deal, no price</title>
+  <link href="assets/libs/select2/dist/css/select2.min.css" rel="stylesheet" />
+  <link href="assets/styles/main.css" rel="stylesheet" type="text/css">
+
+  <link rel="icon" href="assets/images/content/favicon.png" type="image/x-icon" />
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600&amp;subset=latin-ext" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i" rel="stylesheet">
+
+</head>
+<body>
+
+  <div class="wrapper -gray">
+    <header class="header-main -light">
+      <a href="#" class="site-logo">
+        <span class="emoji"></span>
+        <span class="logo-img"></span>
+      </a>
+
+      <ul class="header-main-menu -res-min-1000">
+        <li class="catalog">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48" class="svg-icon"><g fill="none"><g fill="#4D4D4D"><path d="M6.2 22.2L7.8 38.2C8 40.3 9.9 42 12 42L36 42C38.1 42 40 40.3 40.2 38.2L41.8 22.2C42 19.9 40.3 18 38 18L10 18C7.7 18 6 19.9 6.2 22.2L6.2 22.2ZM37.8 22L36.2 37.8C36.2 37.9 36.1 38 36 38L12 38C11.9 38 11.8 37.9 11.8 37.8L10.2 22 37.8 22ZM14 8C14 6.9 14.9 6 16 6L32 6C33.1 6 34 6.9 34 8 34 9.1 33.1 10 32 10L16 10C14.9 10 14 9.1 14 8ZM10 14C10 12.9 10.9 12 12 12L36 12C37.1 12 38 12.9 38 14 38 15.1 37.1 16 36 16L12 16C10.9 16 10 15.1 10 14Z"/></g></g></svg>
+            Catalog
+          </a>
+        </li>
+        <li class="subscription">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 24 16" class="svg-icon"><path class="cls-1" d="M8 12.645a3.52 3.52 0 0 1 1.88 1.36H22V2S10.27 2 9.88 1.994A3.524 3.524 0 0 1 8 3.354V3.5a1 1 0 0 1-2 0v-.146A3.505 3.505 0 0 1 4.13 2H2v12h2.13A3.5 3.5 0 0 1 6 12.646V12.5a1 1 0 0 1 2 0v.146zM1 16a1 1 0 0 1-1-1V1a1 1 0 0 1 1-1h4a.782.782 0 0 1 .67.475 1.374 1.374 0 0 0 2.66-.01A.778.778 0 0 1 9 0h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H9a.79.79 0 0 1-.68-.466 1.36 1.36 0 0 0-2.64 0A.78.78 0 0 1 5 16H1zm5-9.5a1 1 0 1 1 1 1 1 1 0 0 1-1-1zm0 3a1 1 0 1 1 1 1 1 1 0 0 1-1-1zM11 5a1 1 0 0 1 1-1h7a1 1 0 0 1 0 2h-7a1 1 0 0 1-1-1zm0 3a1 1 0 0 1 1-1h5a1 1 0 0 1 0 2h-5a1 1 0 0 1-1-1zm0 3a1 1 0 0 1 1-1h5a1 1 0 0 1 0 2h-5a1 1 0 0 1-1-1z"/></svg>
+            Subscription
+          </a>
+        </li>
+        <li class="deal">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="22" viewBox="0 0 23 22" class="svg-icon"><path class="cls-1" d="M11.95 21.05a1.188 1.188 0 0 0-.92 0l-1.5.736a2.14 2.14 0 0 1-2.81-.9l-.79-1.482a1.167 1.167 0 0 0-.74-.538l-1.65-.288A2.12 2.12 0 0 1 1.8 16.21l.23-1.667a1.156 1.156 0 0 0-.28-.87L.58 12.465a2.118 2.118 0 0 1 0-2.93l1.17-1.207a1.153 1.153 0 0 0 .28-.872L1.8 5.79a2.124 2.124 0 0 1 1.74-2.367l1.65-.288a1.156 1.156 0 0 0 .74-.538l.79-1.482a2.145 2.145 0 0 1 2.81-.9l1.5.734a1.188 1.188 0 0 0 .92 0l1.51-.735a2.142 2.142 0 0 1 2.81.9l.79 1.482a1.16 1.16 0 0 0 .74.538l1.65.288a2.122 2.122 0 0 1 1.74 2.368l-.24 1.668a1.163 1.163 0 0 0 .29.87l1.17 1.207a2.118 2.118 0 0 1 0 2.93l-1.17 1.207a1.163 1.163 0 0 0-.29.87l.24 1.67a2.123 2.123 0 0 1-1.74 2.366l-1.65.288a1.16 1.16 0 0 0-.74.538l-.79 1.482a2.146 2.146 0 0 1-2.81.9zm2.5-1.115l.79-1.482a3.23 3.23 0 0 1 2.2-1.593s1.72-.343 1.71-.37l-.23-1.668a3.18 3.18 0 0 1 .83-2.562s1.2-1.3 1.18-1.322l-1.18-1.2a3.18 3.18 0 0 1-.83-2.562s.2-1.745.17-1.75l-1.65-.288a3.213 3.213 0 0 1-2.2-1.593s-.85-1.52-.87-1.51l-1.51.735a3.233 3.233 0 0 1-2.73 0s-1.58-.728-1.59-.707l-.79 1.482a3.23 3.23 0 0 1-2.2 1.593l-1.65.287c-.03.006.17 1.75.17 1.75a3.152 3.152 0 0 1-.84 2.563l-1.17 1.2c-.02.022 1.17 1.322 1.17 1.322a3.154 3.154 0 0 1 .84 2.562l-.24 1.667c0 .028 1.72.37 1.72.37a3.234 3.234 0 0 1 2.2 1.593s.85 1.52.87 1.51l1.51-.735a3.237 3.237 0 0 1 2.73 0s1.58.728 1.59.707zm-5.31-5.26l6.17-6.1a1.01 1.01 0 0 0 0-1.437 1.044 1.044 0 0 0-1.46 0l-6.17 6.1a1.01 1.01 0 0 0 0 1.437 1.044 1.044 0 0 0 1.46 0zm-.22-4.783a1.525 1.525 0 1 0-1.54-1.525 1.535 1.535 0 0 0 1.54 1.525zm5.14 5.08a1.525 1.525 0 1 0-1.54-1.523 1.534 1.534 0 0 0 1.54 1.523z"/></svg>
+            Deal
+          </a>
+        </li>
+        <li class="blog">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18" class="svg-icon"><path class="cls-1" d="M2.62 7.986h4.76l.72 1.452a1.01 1.01 0 0 0 1.35.447 1 1 0 0 0 .44-1.342l-4-8a1 1 0 0 0-1.79 0l-4 8a1 1 0 0 0 1.79.895zm3.76-2H3.62L5 3.23zm5.62 3a1 1 0 0 1 1-1h6.01a1 1 0 0 1 0 2H13a1 1 0 0 1-1-.993zm-12 4a1 1 0 0 1 1-1h18a1 1 0 0 1 0 2H1a.993.993 0 0 1-1-.993zm0 4a1 1 0 0 1 1-1h18a1 1 0 0 1 0 2H1a.993.993 0 0 1-1-.993zm12-12a1 1 0 0 1 1-1h6.01a1 1 0 0 1 0 2H13a1 1 0 0 1-1-.992zm0-4a1 1 0 0 1 1-1h6.01a1 1 0 0 1 0 2H13a1 1 0 0 1-1-.992z"/></svg>
+            Blog
+          </a>
+        </li>
+      </ul>
+
+      <div class="header-main-controls">
+        <a href="#" class="icon -rounded -gray -notification">
+          <svg width="24px" height="24px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" class="svg-icon"><g fill="none" fill-rule="evenodd"><path d="M14 12h-1.996c-2.215 0-4.116 1.786-4.253 3.988l-1.5 24.024C6.11 42.212 7.785 44 9.99 44h28.02c2.205 0 3.878-1.786 3.74-3.988l-1.5-24.024C40.11 13.788 38.206 12 35.995 12H34v-.005C34 6.48 29.52 2 24 2c-5.516 0-10 4.478-10 9.995V12zm4 0h12v-.005C30 8.69 27.31 6 24 6c-3.308 0-6 2.688-6 5.995V12zm16 4h1.996c.1 0 .255.147.26.238l1.486 23.757-27.47.005 1.47-23.762c.007-.095.16-.238.262-.238H14v4c0 1.105.895 2 2 2s2-.895 2-2v-4h12v4c0 1.105.895 2 2 2s2-.895 2-2v-4zM14 34c0-1.105.898-2 1.99-2h16.02c1.1 0 1.99.888 1.99 2 0 1.105-.898 2-1.99 2H15.99c-1.1 0-1.99-.888-1.99-2z"/></g></svg>
+        </a>
+        <a href="#" class="icon -rounded -gray -res-max-700">
+
+          <svg width="25px" height="25px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" class="svg-icon"><g fill="#4D4D4D" fill-rule="evenodd"><path d="M30.826 13.826C31.57 15.04 32 16.47 32 18c0 4.418-3.582 8-8 8-4.17 0-7.596-3.192-7.967-7.266.82-1.315 2.158-2.73 4.127-2.73 2.8 0 8.23 0 10.666-2.178zM15.056 26h-3.1c-1.092 0-2.23.866-2.526 1.934L6.07 40.097c-.295 1.072.366 1.933 1.476 1.932L40.41 42c1.116 0 1.77-.866 1.472-1.932l-3.38-12.14c-.3-1.07-1.43-1.93-2.53-1.93h-3.028c1.9-2.123 3.056-4.927 3.056-8 0-6.627-5.373-12-12-12s-12 5.373-12 12c0 3.073 1.155 5.877 3.056 8zm19.863 4l-21.914.004L10.786 38l26.383.002L34.92 30z" id="Combined-Shape"/></g></svg>
+        </a>
+        <a href="#" class="btn -default -uppercase -res-min-700">Login</a>
+        <a href="#" data-show=".mobile-menu" class="icon -rounded -white -res-max-1000">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12" viewBox="0 0 18 12" class="svg-icon"><path d="M1 10h16a1 1 0 0 1 0 2H1a1 1 0 0 1 0-2zM1 0h16a1 1 0 0 1 0 2H1a1 1 0 0 1 0-2zm0 5h16a1 1 0 0 1 0 2H1a1 1 0 0 1 0-2z"/></svg>
+        </a>
+      </div>
+  	</header>
+
+    <div class="mobile-menu -hide">
+      <a href="#" data-close=".mobile-menu" class="icon close-button -rounded -white-dark">
+        <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9"><path d="M8.64 1.987L6.14 4.5l2.467 2.475A1.173 1.173 0 0 1 6.95 8.637L4.486 6.162 2.02 8.637a1.167 1.167 0 0 1-1.656 0 1.18 1.18 0 0 1 0-1.662L2.83 4.5.33 1.986A1.173 1.173 0 0 1 1.984.325l2.5 2.512 2.5-2.512A1.173 1.173 0 0 1 8.64 1.987z"/></svg>
+      </a>
+      <ul class="mobile-menu-links">
+        <li><a href="#">Catalog</a></li>
+        <li><a href="#">Subsciption</a></li>
+        <li><a href="#">Deal</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </div>
+
+    <section class="section presentation">
+      <div class="base-col-large">
+        <div class="presentation-buttons -res-min-920">
+          <a href="#" class="btn -rounded -dark -arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 48 48" class="svg-icon"><path class="st0" d="M19.8 30.9c-.8-.8-2.1-.8-2.8 0-.8.8-.8 2.1 0 2.8l5.7 5.7c.3.4.8.6 1.3.6s1-.2 1.4-.6l5.6-5.6c.8-.8.8-2.1 0-2.8-.8-.8-2.1-.8-2.8 0L26 33.2V10c0-1.1-.9-2-2-2s-2 .9-2 2v23.2l-2.2-2.3z"/></svg>
+            Pass
+          </a>
+          <a href="#" class="btn -rounded -green -default">$8</a>
+        </div>
+
+        <p class="presentation-author"><a href="#">Beans UI Goods</a>  presents</p>
+        <h2 class="presentation-headline -no-price"><span class="name">Stamp UI Kit</span></h2>
+        <p class="presentation-description">Stamp is versatile and compelling pack of 75 UI cards, made with hundreds of elements to help you present client’s ideas in the best way.</p>
+
+        <div class="presentation-about">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" class="svg-icon"><defs><style>.cls-12 { fill: #3898ea; fill-rule: evenodd; }</style></defs><path class="cls-12" d="M11.84 12.06a.312.312 0 0 1 .3-.16c.862-.04 2.142-.06 3.475-.06 3.73 0 5.186 2.03 5.186 4.62 0 3.39-2.477 4.85-5.52 4.85-.512 0-.69-.03-1.052-.03v5.13a.135.135 0 0 1-.16.16H12a.137.137 0 0 1-.162-.16V12.06zm2.4 7.1c.31.02.552.02 1.09.02 1.576 0 3.06-.54 3.06-2.67 0-1.69-1.065-2.55-2.856-2.55-.54 0-1.05.03-1.293.04v5.16zm11.584-1.59c-1.066 0-1.428.53-1.428.97 0 .48.242.82 1.67 1.55 2.114 1.02 2.775 1.99 2.775 3.42 0 2.14-1.642 3.29-3.866 3.29a5.8 5.8 0 0 1-2.76-.58.18.18 0 0 1-.107-.21v-1.97c0-.13.067-.17.16-.1a5.007 5.007 0 0 0 2.707.79c1.065 0 1.51-.44 1.51-1.05 0-.48-.31-.9-1.67-1.6-1.915-.91-2.708-1.83-2.708-3.36 0-1.73 1.36-3.16 3.718-3.16a6.227 6.227 0 0 1 2.41.38.285.285 0 0 1 .134.27v1.82a.137.137 0 0 1-.2.14 4.53 4.53 0 0 0-2.346-.6zM20 0A20 20 0 1 1 0 20 20 20 0 0 1 20 0z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" class="svg-icon"><defs><style>.cls-13 { fill: #fdc02d; fill-rule: evenodd; }</style></defs><path id="sketch" class="cls-13" d="M26.51 18.36l-1.732-2.43 1.233-.91 1.918 1.46zM20 26.98l-4.76-6.31h9.522zm-6.014-11.96l1.593.95-1.83 2.73-1.68-2.22zm3.29 1.55l5.85.05 1.64 2.3H15.7zm-.855-3.41h7.16l.985.75-1.275.96-6.23-.05-1.574-.94zm13.256 2.45l-3.018-2.3a.776.776 0 0 0-.23-.17l-2.032-1.55a.837.837 0 0 0-.524-.18H16.13a.84.84 0 0 0-.526.18l-5.28 4.02a.885.885 0 0 0-.167 1.23l9.15 12.12a.868.868 0 0 0 1.385 0l9.152-12.12a.884.884 0 0 0-.17-1.23zM20 0A20 20 0 1 1 0 20 20 20 0 0 1 20 0z"/></svg>
+
+          <span class="presentation-links">
+            <a href=".presentation-about" class="btn -white-shadow scrollto -active" data-tab='.previews' data-tab-group='.product-tab'>Preview</a>
+            <a href=".presentation-about" class="btn -white-shadow scrollto" data-tab='.product-description' data-tab-group='.product-tab'>Description</a>
+            <a href=".presentation-about" class="btn -white-shadow scrollto" data-tab='.product-related' data-tab-group='.product-tab'>Related</a>
+            <a href=".presentation-about" class="btn -white-shadow scrollto" data-tab='.product-full-preview' data-tab-group='.product-tab'>Full Preview</a>
+          </span>
+
+          <span class="presentation-links-mobile">
+            <a href="#" class="link -active" data-tab='.previews' data-tab-group='.product-tab'>Preview</a>
+            <a href="#" class="link" data-tab='.product-description' data-tab-group='.product-tab'>Description</a>
+            <a href="#" class="link" data-tab='.product-related' data-tab-group='.product-tab'>Related</a>
+            <a href="#" class="link" data-tab='.product-full-preview' data-tab-group='.product-tab'>Full Preview</a>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section product-related product-tab -hide">
+      <div class="base-col-large">
+        <div class="items">
+            <div class="item">
+              <a href="#" class="item-link"></a>
+              <span class="icon icon-hot -rounded -white -shadow -large item-status"></span>
+              <div class="image"><img src="./assets/images/content/glue.jpg" alt=""></div>
+              <p class="headline"><a href="#">Glue UI Kit</a></p>
+              <p class="author-name">by <a href="#beans" class="link -green">Beans UI Goods</a></p>
+              <p class="price">$34</p>
+            </div>
+            <div class="item">
+              <span class="icon icon-hot -rounded -white -shadow -large item-status"></span>
+              <div class="image"><img src="./assets/images/content/chameleon.jpg" alt=""></div>
+              <p class="headline"><a href="#">Chameleon UI Kit</a></p>
+              <p class="author-name">by <a href="#beans" class="link -green">Beans UI Goods</a></p>
+              <p class="price">$34</p>
+            </div>
+            <div class="item">
+              <span class="icon icon-hot -rounded -white -shadow -large item-status"></span>
+              <div class="image"><img src="./assets/images/content/module.jpg" alt=""></div>
+              <p class="headline"><a href="#">Module 01 UI Kit</a></p>
+              <p class="author-name">by <a href="#beans" class="link -green">Beans UI Goods</a></p>
+              <p class="price">$34</p>
+            </div>
+            <div class="item">
+              <span class="icon icon-hot -rounded -white -shadow -large item-status"></span>
+              <div class="image"><img src="./assets/images/content/chameleon.jpg" alt=""></div>
+              <p class="headline"><a href="#">Fashion UI Kit</a></p>
+              <p class="author-name">by <a href="#beans" class="link -green">Beans UI Goods</a></p>
+              <p class="price">$34</p>
+            </div>
+            <div class="item">
+              <span class="icon icon-hot -rounded -white -shadow -large item-status"></span>
+              <div class="image"><img src="./assets/images/content/module.jpg" alt=""></div>
+              <p class="headline"><a href="#">Aware Mobile UI Kit</a></p>
+              <p class="author-name">by <a href="#beans" class="link -green">Beans UI Goods</a></p>
+              <p class="price">$34</p>
+            </div>
+            <div class="item">
+              <span class="icon icon-hot -rounded -white -shadow -large item-status"></span>
+              <div class="image"><img src="./assets/images/content/glue.jpg" alt=""></div>
+              <p class="headline"><a href="#">Aware Mobile UI Kit</a></p>
+              <p class="author-name">by <a href="#beans" class="link -green">Beans UI Goods</a></p>
+              <p class="price">$34</p>
+            </div>
+          </div>
+
+        <div class="more -res-min-700">
+          <a href="#" class="btn -blue -big">Full Preview</a>
+        </div>
+      </div>
+    </section>
+    <section class="section product-description product-tab -hide">
+      <div class="base-col-large">
+        <div class="product-description-wrapper">
+          Stamp is versatile and compelling pack of 75 UI cards, made with hundreds of elements to help you present client’s ideas in the best
+          way. Cards divided in 9 content categories, supplemented with many variations of headers, footers and headlines and carefully
+          assembled in Sketch and Photoshop source files. Files can be used as you want – change text styles, colors, add or replace photos
+          and graphics. Customize layouts templates as much, or as little, as you want.
+
+          <ul class="list">
+            <li>100+ Components</li>
+            <li>100% Vector based</li>
+            <li>9 Content categories</li>
+            <li>Bootstrap grid</li>
+            <li>Layered & named</li>
+            <li>Google fonts</li>
+          </ul>
+        </div>
+
+        <div class="more -res-min-700">
+          <a href="#" class="btn -blue -big">Full Preview</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section previews product-tab">
+      <div class="base-col-large">
+        <div class="previews-wrapper">
+          <div class="previews-item"><img src="./assets/images/content/ui-stamp-image1.jpg" alt=""></div>
+          <div class="previews-item"><img src="./assets/images/content/ui-stamp-image2.jpg" alt=""></div>
+          <div class="previews-item"><img src="./assets/images/content/ui-stamp-image3.jpg" alt=""></div>
+          <div class="previews-item"><img src="./assets/images/content/ui-stamp-image4.jpg" alt=""></div>
+          <div class="previews-item"><img src="./assets/images/content/ui-stamp-image5.jpg" alt=""></div>
+          <div class="previews-item"><img src="./assets/images/content/ui-stamp-image6.jpg" alt=""></div>
+          <div class="previews-item"><img src="./assets/images/content/ui-stamp-image7.jpg" alt=""></div>
+          <div class="previews-item"><img src="./assets/images/content/ui-stamp-image8.jpg" alt=""></div>
+        </div>
+
+        <div class="more">
+          <a href="#" class="btn -blue -big" data-showpopup='#fullPreview'>Full Preview</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section product-info">
+      <div class="base-col-large">
+        <div class="product-spec">
+          <div class="product-extension">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" class="svg-icon"><defs><style>.cls-12 { fill: #3898ea; fill-rule: evenodd; }</style></defs><path class="cls-12" d="M11.84 12.06a.312.312 0 0 1 .3-.16c.862-.04 2.142-.06 3.475-.06 3.73 0 5.186 2.03 5.186 4.62 0 3.39-2.477 4.85-5.52 4.85-.512 0-.69-.03-1.052-.03v5.13a.135.135 0 0 1-.16.16H12a.137.137 0 0 1-.162-.16V12.06zm2.4 7.1c.31.02.552.02 1.09.02 1.576 0 3.06-.54 3.06-2.67 0-1.69-1.065-2.55-2.856-2.55-.54 0-1.05.03-1.293.04v5.16zm11.584-1.59c-1.066 0-1.428.53-1.428.97 0 .48.242.82 1.67 1.55 2.114 1.02 2.775 1.99 2.775 3.42 0 2.14-1.642 3.29-3.866 3.29a5.8 5.8 0 0 1-2.76-.58.18.18 0 0 1-.107-.21v-1.97c0-.13.067-.17.16-.1a5.007 5.007 0 0 0 2.707.79c1.065 0 1.51-.44 1.51-1.05 0-.48-.31-.9-1.67-1.6-1.915-.91-2.708-1.83-2.708-3.36 0-1.73 1.36-3.16 3.718-3.16a6.227 6.227 0 0 1 2.41.38.285.285 0 0 1 .134.27v1.82a.137.137 0 0 1-.2.14 4.53 4.53 0 0 0-2.346-.6zM20 0A20 20 0 1 1 0 20 20 20 0 0 1 20 0z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" class="svg-icon"><defs><style>.cls-13 { fill: #fdc02d; fill-rule: evenodd; }</style></defs><path id="sketch" class="cls-13" d="M26.51 18.36l-1.732-2.43 1.233-.91 1.918 1.46zM20 26.98l-4.76-6.31h9.522zm-6.014-11.96l1.593.95-1.83 2.73-1.68-2.22zm3.29 1.55l5.85.05 1.64 2.3H15.7zm-.855-3.41h7.16l.985.75-1.275.96-6.23-.05-1.574-.94zm13.256 2.45l-3.018-2.3a.776.776 0 0 0-.23-.17l-2.032-1.55a.837.837 0 0 0-.524-.18H16.13a.84.84 0 0 0-.526.18l-5.28 4.02a.885.885 0 0 0-.167 1.23l9.15 12.12a.868.868 0 0 0 1.385 0l9.152-12.12a.884.884 0 0 0-.17-1.23zM20 0A20 20 0 1 1 0 20 20 20 0 0 1 20 0z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" class="svg-icon"><defs><style>.cls-13 { fill: #fdc02d; fill-rule: evenodd; }</style></defs><path id="sketch" class="cls-13" d="M26.51 18.36l-1.732-2.43 1.233-.91 1.918 1.46zM20 26.98l-4.76-6.31h9.522zm-6.014-11.96l1.593.95-1.83 2.73-1.68-2.22zm3.29 1.55l5.85.05 1.64 2.3H15.7zm-.855-3.41h7.16l.985.75-1.275.96-6.23-.05-1.574-.94zm13.256 2.45l-3.018-2.3a.776.776 0 0 0-.23-.17l-2.032-1.55a.837.837 0 0 0-.524-.18H16.13a.84.84 0 0 0-.526.18l-5.28 4.02a.885.885 0 0 0-.167 1.23l9.15 12.12a.868.868 0 0 0 1.385 0l9.152-12.12a.884.884 0 0 0-.17-1.23zM20 0A20 20 0 1 1 0 20 20 20 0 0 1 20 0z"/></svg>
+          </div>
+
+          <div class="product-description">
+            <div class="product-item">
+              <h3>Include:</h3>
+              <p>120 iOS templates, Styleguide, UI elements</p>
+            </div>
+            <div class="product-item">
+              <h3>Compatibility:</h3>
+              <p>Sketch 4, Photoshop CC 2015 and later</p>
+            </div>
+          </div>
+
+          <div class="product-useful">
+            <div class="product-item">
+              <h3>File size:</h3>
+              <p>548 mb</p>
+            </div>
+            <div class="product-item">
+              <h3>License:</h3>
+              <p><a href="#" class="link-default">Read Now</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-buy">
+          <div class="product-buy-wrapper">
+            <p><a href="#" class="btn -big -white">Buy for $8</a></p>
+            <p><a href="#" class="link">Download Free Demo</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer class="footer-main">
+
+    <section class="section footer-info">
+      <div class="site-social">
+        <a href="#" class="site-logo">
+          <span class="emoji"></span>
+          <span class="logo-img"></span>
+        </a>
+
+        <a href="#" class="icon-sprite facebook"></a>
+        <a href="#" class="icon-sprite twitter"></a>
+        <a href="#" class="icon-sprite google-plus"></a>
+
+      </div>
+
+      <ul class="footer-menu">
+        <li class="footer-menu-item"><a href="#" class="link-underline">CATALOG</a></li>
+        <li class="footer-menu-item"><a href="#" class="link-underline">Subscription</a></li>
+        <li class="footer-menu-item"><a href="#" class="link-underline">BLOG</a></li>
+        <li class="footer-menu-item"><a href="#" class="link-underline">Press kit</a></li>
+        <li class="footer-menu-item"><a href="#" class="link-underline">License</a></li>
+        <li class="footer-menu-item"><a href="#" class="link-underline">Submit product</a></li>
+        <li class="footer-menu-item"><a href="#" class="link-underline">affiliate</a></li>
+      </ul>
+
+      <p class="footer-copyright">
+        © 2016 <b>UIHead</b>. Market is a place of carefully selected products for web designers and developers.
+        <span class="br"></span>
+        You can contact with us via email adress: <a href="mailto:info@pixelbuddha.net">info@pixelbuddha.net</a>
+      </p>
+    </section>
+  </footer>
+
+  <div class="popup -hide" id="fullPreview">
+    <div class="popup-content">
+      <a href="#" class="icon close-button -rounded -white-dark" data-closepopup="#fullPreview">
+        <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9"><path d="M8.64 1.987L6.14 4.5l2.467 2.475A1.173 1.173 0 0 1 6.95 8.637L4.486 6.162 2.02 8.637a1.167 1.167 0 0 1-1.656 0 1.18 1.18 0 0 1 0-1.662L2.83 4.5.33 1.986A1.173 1.173 0 0 1 1.984.325l2.5 2.512 2.5-2.512A1.173 1.173 0 0 1 8.64 1.987z"></path></svg>
+      </a>
+      <div class="full-preview">
+        <div class="images"><div class="image"><img src="https://res.cloudinary.com/robot/image/upload/w_2112,q_100,c_fit/v1477016464/pufkxlqjrd2i0e5kiyrk.jpg"></div><div class="image"><img src="https://res.cloudinary.com/robot/image/upload/w_2112,q_100,c_fit/v1477016468/ohhdyqboiirbzac8le5i.jpg"></div><div class="image"><img src="https://res.cloudinary.com/robot/image/upload/w_2112,q_100,c_fit/v1477016464/vbmthuajo0eb3yjcf4gi.jpg"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="overlay" class="-hide"></div>
+
+  <script src="assets/libs/jquery/dist/jquery.min.js"></script>
+	<script src="assets/libs/select2/dist/js/select2.min.js"></script>
+	<script src="assets/libs/hero-slider/js/main.js"></script>
+  <script src="assets/libs/growl/javascripts/jquery.growl.js" type="text/javascript"></script>
+  <script src="assets/libs/clipboard/dist/clipboard.min.js"></script>
+  <script src="assets/libs/masonry/dist/masonry.pkgd.min.js"></script>
+  <script src="assets/scripts/main.js"></script>
+
+</body>
+</html>
