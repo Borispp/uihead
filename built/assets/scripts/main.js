@@ -247,7 +247,7 @@ var uiItems = function () {
 				uiItemActiveCount: this.$elements.uiItemActive.length,
 				i: this.$elements.uiItemActive.length + 1,
 				iActive: 0,
-				changeSpeed: 3000
+				changeSpeed: 2500
 			};
 
 			this.$elements.uiItems.on('mouseover', function (e) {
