@@ -166,6 +166,18 @@
     &:active
       background $green-dark
 
+  &.-gray
+    background $gray-button
+    color $white
+    border-color transparent
+
+    &:hover
+      background $green-darker
+      border-color transparent
+
+    &:active
+      background $green-dark
+
   &.-rounded
     box-sizing border-box
     padding 0
@@ -423,7 +435,7 @@ a
 
     input:checked + label
       &:after
-        top 16px
+        top 18px
 
 .checkbox-btn
   input[type="checkbox"]
