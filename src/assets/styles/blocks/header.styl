@@ -16,6 +16,15 @@
   .icon
     cursor pointer
 
+    &.-white-opacity.-notification
+      &:after
+        border-color $gray-button
+        transition border-color .15s linear
+      &:hover:after
+        border-color $gray-button-hover
+      &:active:after
+        border-color $gray-button-active
+
   &.-transparent
     background transparent
 
@@ -46,6 +55,9 @@
       background $gray
       .svg-icon, g
         fill $gray-text
+
+      &.-notification:after
+        border-color $white
 
       &:hover
         background $green-darker

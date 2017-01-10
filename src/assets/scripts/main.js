@@ -408,7 +408,7 @@ var scrollToPage = (target) => {
 	if (target && $(target).length) {
 		y = $(target).offset().top;
 	}
-	$elements.page.animate({ scrollTop: y-60 }, 'slow', 'swing')
+	$elements.page.animate({ scrollTop: y-110 }, 300)
 	return
 }
 

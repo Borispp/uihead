@@ -376,8 +376,8 @@ h4.headline {
 .wrapper {
   width: 100%;
   padding-top: 86px;
-  -ms-flex: 1;
-      flex: 1;
+  -ms-flex: 1 0 auto;
+      flex: 1 0 auto;
 }
 .wrapper.-header-above {
   padding-top: 0;
@@ -622,17 +622,17 @@ h4.headline {
   fill: #000;
 }
 .icon.-white-opacity {
-  background: rgba(255,255,255,0.2);
+  background: #606060;
 }
 .icon.-white-opacity .svg-icon,
 .icon.-white-opacity g {
   fill: #fff;
 }
 .icon.-white-opacity:hover {
-  background: rgba(255,255,255,0.1);
+  background: #4c4c4c;
 }
 .icon.-white-opacity:active {
-  background: rgba(0,0,0,0.2);
+  background: #2d2d2d;
 }
 .icon .icon-bag {
   fill-rule: evenodd;
@@ -643,8 +643,8 @@ h4.headline {
 .icon.icon-hot:before {
   content: '';
   background-image: url("../images/design/sprite.png");
-  background-size: 185.5px 149px;
-  background-position: 0px -126px;
+  background-size: 187.5px 150px;
+  background-position: 0px -127px;
   width: 20px;
   height: 23px;
 }
@@ -700,22 +700,22 @@ h4.headline {
 }
 .icon-sprite.facebook {
   background-image: url("../images/design/sprite.png");
-  background-size: 185.5px 149px;
-  background-position: -99.5px -50px;
+  background-size: 187.5px 150px;
+  background-position: -99.5px -51px;
   width: 33px;
   height: 33px;
 }
 .icon-sprite.twitter {
   background-image: url("../images/design/sprite.png");
-  background-size: 185.5px 149px;
-  background-position: -146.5px -51px;
+  background-size: 187.5px 150px;
+  background-position: -147.5px -52px;
   width: 33px;
   height: 33px;
 }
 .icon-sprite.google-plus {
   background-image: url("../images/design/sprite.png");
-  background-size: 185.5px 149px;
-  background-position: -51.5px -51px;
+  background-size: 187.5px 150px;
+  background-position: -52.5px -51px;
   width: 33px;
   height: 33px;
 }
@@ -724,43 +724,43 @@ h4.headline {
 }
 .emoji.emoji-kiss {
   background-image: url("../images/design/sprite.png");
-  background-size: 185.5px 149px;
-  background-position: -84px -98px;
+  background-size: 187.5px 150px;
+  background-position: -84px -99px;
   width: 27px;
   height: 27px;
 }
 .emoji.emoji-kiss2 {
   background-image: url("../images/design/sprite.png");
-  background-size: 185.5px 149px;
-  background-position: -112px -98px;
+  background-size: 187.5px 150px;
+  background-position: -112px -99px;
   width: 27px;
   height: 27px;
 }
 .emoji.emoji-wink {
   background-image: url("../images/design/sprite.png");
-  background-size: 185.5px 149px;
-  background-position: -56px -98px;
+  background-size: 187.5px 150px;
+  background-position: -56px -99px;
   width: 27px;
   height: 27px;
 }
 .emoji.emoji-laugh {
   background-image: url("../images/design/sprite.png");
-  background-size: 185.5px 149px;
-  background-position: -140px -98px;
+  background-size: 187.5px 150px;
+  background-position: -140px -99px;
   width: 27px;
   height: 27px;
 }
 .emoji.emoji-laugh2 {
   background-image: url("../images/design/sprite.png");
-  background-size: 185.5px 149px;
-  background-position: 0px -98px;
+  background-size: 187.5px 150px;
+  background-position: 0px -99px;
   width: 27px;
   height: 27px;
 }
 .emoji.emoji-laugh3 {
   background-image: url("../images/design/sprite.png");
-  background-size: 185.5px 149px;
-  background-position: -28px -98px;
+  background-size: 187.5px 150px;
+  background-position: -28px -99px;
   width: 27px;
   height: 27px;
 }
@@ -902,6 +902,18 @@ h4.headline {
   border-color: transparent;
 }
 .btn.-white-opacity:active {
+  background: #339851;
+}
+.btn.-gray {
+  background: #606060;
+  color: #fff;
+  border-color: transparent;
+}
+.btn.-gray:hover {
+  background: #39ab5b;
+  border-color: transparent;
+}
+.btn.-gray:active {
   background: #339851;
 }
 .btn.-rounded {
@@ -1153,8 +1165,8 @@ a {
   content: '';
   display: inline-block;
   background-image: url("../images/design/sprite.png");
-  background-size: 185.5px 149px;
-  background-position: -146.5px -85px;
+  background-size: 187.5px 150px;
+  background-position: -147.5px -86px;
   width: 9.5px;
   height: 7px;
   position: absolute;
@@ -1205,7 +1217,7 @@ a {
   top: 12px;
 }
 .checkbox.-left-icon input:checked + label:after {
-  top: 16px;
+  top: 18px;
 }
 .checkbox-btn input[type="checkbox"] {
   display: none;
@@ -1330,6 +1342,16 @@ input.input {
 .header-main .icon {
   cursor: pointer;
 }
+.header-main .icon.-white-opacity.-notification:after {
+  border-color: #606060;
+  transition: border-color 0.15s linear;
+}
+.header-main .icon.-white-opacity.-notification:hover:after {
+  border-color: #4c4c4c;
+}
+.header-main .icon.-white-opacity.-notification:active:after {
+  border-color: #2d2d2d;
+}
 .header-main.-transparent {
   background: transparent;
 }
@@ -1361,7 +1383,7 @@ input.input {
 .header-main.-light .site-logo .logo-img,
 .header-main.-stickit .site-logo .logo-img {
   background-image: url("../images/design/sprite.png");
-  background-size: 185.5px 149px;
+  background-size: 187.5px 150px;
   background-position: 0px -25.5px;
   width: 98.5px;
   height: 24.5px;
@@ -1375,6 +1397,10 @@ input.input {
 .header-main.-light .icon.-white-opacity g,
 .header-main.-stickit .icon.-white-opacity g {
   fill: #9b9b9b;
+}
+.header-main.-light .icon.-white-opacity.-notification:after,
+.header-main.-stickit .icon.-white-opacity.-notification:after {
+  border-color: #fff;
 }
 .header-main.-light .icon.-white-opacity:hover,
 .header-main.-stickit .icon.-white-opacity:hover {
@@ -1438,7 +1464,7 @@ input.input {
 .site-logo .logo-img {
   display: inline-block;
   background-image: url("../images/design/sprite.png");
-  background-size: 185.5px 149px;
+  background-size: 187.5px 150px;
   background-position: 0px 0px;
   width: 98.5px;
   height: 24.5px;
@@ -1454,7 +1480,7 @@ input.input {
 }
 .site-logo.-light .logo-img {
   background-image: url("../images/design/sprite.png");
-  background-size: 185.5px 149px;
+  background-size: 187.5px 150px;
   background-position: 0px -25.5px;
   width: 98.5px;
   height: 24.5px;
@@ -1701,7 +1727,7 @@ input.input {
 }
 .substrate .substrate-images li {
   width: calc(20% - 10px);
-  height: calc(100% / 3 - 10px);
+  height: calc(33.33% - 10px);
   display: block;
   float: left;
   background-size: cover;
@@ -1746,7 +1772,7 @@ input.input {
   font-size: 18px;
   display: inline-block;
   vertical-align: middle;
-  width: calc(100% / 3);
+  width: 33.33%;
   text-align: center;
 }
 .counters .counter-number {
@@ -2203,7 +2229,7 @@ input.input {
   opacity: 1;
 }
 .timer.-finish {
-  background: #40be65;
+  background: #b4b4b4;
   color: #fff;
 }
 .timer.-finish .timer-item {
@@ -2991,7 +3017,7 @@ input.input {
 .about-list li {
   display: inline-block;
   vertical-align: top;
-  width: calc(100% / 3 - 50px);
+  width: calc(33.33% - 50px);
   margin: 0 21px;
   color: #9b9b9b;
   font-size: 16px;
@@ -3016,24 +3042,24 @@ input.input {
 }
 .about-list .best .pic:before {
   background-image: url("../images/design/sprite.png");
-  background-size: 185.5px 149px;
+  background-size: 187.5px 150px;
   background-position: -99.5px 0px;
-  width: 46px;
-  height: 49px;
+  width: 47px;
+  height: 50px;
 }
 .about-list .mark .pic:before {
   background-image: url("../images/design/sprite.png");
-  background-size: 185.5px 149px;
-  background-position: -146.5px 0px;
-  width: 39px;
-  height: 50px;
+  background-size: 187.5px 150px;
+  background-position: -147.5px 0px;
+  width: 40px;
+  height: 51px;
 }
 .about-list .diamond .pic:before {
   background-image: url("../images/design/sprite.png");
-  background-size: 185.5px 149px;
+  background-size: 187.5px 150px;
   background-position: 0px -51px;
-  width: 50.5px;
-  height: 46px;
+  width: 51.5px;
+  height: 47px;
 }
 @media (max-width: 1000px) {
   .about-features {
@@ -3633,7 +3659,7 @@ input.input {
 .items .review-item {
   display: inline-block;
   vertical-align: top;
-  width: calc(100% / 3 - 34px);
+  width: calc(33.33% - 34px);
   margin: 17px;
 }
 .item,
@@ -3851,8 +3877,8 @@ input.input {
   vertical-align: middle;
   margin-right: 8px;
   background-image: url("../images/design/sprite.png");
-  background-size: 185.5px 149px;
-  background-position: -21px -126px;
+  background-size: 187.5px 150px;
+  background-position: -168px -99px;
   width: 19px;
   height: 18px;
 }
