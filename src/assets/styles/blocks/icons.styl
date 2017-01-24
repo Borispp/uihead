@@ -37,8 +37,8 @@
   &.-notification:after
     content ""
     position absolute
-    right 0
-    top 0
+    right -1px
+    top -1px
     width 6px
     height 6px
     background $blue
@@ -116,16 +116,41 @@
         fill $black
 
   &.-white-opacity
-    background $gray-button
+    background rgba(255,255,255,.2)
     .svg-icon, g
       fill $white
 
     &:hover
-      background $gray-button-hover
+      background rgba(255,255,255,.3)
 
     &:active
-      background $gray-button-active
+      background rgba(255,255,255,.1)
 
+    &.-notification
+      position relative
+      background none
+
+      &:after
+        border 0
+        top 2px
+        right 2px
+
+      &:before
+        content ''
+        display inline-block
+        position absolute
+        background url('../images/content/round.svg')
+        width 100%
+        height 100%
+        fill #fff
+        opacity .2
+        transition opacity .2s
+
+      &:hover:before
+        opacity .3
+
+      &:active:before
+        opacity .1
 
   .icon-bag
     fill-rule evenodd
