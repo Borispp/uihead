@@ -521,8 +521,8 @@ h4.headline {
 .icon.-notification:after {
   content: "";
   position: absolute;
-  right: 0;
-  top: 0;
+  right: -1px;
+  top: -1px;
   width: 6px;
   height: 6px;
   background: #2c99ed;
@@ -622,17 +622,43 @@ h4.headline {
   fill: #000;
 }
 .icon.-white-opacity {
-  background: #606060;
+  background: rgba(255,255,255,0.2);
 }
 .icon.-white-opacity .svg-icon,
 .icon.-white-opacity g {
   fill: #fff;
 }
 .icon.-white-opacity:hover {
-  background: #4c4c4c;
+  background: rgba(255,255,255,0.3);
 }
 .icon.-white-opacity:active {
-  background: #2d2d2d;
+  background: rgba(255,255,255,0.1);
+}
+.icon.-white-opacity.-notification {
+  position: relative;
+  background: none;
+}
+.icon.-white-opacity.-notification:after {
+  border: 0;
+  top: 2px;
+  right: 2px;
+}
+.icon.-white-opacity.-notification:before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  background: url("../images/content/round.svg");
+  width: 100%;
+  height: 100%;
+  fill: #fff;
+  opacity: 0.2;
+  transition: opacity 0.2s;
+}
+.icon.-white-opacity.-notification:hover:before {
+  opacity: 0.3;
+}
+.icon.-white-opacity.-notification:active:before {
+  opacity: 0.1;
 }
 .icon .icon-bag {
   fill-rule: evenodd;
@@ -1400,7 +1426,13 @@ input.input {
 }
 .header-main.-light .icon.-white-opacity.-notification:after,
 .header-main.-stickit .icon.-white-opacity.-notification:after {
-  border-color: #fff;
+  border: 3px solid #fff;
+  top: -1px;
+  right: -1px;
+}
+.header-main.-light .icon.-white-opacity.-notification:before,
+.header-main.-stickit .icon.-white-opacity.-notification:before {
+  display: none;
 }
 .header-main.-light .icon.-white-opacity:hover,
 .header-main.-stickit .icon.-white-opacity:hover {

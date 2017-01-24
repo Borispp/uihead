@@ -53,11 +53,18 @@
 
     .icon.-white-opacity
       background $gray
+
       .svg-icon, g
         fill $gray-text
 
-      &.-notification:after
-        border-color $white
+      &.-notification
+        &:after
+          border 3px solid $white
+          top -1px
+          right -1px
+
+        &:before
+          display none
 
       &:hover
         background $green-darker
